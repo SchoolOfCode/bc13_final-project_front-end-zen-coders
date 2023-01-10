@@ -6,15 +6,12 @@ import Link from 'next/link';
 
 // Component imports
 import Navbar from '../Navbar/Navbar';
-import SearchBar from '../SearchBar/SearchBar';
 import EventCard from '../EventCard/EventCard';
 
 // ExploreList component
 export default function ExploreList() {
   return (
     <div>
-      <Navbar />
-      <SearchBar />
       <div>
         <ul>
           <Link href="/explore/knitting">Knitting</Link>
