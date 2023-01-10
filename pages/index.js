@@ -1,17 +1,17 @@
 //* Description: This is the home page of the site
 
 // Import statements
-import React from 'react';
-import Link from 'next/link';
-import Head from 'next/head';
-import Image from 'next/image';
-import { Inter } from '@next/font/google';
-import '../styles/Home.module.css';
+import React from "react";
+import Link from "next/link";
+import Head from "next/head";
+import Image from "next/image";
+import { Inter } from "@next/font/google";
+import "../styles/Home.module.css";
 
 // Component imports
-import Navbar from '../components/Navbar/Navbar';
+import Navbar from "../components/Navbar/Navbar";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 // Home component
 export default function Home() {
