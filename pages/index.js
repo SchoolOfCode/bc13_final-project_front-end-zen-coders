@@ -1,10 +1,18 @@
-import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "@next/font/google";
-import "../styles/Home.module.css";
+//* Description: This is the home page of the site
 
-const inter = Inter({ subsets: ["latin"] });
+// Import statements
+import React from 'react';
+import Head from 'next/head';
+import Image from 'next/image';
+import { Inter } from '@next/font/google';
+import '../styles/Home.module.css';
 
+// Component imports
+import Navbar from '../components/Navbar/Navbar';
+
+const inter = Inter({ subsets: ['latin'] });
+
+// Home component
 export default function Home() {
   return (
     <>
@@ -15,6 +23,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
+        <Navbar />
         <h1 className="text-3xl font-bold underline flex justify-center items-center h-screen">
           Site being built
         </h1>

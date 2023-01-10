@@ -1,11 +1,15 @@
+//* Description: Event card component
+
+// Import statements
 import React from 'react';
 import Image from 'next/image';
 
+// EventCard component
 export default function EventCard() {
   return (
     <card>
       <svg>
-        <Image src="/" alt="icon"></Image>
+        <img src="/" alt="icon"></img>
       </svg>
       <section>
         <div>
@@ -13,7 +17,7 @@ export default function EventCard() {
           <h2>Author</h2>
         </div>
         <div>
-          <Image src="/" alt="icon"></Image>
+          <img src="/" alt="icon"></img>
           <div>
             <h3>Time</h3>
             <h3>Data</h3>
