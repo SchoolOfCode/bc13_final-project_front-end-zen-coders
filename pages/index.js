@@ -21,7 +21,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Navbar />
         <div className="z-1 absolute w-2/3 flex-col items-center justify-center pl-6 ">
           <h1 className="text-7xl font-bold">Learn (almost) anything!</h1>
           <p className="pt-2 font-serif text-xl">
