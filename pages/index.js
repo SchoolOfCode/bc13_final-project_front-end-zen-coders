@@ -2,15 +2,13 @@
 
 // Import statements
 import React from 'react';
+import Link from 'next/link';
 import Head from 'next/head';
 import Image from 'next/image';
-import { Inter } from '@next/font/google';
 import '../styles/Home.module.css';
 
 // Component imports
 import Navbar from '../components/Navbar/Navbar';
-
-const inter = Inter({ subsets: ['latin'] });
 
 // Home component
 export default function Home() {
@@ -23,10 +21,32 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Navbar />
-        <h1 className="text-3xl font-bold underline flex justify-center items-center h-screen">
-          Site being built
-        </h1>
+        <div className="z-1 absolute w-2/3 flex-col items-center justify-center pl-6 ">
+          <h1 className="text-7xl font-bold">Learn (almost) anything!</h1>
+          <p className="pt-2 font-serif text-xl">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+          <div className="flex gap-6 pt-3 text-2xl">
+            <Link
+              className="rounded-full border-2 border-indigo-700 py-1 px-4 transition ease-in-out hover:scale-110 hover:bg-indigo-400 hover:bg-opacity-50"
+              href="/explore"
+            >
+              EXPLORE
+            </Link>
+            <Link
+              className="rounded-full border-2 border-indigo-700 py-1 px-4 transition ease-in-out hover:scale-110 hover:bg-indigo-400 hover:bg-opacity-50"
+              href="/about"
+            >
+              ABOUT
+            </Link>
+          </div>
+        </div>
+        <div className="z-0 flex w-2/3 justify-end">
+          <img src="/team-work.svg" alt="home" />
+        </div>
       </main>
     </>
   );
