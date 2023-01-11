@@ -1,5 +1,11 @@
 import React from 'react';
+import ProfileCard from '../../components/ProfileCard/ProfileCard';
+
 
 export default function index() {
-  return <div>Profile</div>;
+  return (
+  <div>
+  <ProfileCard/>
+  </div>
+  )
 }

@@ -34,12 +34,12 @@ export default function Navbar() {
           </div>
           <h3 className="pr-4 underline decoration-orange-400">Location</h3>
           <div>
-            <a
-              href="#"
+            <Link
+              href="/profile"
               className="mt-4 inline-block  px-4 py-2 text-lg leading-none text-indigo-700 hover:border-transparent  hover:text-white lg:mt-0"
             >
               PK
-            </a>
+            </Link>
           </div>
         </div>
       </nav>
