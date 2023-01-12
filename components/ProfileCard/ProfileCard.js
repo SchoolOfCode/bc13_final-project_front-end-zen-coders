@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function ProfileCard() {
   return (
-    <div className="h-screen rounded-lg border-gray-700 bg-gray-800 shadow-md">
+    <div className="h-screen rounded-lg bg-gray-200">
       <a>
         <img
           className="rounded-t-lg"
@@ -13,7 +13,7 @@ export default function ProfileCard() {
       </a>
       <div className="p-5">
         <div>
-          <h1 className="mb-2 text-4xl font-bold tracking-tight text-white">
+          <h1 className="mb-2 text-4xl font-bold tracking-tight">
             Sharer Name
           </h1>
           <h3>Locaiton</h3>
@@ -21,7 +21,7 @@ export default function ProfileCard() {
             <p>star</p>
           </div>
           <h2>About me:</h2>
-          <p className="mb-3 font-serif text-white">
+          <p className="mb-3 font-serif">
             Here are the biggest enterprise technology acquisitions of 2021 so
             far, in reverse chronological order.
           </p>
