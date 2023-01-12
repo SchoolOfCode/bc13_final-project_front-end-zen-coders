@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function ProfileCard() {
   return (
-    <div className="h-screen w-1/4 rounded-lg border-gray-700 bg-gray-800 shadow-md">
+    <div className="h-screen rounded-lg border-gray-700 bg-gray-800 shadow-md">
       <a>
         <img
           className="rounded-t-lg"
