@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function ProfileEventCard() {
   return (
-    <card className="mb-6 flex flex-row rounded-xl bg-gray-200">
+    <card className="mb-6 flex flex-row rounded-xl">
       <div className="grid grid-cols-4">
         <div className="col-span-1">
           <img
@@ -11,9 +11,14 @@ export default function ProfileEventCard() {
             alt="knitting img"
           />
         </div>
-        <div className="col-span-3 p-3">
-          <h1 className="text-4xl font-bold">Knitting with Julie</h1>
-          <h3 className="text-base font-light">Knightsbridge, London</h3>
+        <div className="col-span-3 rounded-r-lg border-y-2 border-r-2 border-black p-3">
+          <div className="flex flex-row">
+            <div className="mr-3 h-14 w-14 rounded-full bg-red-100"></div>
+            <div>
+              <h1 className="text-4xl font-bold">Knitting with Julie</h1>
+              <h3 className="text-base font-light">Knightsbridge, London</h3>
+            </div>
+          </div>
           <h2 className="pt-3 text-xl font-bold">Description:</h2>
           <p className="">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
