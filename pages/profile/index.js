@@ -1,6 +1,6 @@
-import React from 'react';
-import ProfileCard from '../../components/ProfileCard/ProfileCard';
-import ProfileEventCard from '../../components/ProfileEventCard/profileEventCard';
+import React from "react";
+import ProfileCard from "../../components/ProfileCard/ProfileCard";
+import ProfileEventCard from "../../components/ProfileEventCard/profileEventCard";
 
 export default function index() {
   return (
@@ -8,7 +8,7 @@ export default function index() {
       <div>
         <ProfileCard className="col-span-1" />
       </div>
-      <div className="col-span-3 pb-8">
+      <div className="col-span-3">
         <ProfileEventCard />
         <ProfileEventCard />
         <ProfileEventCard />
