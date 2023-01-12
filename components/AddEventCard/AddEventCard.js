@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function AddEventCard() {
   return (
-    <card className="rounded-lg bg-red-300">
+    <card className=" flex flex-col border-2 border-black rounded-lg bg-red-300">
       <div className="flex flex-row">
         <h2> Skill Type :</h2>
         <div className="flex flex-row">
@@ -17,7 +17,7 @@ export default function AddEventCard() {
       </div>
       <div className="flex flex-row">
         <input placeholder="Description" />
-        <button> Post </button>
+        <button className="rounded-full border-2 border-indigo-700 py-1 px-4 transition ease-in-out hover:scale-110 hover:bg-indigo-400 hover:bg-opacity-50"> Post </button>
       </div>
     </card>
   );
