@@ -1,6 +1,7 @@
 import React from 'react';
 import ProfileCard from '../../components/ProfileCard/ProfileCard';
 import ProfileEventCard from '../../components/ProfileEventCard/profileEventCard';
+import AddEventCard from '../../components/AddEventCard/AddEventCardjs';
 
 export default function index() {
   return (
@@ -11,6 +12,7 @@ export default function index() {
           <h1 className="text-4xl font-bold">Available Sessions:</h1>
           <button>+event</button>
         </div>
+        <AddEventCard/>
         <ProfileEventCard className="mt-6" />
         <ProfileEventCard className="mt-6" />
         <ProfileEventCard className="mt-6" />
