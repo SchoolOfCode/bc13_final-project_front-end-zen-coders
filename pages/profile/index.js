@@ -9,6 +9,10 @@ export default function index() {
         <ProfileCard className="col-span-1" />
       </div>
       <div className="col-span-3">
+        <div className = "flex">
+          <h1> Available Sessions</h1>
+          <button> + event</button>
+        </div>
         <ProfileEventCard />
         <ProfileEventCard />
         <ProfileEventCard />

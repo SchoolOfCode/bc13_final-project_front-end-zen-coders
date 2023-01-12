@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 export default function ProfileEventCard() {
   return (
     <div>
       <a className="flex flex-col items-center rounded-lg border bg-white shadow-md hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 md:max-w-xl md:flex-row">
         <img
-          className="w-100 h-full rounded-none rounded-t-lg rounded-l-lg object-cover"
+          className="w-48 h-full rounded-none rounded-t-lg rounded-l-lg object-cover"
           src="/knitting-event.jpg"
           alt="knitting img"
         />
