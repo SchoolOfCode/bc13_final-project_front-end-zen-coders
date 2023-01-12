@@ -1,21 +1,21 @@
-import React from "react";
+import React from 'react';
 
 export default function AddEventCard() {
   return (
-    <card className="mb-6 flex flex-row rounded-xl">
-      <div>
+    <card className="rounded-lg bg-red-300">
+      <div className="flex flex-row">
         <h2> Skill Type :</h2>
-        <div>
+        <div className="flex flex-row">
           <h2> skill</h2>
           <h2> skill</h2>
           <h2> skill</h2>
         </div>
       </div>
-      <div>
+      <div className="flex flex-row">
         <input placeholder="Date" />
         <input placeholder="Time" />
       </div>
-      <div>
+      <div className="flex flex-row">
         <input placeholder="Description" />
         <button> Post </button>
       </div>
