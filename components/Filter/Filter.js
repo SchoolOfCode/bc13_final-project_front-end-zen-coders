@@ -4,7 +4,7 @@ import React from 'react'
 const Filter = () => {
     return (
         <div>
-        <ul className='flex flex-row justify-between bg-gray-300 py-2 rounded-full my-9 mx-5 px-6'>
+        <ul className='flex flex-row justify-between flex-wrap bg-gray-300 py-2 rounded-full my-9 mx-5 px-6 sm:p-8'>
             <li className='w-20 h-20 flex items-center justify-center  bg-gray-900 rounded-full'><div><img src="/musicIcon.svg" alt="musicIcon" className='w-12'/></div></li>
             <li className='w-20 h-20 flex items-center justify-center bg-gray-900 rounded-full'><div><img src="/musicIcon.svg" alt="musicIcon" className='w-12'/></div></li>
             <li className='w-20 h-20 flex items-center justify-center bg-gray-900 rounded-full'><div><img src="/musicIcon.svg" alt="musicIcon" className='w-12'/></div></li>
