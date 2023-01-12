@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export default function AddEventCard() {
   return (
@@ -15,11 +15,11 @@ export default function AddEventCard() {
         <input placeholder="Date" />
         <input placeholder="Time" />
       </div>
-      <div className="flex flex-row">
+      <div className="flex flex-row justify-between">
         <input placeholder="Description" />
         <button className="rounded-full border-2 border-indigo-700 py-1 px-4 transition ease-in-out hover:scale-110 hover:bg-indigo-400 hover:bg-opacity-50">
-          {' '}
-          Post{' '}
+          {" "}
+          Post{" "}
         </button>
       </div>
     </card>
