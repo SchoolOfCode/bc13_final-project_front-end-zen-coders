@@ -46,7 +46,7 @@ export default function ProfileCard() {
             <p>skill icon</p>
             <p>skill icon</p>
           </div>
-          <button className="h-full w-full rounded-full border-2 border-indigo-900 bg-indigo-700 object-contain py-1 px-4 font-bold text-white transition ease-in-out hover:scale-110 hover:bg-indigo-400 hover:bg-opacity-50">
+          <button className="h-full w-full rounded-full border-2 border-indigo-900 bg-indigo-700 object-contain py-1 px-4 font-bold text-white transition ease-in-out  hover:bg-indigo-900 hover:bg-opacity-50">
             CONTACT
           </button>
         </div>
