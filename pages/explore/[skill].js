@@ -7,7 +7,6 @@ export default function Skill() {
   const skill = router.query.skill;
   return (
     <div>
-      <Navbar />
       <SearchBar />
       <h1>Learn more about {skill} here!</h1>
     </div>
