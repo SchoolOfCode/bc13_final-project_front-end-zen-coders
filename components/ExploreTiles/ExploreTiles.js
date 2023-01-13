@@ -5,7 +5,7 @@ export default function ExploreTiles() {
   return (
     <div className="flex flex-row flex-wrap">
     <div class="grid grid-cols-2 md:grid-cols-3  lg:grid-cols-4 lg:gap-x-14 p-7 m-auto ">
-    <div className="flex flex-col items-center justify-center lg:w-60 bg-gray-400 m-3 rounded-3xl hover:bg-gray-800">
+    <div className="flex flex-col items-center justify-center lg:w-60 bg-gray-400 m-3 rounded-3xl hover:bg-gray-800 hover:scale-110">
 <div className="self-end h-36 w-36 bg-gray-500 m-5 rounded-full flex justify-center items-center">
   <img
     className="h-20 w-20 object-contain p-2"
@@ -24,7 +24,7 @@ export default function ExploreTiles() {
   </div>
 </div>
 </div>
- <div className="flex flex-col items-center justify-center lg:w-60 bg-gray-400 m-3 rounded-3xl hover:bg-gray-800">
+ <div className="flex flex-col items-center justify-center lg:w-60 bg-gray-400 m-3 rounded-3xl hover:bg-gray-800 hover:scale-110">
 <div className="self-end h-36 w-36 bg-gray-500 m-5 rounded-full flex justify-center items-center">
   <img
     className="h-20 w-20 object-contain p-2"
@@ -43,7 +43,7 @@ export default function ExploreTiles() {
   </div>
 </div>
 </div>
-<div className="flex flex-col items-center justify-center lg:w-60 bg-gray-400 m-3 rounded-3xl hover:bg-gray-800">
+<div className="flex flex-col items-center justify-center lg:w-60 bg-gray-400 m-3 rounded-3xl hover:bg-gray-800 hover:scale-110">
 <div className="self-end h-36 w-36 bg-gray-500 m-5 rounded-full flex justify-center items-center">
   <img
     className="h-20 w-20 object-contain p-2"
@@ -62,7 +62,7 @@ export default function ExploreTiles() {
   </div>
 </div>
 </div>
-<div className="flex flex-col items-center justify-center lg:w-60 bg-gray-400 m-3 rounded-3xl hover:bg-gray-800">
+<div className="flex flex-col items-center justify-center lg:w-60 bg-gray-400 m-3 rounded-3xl hover:bg-gray-800 hover:scale-110">
 <div className="self-end h-36 w-36 bg-gray-500 m-5 rounded-full flex justify-center items-center">
   <img
     className="h-20 w-20 object-contain p-2"
@@ -81,7 +81,7 @@ export default function ExploreTiles() {
   </div>
 </div>
 </div>
-<div className="flex flex-col items-center justify-center lg:w-60 bg-gray-400 m-3 rounded-3xl hover:bg-gray-800">
+<div className="flex flex-col items-center justify-center lg:w-60 bg-gray-400 m-3 rounded-3xl hover:bg-gray-800 hover:scale-110">
 <div className="self-end h-36 w-36 bg-gray-500 m-5 rounded-full flex justify-center items-center">
   <img
     className="h-20 w-20 object-contain p-2"
@@ -100,7 +100,7 @@ export default function ExploreTiles() {
   </div>
 </div>
 </div>
-<div className="flex flex-col items-center justify-center lg:w-60 bg-gray-400 m-3 rounded-3xl hover:bg-gray-800">
+<div className="flex flex-col items-center justify-center lg:w-60 bg-gray-400 m-3 rounded-3xl hover:bg-gray-800 hover:scale-110">
 <div className="self-end h-36 w-36 bg-gray-500 m-5 rounded-full flex justify-center items-center">
   <img
     className="h-20 w-20 object-contain p-2"
@@ -119,7 +119,7 @@ export default function ExploreTiles() {
   </div>
 </div>
 </div>
-<div className="flex flex-col items-center justify-center lg:w-60 bg-gray-400 m-3 rounded-3xl hover:bg-gray-800">
+<div className="flex flex-col items-center justify-center lg:w-60 bg-gray-400 m-3 rounded-3xl hover:bg-gray-800 hover:scale-110">
 <div className="self-end h-36 w-36 bg-gray-500 m-5 rounded-full flex justify-center items-center">
   <img
     className="h-20 w-20 object-contain p-2"
@@ -138,7 +138,7 @@ export default function ExploreTiles() {
   </div>
 </div>
 </div>
-<div className="flex flex-col items-center justify-center lg:w-60 bg-gray-400 m-3 rounded-3xl hover:bg-gray-800">
+<div className="flex flex-col items-center justify-center lg:w-60 bg-gray-400 m-3 rounded-3xl hover:bg-gray-800 hover:scale-110">
 <div className="self-end h-36 w-36 bg-gray-500 m-5 rounded-full flex justify-center items-center">
   <img
     className="h-20 w-20 object-contain p-2"
@@ -157,7 +157,7 @@ export default function ExploreTiles() {
   </div>
 </div>
 </div>
-<div className="flex flex-col items-center justify-center lg:w-60 bg-gray-400 m-3 rounded-3xl hover:bg-gray-800">
+<div className="flex flex-col items-center justify-center lg:w-60 bg-gray-400 m-3 rounded-3xl hover:bg-gray-800 hover:scale-110">
 <div className="self-end h-36 w-36 bg-gray-500 m-5 rounded-full flex justify-center items-center">
   <img
     className="h-20 w-20 object-contain p-2"
@@ -176,7 +176,7 @@ export default function ExploreTiles() {
   </div>
 </div>
 </div>
-<div className="flex flex-col items-center justify-center lg:w-60 bg-gray-400 m-3 rounded-3xl hover:bg-gray-800">
+<div className="flex flex-col items-center justify-center lg:w-60 bg-gray-400 m-3 rounded-3xl hover:bg-gray-800 hover:scale-110">
 <div className="self-end h-36 w-36 bg-gray-500 m-5 rounded-full flex justify-center items-center">
   <img
     className="h-20 w-20 object-contain p-2"
