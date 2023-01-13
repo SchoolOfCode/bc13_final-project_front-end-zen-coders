@@ -16,31 +16,39 @@ export default function ProfileCard() {
           <h1 className="mb-2 text-4xl font-bold tracking-tight">
             Sharer Name
           </h1>
-          <h3>Locaiton</h3>
-          <div>
-            <p>star</p>
+          <h3 className="text-base font-light">Knightsbridge, London</h3>
+          <div className="flex flex-row items-center gap-3">
+            <div className="mt-2 flex h-5 flex-row">
+              <img src="/full-star.svg" />
+              <img src="/full-star.svg" />
+              <img src="/full-star.svg" />
+              <img src="/full-star.svg" />
+              <img src="/half-star.svg" />
+            </div>
+            <h3 className="text-sm">(12 REVIEWS)</h3>
           </div>
-          <h2>About me:</h2>
-          <p className="mb-3 font-serif">
-            Here are the biggest enterprise technology acquisitions of 2021 so
-            far, in reverse chronological order.
+          <h2 className="pt-3 text-2xl font-bold">About me:</h2>
+          <p className="mb-3">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat.
           </p>
         </div>
         <div>
-          <div>
-            <p>skill</p>
+          <div className="mb-3 flex flex-row gap-3 rounded-xl border-2 border-black bg-white p-3">
+            <p>skill icon</p>
+            <p>skill icon</p>
+            <p>skill icon</p>
+            <p>skill icon</p>
           </div>
-          <a className="inline-flex items-center rounded-lg bg-blue-700 px-3 py-2 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Contact
-            <svg
-              aria-hidden="true"
-              className="ml-2 -mr-1 h-4 w-4"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"></path>
-            </svg>
-          </a>
+          <button className="h-full w-full rounded-full border-2 border-indigo-900 bg-indigo-700 object-contain py-1 px-4 font-bold text-white transition ease-in-out hover:scale-110 hover:bg-indigo-400 hover:bg-opacity-50">
+            CONTACT
+          </button>
         </div>
       </div>
     </div>

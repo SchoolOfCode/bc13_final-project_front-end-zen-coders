@@ -26,13 +26,19 @@ export default function ProfileEventCard() {
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </p>
-          <div className="flex flex-row pt-3">
-            <h3 className="">17:00 - 18:30</h3>
-            <h3 className="">Thur 12 Dec</h3>
+          <div className="flex flex-row justify-between gap-3 pt-3">
+            <div>
+              <h3 className="font-bold">17:00 - 18:30</h3>
+              <h3 className="">Thur 12 Dec</h3>
+            </div>
+            <div>
+              <h3 className="rounded-full border-2 border-indigo-700 object-contain py-1 px-4 transition ease-in-out hover:scale-110 hover:bg-indigo-400 hover:bg-opacity-50">
+                Edit
+              </h3>
+            </div>
           </div>
         </div>
       </div>
     </card>
   );
 }
-
