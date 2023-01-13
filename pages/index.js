@@ -44,7 +44,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="z-0 flex w-2/3 justify-end">
+        <div className="z-0 m-auto flex w-2/3">
           <img src="/team-work.svg" alt="home" />
         </div>
       </main>
