@@ -3,6 +3,7 @@
 // Import statements
 import React from "react";
 import Link from "next/link";
+import Auth from "../Auth/Auth.js";
 
 // Navbar component
 export default function Navbar() {
@@ -35,22 +36,8 @@ export default function Navbar() {
           <h3 className="text-m pr-4 underline decoration-indigo-400">
             Location
           </h3>
-          <div>
-            <a
-              className="mt-4 inline-block px-4 py-2 text-2xl font-bold leading-none text-indigo-600 hover:border-transparent hover:text-black lg:mt-0"
-              href="/api/auth/login"
-            >
-              Login
-            </a>
-          </div>
-          <div>
-            <a
-              className="mt-4 inline-block px-4 py-2 text-2xl font-bold leading-none text-indigo-600 hover:border-transparent hover:text-black lg:mt-0"
-              href="/api/auth/logout"
-            >
-              Logout
-            </a>
-          </div>
+          <Auth />
+
           <div>
             <Link
               href="/profile"
