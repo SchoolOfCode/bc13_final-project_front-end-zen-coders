@@ -1,7 +1,7 @@
 // import { UserProvider } from '@auth0/nextjs-auth0/client';
 // import NextAuth from 'next-auth'
 import React from "react";
-import { useUser } from "@auth0/nextjs-auth0/client"
+import { useUser } from "@auth0/nextjs-auth0/client";
 
 export default function Auth() {
   const { user, error, isLoading } = useUser();
@@ -12,7 +12,7 @@ export default function Auth() {
   if (user) {
     return (
       <div>
-     <p>Welcome {user.name}</p><a href="/api/auth/logout">Logout</a>
+        <a href="/api/auth/logout">Logout</a>
       </div>
     );
   }
