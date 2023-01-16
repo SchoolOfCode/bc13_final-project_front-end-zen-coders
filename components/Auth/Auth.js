@@ -1,24 +1,18 @@
-import React from "react";
+import { useUser } from "@auth0/nextjs-auth0";
 
 export default function Auth() {
-  return (
-    <div>
+  const { user, error, isLoading } = useUser();
+
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>{error.message}</div>;
+
+  if (user) {
+    return (
       <div>
-        <a
-          className="mt-4 inline-block px-4 py-2 text-2xl font-bold leading-none text-indigo-600 hover:border-transparent hover:text-black lg:mt-0"
-          href="/api/auth/login"
-        >
-          Login
-        </a>
+        Welcome {user.name}! <a href="/api/auth/logout">Logout</a>
       </div>
-      <div>
-        <a
-          className="mt-4 inline-block px-4 py-2 text-2xl font-bold leading-none text-indigo-600 hover:border-transparent hover:text-black lg:mt-0"
-          href="/api/auth/logout"
-        >
-          Logout
-        </a>
-      </div>
-    </div>
-  );
+    );
+  }
+
+  return <a href="/api/auth/login">Login</a>;
 }
