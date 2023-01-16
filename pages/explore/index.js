@@ -1,9 +1,9 @@
 import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
-import ExploreList from "../../components/ExploreList/ExploreList";
+import ExploreCard from "../../components/ExploreCard/ExploreCard";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import Filter from "../../components/Filter/Filter";
-import ExploreTiles from "../../components/ExploreTiles/ExploreTiles";
+//import ExploreTiles from "../../components/ExploreCard/ExploreCard";
 
 export const getStaticProps = async () => {
 
@@ -25,10 +25,10 @@ export default function index({ posts}) {
       <h1>Explore Page</h1>
       {posts.map (post => (
         <div key= {post.id}>
-<h3>{post.title}</h3>
+<ExploreCard title = {post.title} />
         </div>
       ))}
-      <ExploreList />
+     
     </div>
   );
 }
