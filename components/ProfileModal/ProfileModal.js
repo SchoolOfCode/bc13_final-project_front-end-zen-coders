@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 
 export default function ProfileModal() {
   const [showModal, setShowModal] = React.useState(false);
@@ -9,8 +10,7 @@ export default function ProfileModal() {
     console.log(profile);
   }
 
-  async function postUser(e) {
-    e.preventDefault();
+  async function postUser() {
     const response = await fetch("http://localhost:3003/users/add", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -78,15 +78,15 @@ export default function ProfileModal() {
                     </div>
                     <div>
                       <label
-                        htmlFor="Email"
+                        htmlFor="email"
                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                       >
                         Email
                       </label>
                       <input
                         type="email"
-                        name="Email"
-                        id="Email"
+                        name="email"
+                        id="email"
                         placeholder="johnlewis@gmail.com"
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                         required
@@ -102,8 +102,8 @@ export default function ProfileModal() {
                       </label>
                       <input
                         type="checkbox"
-                        name="sharer"
-                        id="sharer"
+                        name="isSharer"
+                        id="isSharer"
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                         required
                         onChange={handleChange}
@@ -116,8 +116,8 @@ export default function ProfileModal() {
                       </label>
                       <input
                         type="checkbox"
-                        name="learner"
-                        id="learner"
+                        name="isLearner"
+                        id="isLearner"
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                         required
                         onChange={handleChange}
