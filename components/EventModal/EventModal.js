@@ -1,33 +1,17 @@
 import React from "react";
 
-export default function ProfileModal() {
+export default function EventModal() {
   const [showModal, setShowModal] = React.useState(false);
-  const [profile, setProfile] = useState({});
-
-  function handleChange(e) {
-    setProfile((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-    console.log(profile);
-  }
-
-  async function postUser(e) {
-    e.preventDefault();
-    const response = await fetch("http://localhost:3003/users/add", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(profile),
-    });
-    console.log(response);
-  }
 
   return (
     <div>
       <div className="userUpdate">
         <button
-          className="border-indigo-900 text-white bg-indigo-700 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          className="rounded-full border-2 border-indigo-700 object-contain py-1 px-4 transition ease-in-out hover:scale-110 hover:bg-indigo-400 hover:bg-opacity-50"
           type="button"
           onClick={() => setShowModal(true)}
         >
-          Update User Page
+          Edit
         </button>
       </div>
       {showModal ? (
@@ -56,7 +40,6 @@ export default function ProfileModal() {
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                         placeholder="John Lewis"
                         required
-                        onChange={handleChange}
                       />
                     </div>
                     <div>
@@ -73,7 +56,6 @@ export default function ProfileModal() {
                         placeholder="Higham on the Hill"
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                         required
-                        onChange={handleChange}
                       />
                     </div>
                     <div>
@@ -90,7 +72,6 @@ export default function ProfileModal() {
                         placeholder="johnlewis@gmail.com"
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                         required
-                        onChange={handleChange}
                       />
                     </div>
                     <div>
@@ -106,7 +87,6 @@ export default function ProfileModal() {
                         id="sharer"
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                         required
-                        onChange={handleChange}
                       />
                       <label
                         htmlFor="learner"
@@ -120,7 +100,6 @@ export default function ProfileModal() {
                         id="learner"
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                         required
-                        onChange={handleChange}
                       />
                     </div>
                     <div>
@@ -137,7 +116,6 @@ export default function ProfileModal() {
                         placeholder="I am a biology tutor blablabla"
                         className=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 h-48 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                         required
-                        onChange={handleChange}
                       />
                     </div>
                     <div>
@@ -170,10 +148,7 @@ export default function ProfileModal() {
                   <button
                     className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                    onClick={() => {
-                      setShowModal(false);
-                      postUser();
-                    }}
+                    onClick={() => setShowModal(false)}
                   >
                     Save Changes
                   </button>
