@@ -5,7 +5,7 @@ import SearchBar from '../../components/SearchBar/SearchBar';
 import Filter from '../../components/Filter/Filter';
 
 export const getStaticProps = async () => {
-  const res = await fetch('http://localhost:3001/events/explore');
+  const res = await fetch(process.env.DATABASE_URL);
   const data = await res.json();
 
   return {

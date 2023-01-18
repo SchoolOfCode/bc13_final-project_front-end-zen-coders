@@ -1,7 +1,12 @@
 import React from "react";
 import Link from "next/link";
 
-export default function ExploreCard({ title, name, startTime }) {
+//import all the icons
+//store them in an array
+//assign correct icon to skill
+//if skill = '', img = 
+
+export default function ExploreCard({ title, name, startTime, skill }) {
   //lists of weekdays and month format .
   const weekdayList = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const monthList = [
@@ -32,7 +37,16 @@ export default function ExploreCard({ title, name, startTime }) {
     <Link href="/profile">
       <div className="m-3 flex flex-col items-center justify-center rounded-3xl bg-gray-400 hover:scale-110 hover:bg-gray-600 lg:w-60">
         <div className="m-5 flex h-36 w-36 items-center justify-center self-end rounded-full bg-gray-500">
-          <img className="h-20 w-20 object-contain p-2" src="/knitting.svg" />
+        {skill === "Knitting"? (<img className="h-20 w-20 object-contain p-2" src="/knitting.svg" />) :null }
+        {skill === "Music"? (<img className="h-20 w-20 object-contain p-2" src="/musicIcon.svg" />) :null } 
+        {skill === "Gardening"? (<img className="h-20 w-20 object-contain p-2" src="/shears.svg" />) :null }
+        {skill === "Photography"? (<img className="h-20 w-20 object-contain p-2" src="/photoIcon.svg" />) :null } 
+        {skill === "Painting"? (<img className="h-20 w-20 object-contain p-2" src="/paintingIcon.svg" />) :null }
+        {skill === "Writing"? (<img className="h-20 w-20 object-contain p-2" src="/writingIcon.svg" />) :null } 
+        {skill === "Language"? (<img className="h-20 w-20 object-contain p-2" src="/languageIcon.svg" />) :null }
+        {skill === "Tutoring"? (<img className="h-20 w-20 object-contain p-2" src="/tutorIcon.svg" />) :null } 
+        {skill === "Sports"? (<img className="h-20 w-20 object-contain p-2" src="/sportIcon.svg" />) :null }
+        {skill === "Other"? (<img className="h-20 w-20 object-contain p-2" src="/otherIcon.svg" />) :null }      
         </div>
         <div className="px-5 pb-5">
           <h1 className="font-bold">{title}</h1>
