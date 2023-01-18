@@ -3,7 +3,6 @@ import Navbar from '../../components/Navbar/Navbar';
 import ExploreCard from '../../components/ExploreCard/ExploreCard';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import Filter from '../../components/Filter/Filter';
-//import ExploreTiles from "../../components/ExploreCard/ExploreCard";
 
 export const getStaticProps = async () => {
   const res = await fetch('https://releasev1-0.onrender.com/events/explore');
@@ -19,7 +18,6 @@ export default function index({ events }) {
     <div>
       <SearchBar />
       <Filter />
-      {/* <ExploreTiles /> */}
       <h1>Explore Page</h1>
       <div className="flex flex-row flex-wrap">
         <div class="m-auto grid grid-cols-2  p-7 md:grid-cols-3 lg:grid-cols-4 lg:gap-x-14 ">

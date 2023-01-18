@@ -1,8 +1,9 @@
 //* Description: This component will render the Navbar component
 
 // Import statements
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
+import Auth from "../Auth/Auth.js";
 
 // Navbar component
 export default function Navbar() {
@@ -35,6 +36,8 @@ export default function Navbar() {
           <h3 className="text-m pr-4 underline decoration-indigo-400">
             Location
           </h3>
+          <Auth />
+
           <div>
             <Link
               href="/profile"
