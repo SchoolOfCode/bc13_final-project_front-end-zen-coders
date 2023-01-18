@@ -9,7 +9,10 @@ export default function index() {
 
   return (
     <div className="grid grid-cols-4 gap-4 px-12">
+    <div>
       <ProfileCard className="col-span-1 bg-blue-200" />
+      <button>gggg</button>
+    </div>
       <div className="col-span-3">
         <div className="mb-3 flex justify-between">
           <h1 className="text-4xl font-bold">Available Sessions:</h1>
