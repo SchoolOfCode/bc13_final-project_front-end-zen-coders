@@ -6,7 +6,7 @@ import Filter from '../../components/Filter/Filter';
 //import ExploreTiles from "../../components/ExploreCard/ExploreCard";
 
 export const getStaticProps = async () => {
-  const res = await fetch('https://releasev1-0.onrender.com/events');
+  const res = await fetch('https://releasev1-0.onrender.com/events/explore');
   const data = await res.json();
 
   return {
