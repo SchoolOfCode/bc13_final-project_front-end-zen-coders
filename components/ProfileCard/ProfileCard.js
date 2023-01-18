@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { useUser } from "@auth0/nextjs-auth0/client";
+import ProfileModal from "../ProfileModal/ProfileModal";
 
 export default function ProfileCard() {
   const { user, error, isLoading } = useUser();
@@ -67,6 +68,7 @@ export default function ProfileCard() {
               <a href={"#"}> CONTACT </a>
             )}
           </button>
+          <ProfileModal />
         </div>
       </div>
     </div>

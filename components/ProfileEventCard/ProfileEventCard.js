@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import EventModal from "../EventModal/EventModal";
 
 export default function ProfileEventCard() {
   return (
@@ -32,9 +33,10 @@ export default function ProfileEventCard() {
               <h3 className="">Thur 12 Dec</h3>
             </div>
             <div>
-              <h3 className="rounded-full border-2 border-indigo-700 object-contain py-1 px-4 transition ease-in-out hover:scale-110 hover:bg-indigo-400 hover:bg-opacity-50">
+              {/* <h3 className="rounded-full border-2 border-indigo-700 object-contain py-1 px-4 transition ease-in-out hover:scale-110 hover:bg-indigo-400 hover:bg-opacity-50">
                 Edit
-              </h3>
+              </h3> */}
+              <EventModal />
             </div>
           </div>
         </div>
