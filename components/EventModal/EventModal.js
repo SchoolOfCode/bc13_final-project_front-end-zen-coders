@@ -23,22 +23,38 @@ export default function EventModal() {
               <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
                 <div className="px-6 py-6 lg:px-8">
                   <h3 className="mb-4 text-xl font-medium text-gray-900 dark:text-white">
-                    Update profile
+                    Update event
                   </h3>
                   <form className="space-y-6" action="#">
                     <div>
                       <label
-                        htmlFor="name"
+                        htmlFor="title"
                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                       >
-                        Your name
+                        Event Title
                       </label>
                       <input
-                        type="name"
-                        name="name"
-                        id="name"
+                        type="text"
+                        name="title"
+                        id="title"
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="John Lewis"
+                        placeholder="Event name here..."
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label
+                        htmlFor="skill"
+                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >
+                        Skill
+                      </label>
+                      <input
+                        type="text"
+                        name="skill"
+                        id="skill"
+                        placeholder="Skill name"
+                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                         required
                       />
                     </div>
@@ -50,85 +66,67 @@ export default function EventModal() {
                         Location
                       </label>
                       <input
-                        type="location"
+                        type="text"
                         name="location"
                         id="location"
-                        placeholder="Higham on the Hill"
+                        placeholder="London"
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                         required
                       />
                     </div>
                     <div>
                       <label
-                        htmlFor="Email"
+                        htmlFor="area"
                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                       >
-                        Email
+                        Area
                       </label>
                       <input
-                        type="email"
-                        name="Email"
-                        id="Email"
-                        placeholder="johnlewis@gmail.com"
-                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="sharer"
-                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >
-                        Sharer?
-                      </label>
-                      <input
-                        type="checkbox"
-                        name="sharer"
-                        id="sharer"
+                        type="text"
+                        name="area"
+                        id="area"
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                         required
                       />
                       <label
-                        htmlFor="learner"
+                        htmlFor="description"
                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                       >
-                        Learner?
-                      </label>
-                      <input
-                        type="checkbox"
-                        name="learner"
-                        id="learner"
-                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="aboutMe"
-                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >
-                        Profile Description
+                        Description
                       </label>
                       <textarea
-                        type="text"
-                        name="aboutMe"
-                        id="aboutMe"
-                        placeholder="I am a biology tutor blablabla"
-                        className=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 h-48 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                        name="description"
+                        id="description"
+                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                         required
                       />
                     </div>
                     <div>
                       <label
-                        htmlFor="image"
+                        htmlFor="startTime"
+                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >
+                        Event Start Time
+                      </label>
+                      <input
+                        type="datetime-local"
+                        name="startTime"
+                        id="startTime"
+                        className=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label
+                        htmlFor="eventPic"
                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                       >
                         Upload your photo (not working just now, bear with us)
                       </label>
                       <input
                         type="file"
-                        name="image"
-                        id="image"
+                        name="eventPic"
+                        id="eventPic"
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                         required
                       />
