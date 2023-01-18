@@ -21,14 +21,15 @@ export default function ProfileModal() {
 
   return (
     <div>
-      <div className="userUpdate">
+      <div className="userUpdate my-6 flex flex-row border-indigo-900 text-white bg-indigo-700 font-bold uppercase text-sm px-6 py-3 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear justify-center transition-shadow cursor-progress duration-150 hover:bg-indigo-500" onClick={() => setShowModal(true)}>
+    
         <button
-          className="border-indigo-900 text-white bg-indigo-700 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-          type="button"
-          onClick={() => setShowModal(true)}
+          type="button" className="cursor-progress"
+    
         >
-          Update User Page
+          Edit Profile 
         </button>
+        <img className="w-4/12" src="/editProfileIcon.png" />
       </div>
       {showModal ? (
         <>

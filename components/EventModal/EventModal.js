@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 export default function EventModal() {
   const [showModal, setShowModal] = React.useState(false);
+  const [event, setEvent] = useState({})
+
+
+
+
+
 
   return (
     <div>
@@ -39,7 +45,7 @@ export default function EventModal() {
                         id="title"
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                         placeholder="Event name here..."
-                        required
+                        required onChange={handleChange}
                       />
                     </div>
                     <div>
@@ -49,8 +55,8 @@ export default function EventModal() {
                       >
                         Skill
                       </label>
-                      <select name="skill" id="skill">
-                        <option value="Music">Music</option>
+                      <select name="skill" id="skill" onChange={handleChange}>
+                        <option value="Music" >Music</option>
                         <option value="Gardening">Gardening</option>
                         <option value="Photograhy">Photograhy</option>
                         <option value="Painting">Painting</option>
@@ -75,7 +81,7 @@ export default function EventModal() {
                         id="location"
                         placeholder="London"
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        required
+                        required onChange={handleChange}
                       />
                     </div>
                     <div>
@@ -90,7 +96,7 @@ export default function EventModal() {
                         name="area"
                         id="area"
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        required
+                        required onChange={handleChange}
                       />
                       <label
                         htmlFor="description"
@@ -102,7 +108,7 @@ export default function EventModal() {
                         name="description"
                         id="description"
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        required
+                        required onChange={handleChange}
                       />
                     </div>
                     <div>
@@ -117,7 +123,7 @@ export default function EventModal() {
                         name="startTime"
                         id="startTime"
                         className=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        required
+                        required onChange={handleChange}
                       />
                     </div>
                     <div>
@@ -132,7 +138,7 @@ export default function EventModal() {
                         name="eventPic"
                         id="eventPic"
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        required
+                        required onChange={handleChange}
                       />
                     </div>
                   </form>
