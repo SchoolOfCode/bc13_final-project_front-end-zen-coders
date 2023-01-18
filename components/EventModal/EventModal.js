@@ -49,14 +49,18 @@ export default function EventModal() {
                       >
                         Skill
                       </label>
-                      <input
-                        type="text"
-                        name="skill"
-                        id="skill"
-                        placeholder="Skill name"
-                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        required
-                      />
+                      <select name="skill" id="skill">
+                        <option value="Music">Music</option>
+                        <option value="Gardening">Gardening</option>
+                        <option value="Photograhy">Photograhy</option>
+                        <option value="Painting">Painting</option>
+                        <option value="Knitting">Knitting</option>
+                        <option value="Writting">Writting</option>
+                        <option value="Language">Language</option>
+                        <option value="Tutoring">Tutoring</option>
+                        <option value="Sports">Sports</option>
+                        <option value="Other">Other</option>
+                      </select>
                     </div>
                     <div>
                       <label
