@@ -3,7 +3,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import ExploreList from "../../components/ExploreList/ExploreList";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import Filter from "../../components/Filter/Filter";
-import ExploreTiles from "../../components/ExploreTiles/ExploreTiles";
+import ExploreTiles from "../../components/ExploreCard/ExploreCard";
 
 export default function index() {
   return (
