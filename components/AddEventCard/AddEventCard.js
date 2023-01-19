@@ -1,6 +1,21 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 
+// POST request handling to link front and backend
+  const postEvent = async (obj) => {
+    const newEvent = await fetch(`http://localhost:3000/api/resources`, {
+      method: "POST",
+
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(obj),
+    });
+    const data = await resources.json();
+    // updating resources state with new entered data.
+    setCards([...cards, data]);
+  };
+
 export default function AddEventCard() {
   const {
     register,
@@ -40,8 +55,7 @@ export default function AddEventCard() {
         <div className="flex flex-row">
           <h2 className="text-2xl font-bold">Location: </h2>
           <div className="flex flex-row">
-            <select
-              {...register("location", { required: "Location is required" })}
+            <select {...register("location", { required: "Location is required" })}
             >
               <option value="">Location</option>
               <option value="City of Westminster">City of Westminster</option>
@@ -60,27 +74,26 @@ export default function AddEventCard() {
           </div>
         </div>
         <div className="mt-3 flex flex-row gap-3">
-          <input
+          <input {...register("date", { required: "Date is required" })}
             placeholder="Date:"
             type="date"
             className="form-control relative m-0 block w-full min-w-0 flex-auto rounded-full border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-1.5 text-base font-normal text-gray-700 transition ease-in-out focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none"
           />
-          <input
+          <p>{errors.Date?.message}</p>
+          <input {...register("time", { required: "Time is required" })}
             placeholder="Time:"
             type="time"
             className="form-control  relative m-0 block w-full min-w-0 flex-auto rounded-full border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-1.5 text-base font-normal  text-gray-700 transition ease-in-out focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none"
-          />
+          /><p>{errors.Time?.message}</p>
         </div>
         <div className="mt-3 flex flex-row justify-between  gap-3">
-          <textarea
+          <textarea {...register("description", { required: "Description is required" })}
             placeholder="Description:"
             type="text"
             rows="5"
             className="form-control  relative m-0 block w-full min-w-0 flex-auto rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-1.5 text-base font-normal  text-gray-700 transition ease-in-out focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none"
-          />
-          <button className="h-full rounded-full border-2 border-indigo-700 object-contain py-1 px-4 transition ease-in-out hover:scale-110 hover:bg-indigo-400 hover:bg-opacity-50">
-            Post
-          </button>
+          /> <p>{errors.Description?.message}</p>
+          <input className="h-full rounded-full border-2 border-indigo-700 object-contain py-1 px-4 transition ease-in-out hover:scale-110 hover:bg-indigo-400 hover:bg-opacity-50" id="submit-btn" type="submit" value="Post"/>
         </div>
       </card>
     </form>

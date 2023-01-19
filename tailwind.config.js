@@ -26,7 +26,7 @@ module.exports = {
     extend: {
       // fontFamily: {
       //   'serif': ['Merriweather', ...defaultTheme.fontFamily.serif],
-      //   'sans': ['Courier New', ...defaultTheme.fontFamily.sans],
+      //   'sans': ['Roboto', ...defaultTheme.fontFamily.sans],
       // },
       gap: {
         'p5':"5%"
