@@ -4,6 +4,11 @@ import React from 'react';
 const Filter = () => {
   return (
     <ul className="flex flex-row justify-between flex-wrap bg-gray-300 rounded-full my-9 mx-5 px-6 sm:p-4">
+      <Link href="/explore">
+        <li className="w-28 h-20 flex items-center justify-center text-5xl">
+          <div>All</div>
+        </li>
+      </Link>
       <Link href="/explore/AOG">
         <li className="w-20 h-20 hover:scale-125 flex items-center justify-center  bg-gray-900 rounded-full">
           <div>
@@ -74,9 +79,6 @@ const Filter = () => {
           </div>
         </li>
       </Link>
-      <li className="w-28 h-20 flex items-center justify-center text-5xl">
-        <div>Filter</div>
-      </li>
     </ul>
   );
 };
