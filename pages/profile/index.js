@@ -4,14 +4,13 @@ import ProfileCard from '../../components/ProfileCard/ProfileCard';
 import ProfileEventCard from '../../components/ProfileEventCard/profileEventCard';
 import AddEventCard from '../../components/AddEventCard/AddEventCard.js';
 
-export default function index() {
+export default function index({users}) {
   const [show, setShow] = useState(false);
 
   return (
     <div className="grid grid-cols-4 gap-4 px-12">
     <div>
       <ProfileCard className="col-span-1 bg-blue-200" />
-      <button>gggg</button>
     </div>
       <div className="col-span-3">
         <div className="mb-3 flex justify-between">
@@ -33,3 +32,21 @@ export default function index() {
     </div>
   );
 }
+
+export const getServerSideProps = async()=>{
+  try{
+      const res = await fetch('https://releasev1-0.onrender.com/users')
+      const data = await res.json()
+      console.log(data)
+      
+      return {
+          props: {
+              users: data
+          },
+      }
+  }
+      catch(err){
+          console.log(err)
+  } 
+      
+  }

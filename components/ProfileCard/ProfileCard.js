@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import ProfileModal from "../ProfileModal/ProfileModal";
 
@@ -54,7 +55,7 @@ export default function ProfileCard() {
             consequat.
           </p>
         </div>
-        <div>
+        <div className="flex flex-col items-center justify-center">
           <div className="mb-3 flex flex-row gap-3 rounded-xl border-2 border-black bg-white p-3">
             <p>skill icon</p>
             <p>skill icon</p>
@@ -68,7 +69,10 @@ export default function ProfileCard() {
               <a href={"#"}> CONTACT </a>
             )}
           </button>
-          <ProfileModal />
+    
+    <ProfileModal />
+          {/* <Link href={`/profile/${profile.id}`}
+>     <ProfileModal /></Link>      */}
         </div>
       </div>
     </div>
