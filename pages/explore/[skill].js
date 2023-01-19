@@ -12,3 +12,7 @@ export default function Skill() {
     </div>
   );
 }
+
+export async function getSeverSideProps({params}){
+  const skill = await fetch (`https://hobi.onrender.com/events/explore?skill=${skill}`)
+}
