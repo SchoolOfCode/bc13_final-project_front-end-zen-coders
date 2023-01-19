@@ -9,15 +9,16 @@ const bella = {
   name: 'Kiane Blackman',
   intro: "I'm a full stack developer blah blah blah",
   gitHub: 'https://github.com/kianeblackman/',
-  linkedIn: 'https://www.linkedin.com/in/kiane-gucher-blackman-646286251/',
+  linkedIn: 'https://www.linkedin.com/in/bella-bekanova-b5215b26/',
   portfolio: 'https://kianeblackman.com/',
   image: '/profileImages/kiane.jpg',
 };
 
 const curt = {
-  name: 'Kiane',
-  intro: "I'm a full stack developer",
-  gitHub: 'https://github.com/kianeblackman/',
+  name: 'Curt Smith',
+  intro:
+    'I studied geography in university and then moved into a career in finance. I wanted something more challenging and creative so moved into the world of tech.',
+  gitHub: 'https://github.com/Ottcoder',
   linkedIn: 'https://www.linkedin.com/in/kiane-gucher-blackman-646286251/',
   portfolio: 'https://kianeblackman.com/',
   image: '/profileImages/kiane.jpg',
@@ -28,7 +29,7 @@ const evgenii = {
   intro: "I'm a full stack developer",
   gitHub: 'https://github.com/kianeblackman/',
   linkedIn: 'https://www.linkedin.com/in/kiane-gucher-blackman-646286251/',
-  portfolio: 'https://kianeblackman.com/',
+  portfolio: 'https://main.d3v0r89gmu5nt7.amplifyapp.com',
   image: '/profileImages/kiane.jpg',
 };
 
@@ -86,6 +87,7 @@ export default function about() {
         />
         <AboutProfileCard
           name={curt.name}
+          intro={curt.intro}
           gitHub={curt.gitHub}
           linkedIn={curt.linkedIn}
           portfolio={curt.portfolio}
@@ -93,6 +95,7 @@ export default function about() {
         />
         <AboutProfileCard
           name={evgenii.name}
+          intro={evgenii.intro}
           gitHub={evgenii.gitHub}
           linkedIn={evgenii.linkedIn}
           portfolio={evgenii.portfolio}
@@ -100,6 +103,7 @@ export default function about() {
         />
         <AboutProfileCard
           name={illwad.name}
+          intro={illwad.intro}
           gitHub={illwad.gitHub}
           linkedIn={illwad.linkedIn}
           portfolio={illwad.portfolio}
@@ -107,6 +111,7 @@ export default function about() {
         />
         <AboutProfileCard
           name={kiane.name}
+          intro={kiane.intro}
           gitHub={kiane.gitHub}
           linkedIn={kiane.linkedIn}
           portfolio={kiane.portfolio}
@@ -114,6 +119,7 @@ export default function about() {
         />
         <AboutProfileCard
           name={jay.name}
+          intro={jay.intro}
           gitHub={jay.gitHub}
           linkedIn={jay.linkedIn}
           portfolio={jay.portfolio}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { SiGithub, SiLinkedin, SiBuffer } from 'react-icons/si';
 
 export default function AboutProfileCard({
   name,
@@ -14,9 +15,18 @@ export default function AboutProfileCard({
       <div className="flex flex-col text-center">
         <h1>{name}</h1>
         <p>{intro}</p>
-        <a href={gitHub}>GitHub</a>
-        <a href={linkedIn}>LinkedIn</a>
-        <a href={portfolio}>Portfolio</a>
+        <a href={gitHub}>
+          <SiGithub />
+          GitHub
+        </a>
+        <a href={linkedIn}>
+          <SiLinkedin />
+          LinkedIn
+        </a>
+        <a href={portfolio}>
+          <SiBuffer />
+          Portfolio
+        </a>
       </div>
     </div>
   );
