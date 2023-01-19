@@ -5,7 +5,7 @@ import SearchBar from '../../components/SearchBar/SearchBar';
 import Filter from '../../components/Filter/Filter';
 
 export const getStaticProps = async () => {
-  const res = await fetch('https://releasev1-0.onrender.com/events/explore');
+  const res = await fetch(process.env.DATABASE_URL);
   const data = await res.json();
 
   return {
@@ -23,7 +23,7 @@ export default function index({ events }) {
         <div class="m-auto grid grid-cols-2  p-7 md:grid-cols-3 lg:grid-cols-4 lg:gap-x-14 ">
           {events.map((event) => (
             <div key={event.id}>
-              <ExploreCard title={event.title} skill={event.skill} />
+              <ExploreCard title={event.title} skill={event.skill} name ={event.sharerName[0].name} startTime ={event.startTime} />
             </div>
           ))}
         </div>
