@@ -60,18 +60,24 @@ export default function AddEventCard({postEvent}) {
           </div>
         </div>
         <div className="mt-3 flex flex-row gap-3">
-          <input {...register("date", { required: "Date is required" })}
-            placeholder="Date:"
-            type="date"
+          <input {...register("title", { required: "Title is required" })}
+            placeholder="Title:"
+            type="Title"
             className="form-control relative m-0 block w-full min-w-0 flex-auto rounded-full border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-1.5 text-base font-normal text-gray-700 transition ease-in-out focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none"
           />
-          <p>{errors.Date?.message}</p>
-          <input {...register("time", { required: "Time is required" })}
-            placeholder="Time:"
-            type="time"
+          <p>{errors.Title?.message}</p>
+          <input {...register("startTime", { required: "Date/Time is required" })}
+            placeholder="startTime:"
+            type="datetime-local"
             className="form-control  relative m-0 block w-full min-w-0 flex-auto rounded-full border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-1.5 text-base font-normal  text-gray-700 transition ease-in-out focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none"
-          /><p>{errors.Time?.message}</p>
+          /><p>{errors.DateTime?.message}</p>
         </div>
+        <input {...register("sharerId", { required: "id is required" })}
+            placeholder="id:"
+            type="text"
+            className="form-control  relative m-0 block w-full min-w-0 flex-auto rounded-full border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-1.5 text-base font-normal  text-gray-700 transition ease-in-out focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none"
+          /><p>{errors.Id?.message}</p>
+        
         <div className="mt-3 flex flex-row justify-between  gap-3">
           <textarea {...register("description", { required: "Description is required" })}
             placeholder="Description:"

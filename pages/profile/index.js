@@ -1,15 +1,34 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ProfileCard from '../../components/ProfileCard/ProfileCard';
 import ProfileEventCard from '../../components/ProfileEventCard/profileEventCard';
 import AddEventCard from '../../components/AddEventCard/AddEventCard.js';
 
 export default function index() {
   const [show, setShow] = useState(false);
+  const [cards, setCards] = useState([]);
+
+  useEffect(() => {
+
+
+    const gatherProfileEvents = async (obj) => {
+      const profileEvents = await fetch(`http://localhost:3001/users/profile/63bc220a504d64dbff9d1a28`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const data = await profileEvents.json();
+      // setting state with payload of request
+      setCards(data.payload);
+    };
+    gatherProfileEvents();
+    // Added cards state as a dependency so it reloads when a new resources is posted
+  }, [cards]);
 
 // POST request handling to link front and backend
 const postEvent = async (obj) => {
-  const newEvent = await fetch(`https://hobi.onrender.com/events/add`, {
+  const newEvent = await fetch(`http://localhost:3001/events/add`, {
     method: "POST",
 
     headers: {
@@ -19,7 +38,7 @@ const postEvent = async (obj) => {
   });
   const data = await newEvent.json();
   // // updating resources state with new entered data.
-  // setCards([...cards, data]);
+  setCards([...cards, data]);
 };
 
   return (
@@ -40,7 +59,7 @@ const postEvent = async (obj) => {
           </button>
         </div>
         {show ? <AddEventCard postEvent = {postEvent}/> : null}
-        <ProfileEventCard className="mt-6" />
+        <ProfileEventCard className="mt-6" cards = {cards} />
         <ProfileEventCard className="mt-6" />
         <ProfileEventCard className="mt-6" />
         <ProfileEventCard className="mt-6" />
