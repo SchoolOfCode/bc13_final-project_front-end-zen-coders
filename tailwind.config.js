@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+//const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -22,6 +24,10 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
     extend: {
+      // fontFamily: {
+      //   'serif': ['Merriweather', ...defaultTheme.fontFamily.serif],
+      //   'sans': ['Courier New', ...defaultTheme.fontFamily.sans],
+      // },
       gap: {
         'p5':"5%"
       }
@@ -29,3 +35,4 @@ module.exports = {
   },
   plugins: [],
 };
+
