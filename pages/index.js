@@ -21,31 +21,33 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className="z-1 absolute w-2/3 flex-col items-center justify-center pl-6 ">
-          <h1 className="text-7xl font-bold">Learn (almost) anything!</h1>
-          <p className="pt-2 font-serif text-xl">
+        <div className="md:mt-28 z-1 absolute w-full flex-col items-center justify-center px-6 md:px-12">
+          <h1 className="text-5xl md:text-7xl mt-6 md:mt-0 font-bold">
+            Learn (almost) anything!
+          </h1>
+          <p className="md:w-2/3 pt-2 font-serif text-base md:text-xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </p>
-          <div className="flex gap-6 pt-3 text-2xl">
+          <div className="flex items-center gap-6 pt-3 md:mt-3 text-2xl">
             <Link
-              className="rounded-full border-2 border-indigo-700 py-1 px-4 transition ease-in-out hover:scale-110 hover:bg-indigo-400 hover:bg-opacity-50"
+              className="rounded-full border-2 text-base md:text-2xl border-indigo-700 py-1 px-4 transition ease-in-out hover:bg-indigo-400 hover:bg-opacity-50"
               href="/explore"
             >
               EXPLORE
             </Link>
             <Link
-              className="rounded-full border-2 border-indigo-700 py-1 px-4 transition ease-in-out hover:scale-110 hover:bg-indigo-400 hover:bg-opacity-50"
+              className="text-indigo-700 text-base md:text-2xl transition ease-in-out"
               href="/about"
             >
               ABOUT
             </Link>
           </div>
-        </div>
-        <div className="z-0 m-auto flex w-2/3">
-          <img src="/team-work.svg" alt="home" />
+          <div className="z-0 flex w-full md:right-0 md:w-2/3">
+            <img src="/team-work.svg" alt="home" />
+          </div>
         </div>
       </main>
     </>
