@@ -4,6 +4,11 @@ import { useState } from "react";
 export default function ProfileModal() {
   const [showModal, setShowModal] = React.useState(false);
   const [profile, setProfile] = useState({});
+  const [profilePic, setProfilePic] = useState();
+
+  function handleProfilePic(e) {
+      setProfilePic(e.target.files[0]);
+    }
 
   function handleChange(e) {
     setProfile((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -11,63 +16,75 @@ export default function ProfileModal() {
   }
 
   async function postUser() {
+    const formData = new FormData();
+    formData.append("profilePic", profilePic);
+    formData.append("name", profile.name);
+    formData.append("location", profile.location);
+    formData.append("email", profile.email);
+    formData.append("isSharer", Boolean(profile.isSharer));
+    formData.append("isLearner", Boolean(profile.isLearner));
+    formData.append("aboutMe", profile.aboutMe);
+
     const response = await fetch("http://localhost:3003/users/add", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(profile),
+      body: formData
     });
-    console.log(response);
-  }
 
+    if(response.ok) {
+    console.log("Profile successfully updated.");
+  } else {
+  console.log("An error occurred, please try again later.");
+  }
+  }
+  
   return (
     <div>
-      <div className="userUpdate my-6 flex flex-row border-indigo-900 text-white bg-indigo-700 font-bold uppercase text-sm px-6 py-3 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear justify-center transition-shadow cursor-progress duration-150 hover:bg-indigo-500" onClick={() => setShowModal(true)}>
-    
-        <button
-          type="button" className="cursor-progress"
-    
-        >
-          Edit Profile 
-        </button>
-        <img className="w-4/12" src="/editProfileIcon.png" />
-      </div>
-      {showModal ? (
-        <>
-          <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-            <div className="relative w-auto my-6 mx-auto max-w-3xl">
-              {/*content*/}
-              {/* <!-- Modal content --> */}
-              <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                <div className="px-6 py-6 lg:px-8">
-                  <h3 className="mb-4 text-xl font-medium text-gray-900 dark:text-white">
-                    Update profile
-                  </h3>
-                  <form className="space-y-6" action="#">
-                    <div>
-                      <label
-                        htmlFor="name"
-                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >
-                        Your name
-                      </label>
-                      <input
-                        type="name"
-                        name="name"
-                        id="name"
-                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        placeholder="John Lewis"
-                        required
-                        onChange={handleChange}
-                      />
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="location"
-                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >
-                        Location
-                      </label>
-                      <input
+    <div className="userUpdate my-6 flex flex-row border-indigo-900 text-white bg-indigo-700 font-bold uppercase text-sm px-6 py-3 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear justify-center transition-shadow cursor-progress duration-150 hover:bg-indigo-500" onClick={() => setShowModal(true)}>
+    <button
+      type="button" className="cursor-progress"
+
+    >
+      Edit Profile 
+    </button>
+    <img className="w-4/12" src="/editProfileIcon.png" />
+  </div>
+  {showModal ? (
+    <>
+      <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+        <div className="relative w-auto my-6 mx-auto max-w-3xl">
+          {/*content*/}
+          {/* <!-- Modal content --> */}
+          <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <div className="px-6 py-6 lg:px-8">
+              <h3 className="mb-4 text-xl font-medium text-gray-900 dark:text-white">
+                Update profile
+              </h3>
+              <form className="space-y-6" action="#">
+                <div>
+                  <label
+                    htmlFor="name"
+                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >
+                    Your name
+                  </label>
+                  <input
+                    type="name"
+                    name="name"
+                    id="name"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                    placeholder="John Lewis"
+                    required
+                    onChange={handleChange}
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="location"
+                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >
+                    Location
+                  </label>
+                  <input
                         type="location"
                         name="location"
                         id="location"
@@ -102,13 +119,12 @@ export default function ProfileModal() {
                         Sharer?
                       </label>
                       <input
-                        type="checkbox"
-                        name="isSharer"
-                        id="isSharer"
-                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        required
-                        onChange={handleChange}
-                      />
+  type="checkbox"
+  name="isSharer"
+  id="isSharer"
+  value={profile.isSharer}
+  onChange={handleChange}
+/>
                       <label
                         htmlFor="learner"
                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -116,13 +132,12 @@ export default function ProfileModal() {
                         Learner?
                       </label>
                       <input
-                        type="checkbox"
-                        name="isLearner"
-                        id="isLearner"
-                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        required
-                        onChange={handleChange}
-                      />
+  type="checkbox"
+  name="isLearner"
+  id="isLearner"
+  value={profile.isLearner}
+  onChange={handleChange}
+/>
                     </div>
                     <div>
                       <label
@@ -143,17 +158,17 @@ export default function ProfileModal() {
                     </div>
                     <div>
                       <label
-                        htmlFor="image"
+                        htmlFor="profilePic"
                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                       >
                         Upload your photo (not working just now, bear with us)
                       </label>
                       <input
                         type="file"
-                        name="image"
-                        id="image"
+                        name="profilePic"
+                        id="profilePic"
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        required
+                        required onChange={handleProfilePic}
                       />
                     </div>
                   </form>
@@ -188,3 +203,4 @@ export default function ProfileModal() {
     </div>
   );
 }
+

@@ -28,6 +28,7 @@ export default function index({users}) {
         <ProfileEventCard className="mt-6" />
         <ProfileEventCard className="mt-6" />
         <ProfileEventCard className="mt-6" />
+        {/* <img src="{{/var/folders/7h/312p1mw95hq958v_5s35780c0000gn/T/7c458e2aff1994d8c324051b1d79d110}}" /> */}
       </div>
     </div>
   );
