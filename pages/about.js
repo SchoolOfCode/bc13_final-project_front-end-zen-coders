@@ -63,7 +63,7 @@ const jay = {
 // About page
 export default function about() {
   return (
-    <div className="flex flex-col mx-6 mt-3 mb-20">
+    <div className="flex flex-col mx-6 mb-20 md:pt-28">
       <div className="w-full">
         <h1 className="font-bold text-5xl">About us</h1>
         <p className="mt-2 text-base font-serif">
