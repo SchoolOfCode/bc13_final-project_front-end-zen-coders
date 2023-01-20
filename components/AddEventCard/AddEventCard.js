@@ -1,22 +1,8 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 
-// POST request handling to link front and backend
-  const postEvent = async (obj) => {
-    const newEvent = await fetch(`http://localhost:3000/api/resources`, {
-      method: "POST",
 
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(obj),
-    });
-    const data = await resources.json();
-    // updating resources state with new entered data.
-    setCards([...cards, data]);
-  };
-
-export default function AddEventCard() {
+export default function AddEventCard({postEvent}) {
   const {
     register,
     handleSubmit,
@@ -29,7 +15,7 @@ export default function AddEventCard() {
       className="form"
       onSubmit={handleSubmit((data) => {
         console.log(data);
-        postResources(data);
+        postEvent(data);
       })}
     >
       <card className="mb-6 flex flex-col rounded-lg border-2 border-black bg-gray-200 p-3">

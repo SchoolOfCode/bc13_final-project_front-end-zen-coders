@@ -7,6 +7,21 @@ import AddEventCard from '../../components/AddEventCard/AddEventCard.js';
 export default function index() {
   const [show, setShow] = useState(false);
 
+// POST request handling to link front and backend
+const postEvent = async (obj) => {
+  const newEvent = await fetch(`https://hobi.onrender.com/events/add`, {
+    method: "POST",
+
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(obj),
+  });
+  const data = await newEvent.json();
+  // // updating resources state with new entered data.
+  // setCards([...cards, data]);
+};
+
   return (
     <div className="grid grid-cols-4 gap-4 px-12">
     <div>
@@ -24,7 +39,7 @@ export default function index() {
             +event
           </button>
         </div>
-        {show ? <AddEventCard /> : null}
+        {show ? <AddEventCard postEvent = {postEvent}/> : null}
         <ProfileEventCard className="mt-6" />
         <ProfileEventCard className="mt-6" />
         <ProfileEventCard className="mt-6" />
