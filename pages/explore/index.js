@@ -16,11 +16,11 @@ export const getServerSideProps = async () => {
 export default function index({ events }) {
   return (
     <div>
-      <SearchBar />
+      {/* <SearchBar /> */}
       <Filter />
       <h1>Learn more about...</h1>
       <div className="flex flex-row flex-wrap">
-        <div class="m-auto grid grid-cols-2  p-7 md:grid-cols-3 lg:grid-cols-4 lg:gap-x-14 ">
+        <div class="m-auto grid grid-cols-1  p-7 md:grid-cols-3 lg:grid-cols-4 lg:gap-x-14 ">
           {events.map((event) => (
             <div key={event.id}>
               <ExploreCard
