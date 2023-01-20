@@ -4,7 +4,7 @@ import ProfileCard from '../../components/ProfileCard/ProfileCard';
 import ProfileEventCard from '../../components/ProfileEventCard/profileEventCard';
 import AddEventCard from '../../components/AddEventCard/AddEventCard.js';
 
-export default function index({users}) {
+export default function Index({users}) {
   const [show, setShow] = useState(false);
 
   return (
