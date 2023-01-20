@@ -3,7 +3,7 @@ import React from 'react';
 
 const Filter = () => {
   return (
-    <ul className="flex flex-row justify-between flex-wrap bg-gray-300 rounded-full my-9 mx-5 px-6 sm:p-4">
+    <ul className="hidden md:flex flex-row justify-between flex-wrap bg-gray-300 rounded-full my-9 mx-5 px-6 sm:p-4">
       <Link href="/explore">
         <li className="w-28 h-20 flex items-center justify-center text-5xl">
           <div>All</div>

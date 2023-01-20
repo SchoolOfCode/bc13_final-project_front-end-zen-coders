@@ -11,7 +11,7 @@ const bella = {
   gitHub: 'https://github.com/kianeblackman/',
   linkedIn: 'https://www.linkedin.com/in/bella-bekanova-b5215b26/',
   portfolio: 'https://kianeblackman.com/',
-  image: '/profileImages/kiane.jpg',
+  image: '/profileImages/bella.jpg',
 };
 
 const curt = {
@@ -21,7 +21,7 @@ const curt = {
   gitHub: 'https://github.com/Ottcoder',
   linkedIn: 'https://www.linkedin.com/in/kiane-gucher-blackman-646286251/',
   portfolio: 'https://kianeblackman.com/',
-  image: '/profileImages/kiane.jpg',
+  image: '/profileImages/curt.jpg',
 };
 
 const evgenii = {
@@ -30,7 +30,7 @@ const evgenii = {
   gitHub: 'https://github.com/kianeblackman/',
   linkedIn: 'https://www.linkedin.com/in/kiane-gucher-blackman-646286251/',
   portfolio: 'https://main.d3v0r89gmu5nt7.amplifyapp.com',
-  image: '/profileImages/kiane.jpg',
+  image: '/profileImages/eugine.jpg',
 };
 
 const illwad = {
@@ -39,7 +39,7 @@ const illwad = {
   gitHub: 'https://github.com/kianeblackman/',
   linkedIn: 'https://www.linkedin.com/in/kiane-gucher-blackman-646286251/',
   portfolio: 'https://kianeblackman.com/',
-  image: '/profileImages/kiane.jpg',
+  image: '/profileImages/illwad.jpg',
 };
 
 const kiane = {
@@ -57,13 +57,13 @@ const jay = {
   gitHub: 'https://github.com/kianeblackman/',
   linkedIn: 'https://www.linkedin.com/in/kiane-gucher-blackman-646286251/',
   portfolio: 'https://kianeblackman.com/',
-  image: '/profileImages/kiane.jpg',
+  image: '/profileImages/jay.jpg',
 };
 
 // About page
 export default function about() {
   return (
-    <div className="flex flex-col mx-6 mb-20 md:pt-28 md:mx-12">
+    <div className="flex flex-col mx-6 mt-3 mb-20 md:pt-28 md:mx-12">
       <div className="w-full">
         <h1 className="font-bold text-5xl md:text-7xl">About us</h1>
         <p className="mt-2 text-base md:text-lg md:w-3/4 font-serif">
