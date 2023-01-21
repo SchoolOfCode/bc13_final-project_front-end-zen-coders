@@ -1,7 +1,7 @@
 import React from 'react';
-import Navbar from '../../components/Navbar/Navbar';
+import Navbar from '../../components/Navbar/Navbar.js';
 import ExploreCard from '../../components/ExploreCard/ExploreCard';
-import SearchBar from '../../components/SearchBar/SearchBar';
+import SearchBar from '../../components/SearchBar/SearchBar.js';
 import Filter from '../../components/Filter/Filter';
 
 export const getServerSideProps = async () => {
@@ -15,12 +15,11 @@ export const getServerSideProps = async () => {
 
 export default function index({ events }) {
   return (
-    <div className="mx-6 mb-20 md:pt-28">
+    <div className="mx-3 md:mx-12 md:pt-28">
       {/* <SearchBar /> */}
       <Filter />
-      <h2 className="text-lg">Learn more about...</h2>
-      <div className="flex flex-row flex-wrap">
-        <div className="m-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 lg:gap-x-14">
+      <div className="flex flex-row items-center">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {events.map((event) => (
             <div key={event.id}>
               <ExploreCard

@@ -35,8 +35,8 @@ export default function ExploreCard({ title, name, startTime, skill }) {
 
   return (
     <Link href="/profile">
-      <div className="m-3 flex flex-col items-center justify-center rounded-3xl bg-gray-300 hover:shadow-xl hover:bg-gray-400 lg:w-60">
-        <div className="m-5 flex h-36 w-36 items-center justify-center self-end rounded-full bg-gray-500">
+      <div className="flex w-full flex-col items-center justify-center rounded-3xl border-2 border-black bg-white hover:bg-gray-100 hover:shadow-xl">
+        <div className="m-5 flex border-2 border-black items-center justify-center self-end rounded-full">
           {skill === 'Knitting' ? (
             <img className="h-20 w-20 object-contain p-2" src="/knitting.svg" />
           ) : null}
@@ -92,12 +92,12 @@ export default function ExploreCard({ title, name, startTime, skill }) {
             />
           ) : null}
         </div>
-        <div className="px-5 pb-5">
-          <h1 className="font-bold">{title}</h1>
-          <p className="font-light">{name}</p>
-          <div className="mt-2.5 mb-5 flex items-center">
-            <img className="h-30 w-24" src="/arrow.svg" />
-            <div className="-mb-12 flex flex-col">
+        <div className="m-3">
+          <h1 className="font-bold text-lg">{title}</h1>
+          <p className="font-light text-lg">Name</p>
+          <div className="mt-2.5 flex flex-row">
+            <img className="h-30 w-24 mr-3" src="/arrow.svg" />
+            <div className="flex flex-col  justify-end">
               <p>
                 {hour}:{minutes}
               </p>

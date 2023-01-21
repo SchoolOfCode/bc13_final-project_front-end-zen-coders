@@ -7,14 +7,14 @@ import Auth from '../Auth/Auth.js';
 import Image from 'next/image';
 
 // Navbar component
-export default function Navbar() {
+export default function NavbarSm() {
   return (
-    <div className="px-3 pb-3 fixed md:hidden backdrop-blur-sm from-white/30 bottom-0 w-full z-10">
-      <nav className="flex h-12 items-center rounded-full border-2 border-black p-3">
-        <div className="flex justify-between w-full ml-3 mr-3">
+    <div className="px-3 pb-3 fixed md:hidden bottom-0 bg-white  w-full z-10">
+      <nav className="flex items-center rounded-full border-2 border-black h-12 p-1.5">
+        <div className="flex justify-between w-full ml-6 mr-6">
           <Link href="/" className="flex flex-col">
             <img src="/icons/home.svg" alt="home-icon" className="h-5"></img>
-            <a className="text-xs">Home</a>
+            <h3 className="text-xs">Home</h3>
           </Link>
           <Link href="/explore" className="flex flex-col">
             <img
@@ -22,16 +22,13 @@ export default function Navbar() {
               alt="search-icon"
               className="h-5"
             ></img>
-            <a className="text-xs">Explore</a>
+            <h3 className="text-xs">Explore</h3>
           </Link>
           <Link href="/about" className="flex flex-col">
             <img src="/icons/info.svg" alt="about-icon" className="h-5"></img>
-            <a className="text-xs">About</a>
+            <h3 className="text-xs">About</h3>
           </Link>
           <Auth />
-          <Link href="/profile" className="font-bold text-indigo-600">
-            PK
-          </Link>
         </div>
       </nav>
     </div>
