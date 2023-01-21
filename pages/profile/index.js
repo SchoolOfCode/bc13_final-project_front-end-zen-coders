@@ -4,7 +4,23 @@ import ProfileCard from '../../components/ProfileCard/ProfileCard';
 import ProfileEventCard from '../../components/ProfileEventCard/profileEventCard';
 import AddEventCard from '../../components/AddEventCard/AddEventCard.js';
 
-export default function index({ users }) {
+export const getServerSideProps = async () => {
+  try {
+    const res = await fetch('https://releasev1-0.onrender.com/users');
+    const data = await res.json();
+    console.log(data);
+
+    return {
+      props: {
+        users: data,
+      },
+    };
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export default function Index({ users }) {
   const [show, setShow] = useState(false);
 
   return (
@@ -32,19 +48,3 @@ export default function index({ users }) {
     </div>
   );
 }
-
-export const getServerSideProps = async () => {
-  try {
-    const res = await fetch('https://releasev1-0.onrender.com/users');
-    const data = await res.json();
-    console.log(data);
-
-    return {
-      props: {
-        users: data,
-      },
-    };
-  } catch (err) {
-    console.log(err);
-  }
-};

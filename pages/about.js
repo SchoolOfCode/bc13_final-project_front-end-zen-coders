@@ -3,6 +3,7 @@
 // Import statements
 import React from 'react';
 import AboutProfileCard from '../components/AboutProfileCard/AboutProfileCard';
+import ProfileEventCard from '../components/ProfileEventCard/ProfileEventCard';
 
 // Profile information
 const bella = {

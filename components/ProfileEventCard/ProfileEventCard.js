@@ -1,20 +1,19 @@
-import React from "react";
-import EventModal from "../EventModal/EventModal";
+import React from 'react';
+import EventModal from '../EventModal/EventModal';
 
 export default function ProfileEventCard() {
   return (
-    <card className="mb-6 flex flex-row rounded-xl">
-      <div className="grid grid-cols-4">
-        <div className="col-span-1">
+    <card className="mb-6 flex rounded-xl">
+      <div className="grid grid-cols-1 md:grid-cols-4">
+        <div className="md:col-span-1">
           <img
-            className="h-full rounded-l-lg"
+            className="h-full rounded-t-lg md:rounded-l-lg md:rounded-r-none"
             src="/knitting-event.jpg"
             alt="knitting img"
           />
         </div>
-        <div className="col-span-3 rounded-r-lg border-y-2 border-r-2 border-black p-3">
+        <div className="col-span-3 rounded-b-lg md:rounded-l-none md:rounded-r-lg md:border-t-2 border-b-2 md:border-l-0 border-l-2 border-r-2 border-black p-3">
           <div className="flex flex-row">
-            <div className="mr-3 h-14 w-14 rounded-full bg-red-100"></div>
             <div>
               <h1 className="text-4xl font-bold">Knitting with Julie</h1>
               <h3 className="text-base font-light">Knightsbridge, London</h3>

@@ -10,14 +10,14 @@ export default function Filter() {
             <div className="text-2xl hover:scale-110">All</div>
           </li>
         </Link>
-        <Link href="/explore/AOG">
+        <Link href="/explore/music">
           <li className="hover:scale-110 flex items-center justify-center">
             <div>
               <img src="/musicIcon.svg" alt="musicIcon" className="w-12" />
             </div>
           </li>
         </Link>
-        <Link href="/explore/RVM">
+        <Link href="/explore/knitting">
           <li className="hover:scale-110 flex items-center justify-center bg-black">
             <div>
               <img src="/knitting.svg" alt="knittingIcon" className="w-12" />
