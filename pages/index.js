@@ -22,7 +22,9 @@ export default function Home() {
       </Head>
       <main>
         <div className="md:pt-28 z-0 flex-col px-6 md:mx-12">
-          <h1 className="text-8xl md:hidden mt-3 font-bold underline">Hobï</h1>
+          <h1 className="text-8xl md:hidden mt-3 font-normal underline decoration-4 underline-offset-8 text-indigo-700">
+            hobï
+          </h1>
           <h2 className="text-5xl md:text-7xl mt-3 md:mt-0 font-bold">
             Learn (almost) anything!
           </h2>
