@@ -20,7 +20,7 @@ export default function index({ events }) {
       {/* <SearchBar /> */}
       <Filter />
       <FilterSm />
-      <div className="flex flex-row items-center">
+      <div className="flex pt-16 flex-row items-center">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
           {events.map((event) => (
             <div key={event.id}>

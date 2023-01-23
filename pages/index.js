@@ -39,9 +39,9 @@ export default function Home() {
             ABOUT
           </Link>
         </div>
-      </div>
-      <div className="bottom-0">
-        <img src="/team-work.svg" alt="home" />
+        <div className="">
+          <img src="/team-work.svg" alt="home" />
+        </div>
       </div>
     </main>
   );

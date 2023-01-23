@@ -8,12 +8,12 @@ export default function FilterSm() {
     <div className="fixed md:hidden">
       <button
         onClick={() => setShow(!show)}
-        className="mt-3 rounded-full border-2 h-12 border-indigo-700 bg-white gap-x-2 px-4"
+        className="mt-3 rounded-full border-2 h-12 border-indigo-700 bg-white px-4"
       >
-        +event
+        Catagory
       </button>
       {show ? (
-        <div className="flex gap-6 mx-3 mt-6 flex-row flex-wrap items-center p-3 rounded-xl justify-between border-2 border-black bg-white pb-3">
+        <div className="flex gap-6 shadow-lg mt-6 flex-row flex-wrap items-center p-3 rounded-xl justify-between border-2 border-black bg-white">
           <Link href="/explore">
             <li className="flex items-center justify-center">
               <div className="text-2xl hover:scale-105">All</div>
