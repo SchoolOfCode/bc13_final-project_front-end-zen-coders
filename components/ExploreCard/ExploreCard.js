@@ -6,7 +6,7 @@ import Link from "next/link";
 //assign correct icon to skill
 //if skill = '', img = 
 
-export default function ExploreCard({ title, name, startTime, skill }) {
+export default function ExploreCard({ title, name, startTime, skill, sharerId }) {
   //lists of weekdays and month format .
   const weekdayList = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const monthList = [
@@ -34,7 +34,7 @@ export default function ExploreCard({ title, name, startTime, skill }) {
   let minutes = date.getMinutes();
 
   return (
-    <Link href="/profile">
+    <Link href={`/profile/${sharerId}`}>
       <div className="m-3 flex flex-col items-center justify-center rounded-3xl bg-gray-400 hover:scale-110 hover:bg-gray-600 lg:w-60">
         <div className="m-5 flex h-36 w-36 items-center justify-center self-end rounded-full bg-gray-500">
         {skill === "Knitting"? (<img className="h-20 w-20 object-contain p-2" src="/knitting.svg" />) :null }
