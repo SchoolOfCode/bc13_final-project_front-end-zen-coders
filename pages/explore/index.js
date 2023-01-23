@@ -1,7 +1,5 @@
 import React from 'react';
-import Navbar from '../../components/Navbar/Navbar.js';
 import ExploreCard from '../../components/ExploreCard/ExploreCard';
-import SearchBar from '../../components/SearchBar/SearchBar.js';
 import Filter from '../../components/Filter/Filter';
 import FilterSm from '../../components/Filter/FilterSm.js';
 
