@@ -37,7 +37,7 @@ const postEvent = async (obj) => {
     body: JSON.stringify(obj),
   });
   const data = await newEvent.json();
-  // // updating resources state with new entered data.
+  // // updating events with new entered data.
   setCards([...cards, data]);
 };
 
