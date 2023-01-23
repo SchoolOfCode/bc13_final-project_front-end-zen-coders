@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import ProfileCard from '../../components/ProfileCard/ProfileCard';
-import ProfileEventCard from '../../components/ProfileEventCard/profileEventCard';
+import ProfileEventCard from '../../components/ProfileEventCard/ProfileEventCard.js';
 import AddEventCard from '../../components/AddEventCard/AddEventCard.js';
 
 export default function Index({users}) {
