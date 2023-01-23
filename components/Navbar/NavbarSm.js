@@ -9,9 +9,9 @@ import Image from 'next/image';
 // Navbar component
 export default function NavbarSm() {
   return (
-    <div className="px-3 pb-3 fixed md:hidden bottom-0 bg-white  w-full z-10">
-      <nav className="flex items-center rounded-full border-2 border-black h-12 p-1.5">
-        <div className="flex justify-between w-full ml-6 mr-6">
+    <div className="fixed bottom-0 z-10 w-full px-3 pb-3 md:hidden">
+      <nav className="flex items-center rounded-full border-2 border-black bg-white p-2 shadow-lg">
+        <div className="ml-6 mr-6 flex w-full justify-between">
           <Link href="/" className="flex flex-col">
             <img src="/icons/home.svg" alt="home-icon" className="h-5"></img>
             <h3 className="text-xs">Home</h3>

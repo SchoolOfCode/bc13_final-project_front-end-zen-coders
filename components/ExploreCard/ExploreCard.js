@@ -35,7 +35,7 @@ export default function ExploreCard({ title, name, startTime, skill }) {
   return (
     <Link href="/profile">
       <div className="m-3 flex flex-row items-center justify-center rounded-3xl border-2 border-black bg-white hover:bg-gray-100 hover:shadow-xl md:m-6 md:flex-col">
-        <div className="m-2 flex w-1/4 items-start self-start rounded-full border-2 border-black md:static md:m-5 md:h-20 md:w-20 md:self-end">
+        <div className="m-2 flex w-1/4 items-start self-start md:static md:m-5 md:h-20 md:w-20 md:self-end md:rounded-full md:border-2 md:border-black">
           {skill === 'Knitting' ? (
             <img
               className="object-contain p-1 md:p-3"
