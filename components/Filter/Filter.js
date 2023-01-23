@@ -7,7 +7,7 @@ export default function Filter() {
       <div className="flex px-4 flex-row items-center justify-between border-b-2 border-black bg-white pb-3 w-full">
         <Link href="/explore">
           <li className="flex items-center justify-center">
-            <div className="text-2xl hover:scale-110">All</div>
+            <div className="text-2xl hover:scale-105">All</div>
           </li>
         </Link>
         <Link href="/explore/music">
@@ -17,93 +17,97 @@ export default function Filter() {
               alt="musicIcon"
               className="w-10"
             />
-            <text className='text-sm'>Music</text>
+            <text className="text-sm">Music</text>
           </li>
         </Link>
         <Link href="/explore/knitting">
-          <li className="hover:scale-110 flex flex-col items-center justify-center ">
+          <li className="hover:scale-105 flex flex-col items-center justify-center ">
             <img
               src="/icons/knitting-black.svg"
               alt="knittingIcon"
               className="w-12"
             />
-            <text>Knitting</text>
+            <text className="text-sm">Knitting</text>
           </li>
         </Link>
         <Link href="/explore/language">
-          <li className="hover:scale-110 flex flex-col items-center justify-center ">
+          <li className="hover:scale-105 flex flex-col items-center justify-center ">
             <img
               src="/icons/language-black.svg"
               alt="languageIcon"
               className="w-10 "
             />
-            <text>Language</text>
+            <text className="text-sm">Language</text>
           </li>
         </Link>
         <Link href="/explore/sport">
-          <li className="hover:scale-110 flex flex-col items-center justify-center ">
+          <li className="hover:scale-105 flex flex-col items-center justify-center ">
             <img
               src="/icons/sport-black.svg"
               alt="sportIcon"
               className="w-10"
             />
-            <text>Sport</text>
+            <text className="text-sm">Sport</text>
           </li>
         </Link>
         <Link href="/explore/gardening">
-          <li className="hover:scale-110 flex flex-col items-center justify-center ">
-            <img src="/icons/gardening-black.svg" alt="shearsIcon" className="w-10" />
-            <text>Gardening</text>
+          <li className="hover:scale-105 flex flex-col items-center justify-center ">
+            <img
+              src="/icons/gardening-black.svg"
+              alt="shearsIcon"
+              className="w-10"
+            />
+            <text className="text-sm">Gardening</text>
           </li>
         </Link>
         <Link href="/explore/writing">
-          <li className="hover:scale-110 flex flex-col items-center justify-center ">
+          <li className="hover:scale-105 flex flex-col items-center justify-center ">
             <img
               src="/icons/writing-black.svg"
               alt="writingIcon"
               className="w-10"
             />
-            <text>Writing</text>
+            <text className="text-sm">Writing</text>
           </li>
         </Link>
         <Link href="/explore/painting">
-          <li className="hover:scale-110 flex flex-col items-center justify-center ">
+          <li className="hover:scale-105 flex flex-col items-center justify-center ">
             <img
               src="/icons/painting-black.svg"
               alt="paintingIcon"
               className="w-10"
             />
-            <text>Painting</text>
+            <text className="text-sm">Painting</text>
           </li>
         </Link>
         <Link href="/explore/skill/tutor">
-          <li className="hover:scale-110 flex flex-col items-center justify-center ">
+          <li className="hover:scale-105 flex flex-col items-center justify-center ">
             <img
               src="/icons/tutoring-black.svg"
               alt="tutorIcon"
               className="w-10"
             />
-            <text>Tutoring</text>
+            <text className="text-sm">Tutoring</text>
           </li>
         </Link>
         <Link href="/explore/photography">
-          <li className="hover:scale-110 flex flex-col items-center justify-center ">
+          <li className="hover:scale-105 flex flex-col items-center justify-center ">
             <img
               src="/icons/photography-black.svg"
               alt="photoIcon"
               className="w-10"
             />
-            <text>Photography</text>
+            <text className="text-sm">Photography</text>
           </li>
         </Link>
         <Link href="/explore/other">
-          <li className="hover:scale-110 flex flex-col items-center justify-center">
+          <li className="hover:scale-105 flex flex-col items-center justify-center">
             <img
               src="/icons/other-black.svg"
               alt="otherIcon"
               className="w-10"
             />
-            <text>Other</text>
+            <text className="text-sm">Other</text>
           </li>
         </Link>
       </div>
