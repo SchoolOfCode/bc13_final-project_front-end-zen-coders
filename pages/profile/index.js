@@ -8,23 +8,23 @@ export default function index() {
   const [show, setShow] = useState(false);
   const [cards, setCards] = useState([]);
 
-  useEffect(() => {
+  // useEffect(() => {
 
 
-    const gatherProfileEvents = async (obj) => {
-      const profileEvents = await fetch(`http://localhost:3001/users/profile/63bc220a504d64dbff9d1a28`, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      const data = await profileEvents.json();
-      // setting state with payload of request
-      setCards(data.payload);
-    };
-    gatherProfileEvents();
-    // Added cards state as a dependency so it reloads when a new resources is posted
-  }, [cards]);
+    // const gatherProfileEvents = async (obj) => {
+    //   const profileEvents = await fetch(`http://localhost:3001/users/profile/63bc220a504d64dbff9d1a28`, {
+    //     method: "GET",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //   });
+    //   const data = await profileEvents.json();
+    //   // setting state with payload of request
+    //   setCards(data.payload);
+    // };
+    // gatherProfileEvents();
+  //   // Added cards state as a dependency so it reloads when a new resources is posted
+  // }, [cards]);
 
 // POST request handling to link front and backend
 const postEvent = async (obj) => {
