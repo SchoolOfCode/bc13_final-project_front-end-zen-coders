@@ -4,28 +4,28 @@ import Link from 'next/link';
 export default function Filter() {
   return (
     <div className="bg-white hidden md:flex">
-      <div className="flex px-4 flex-row items-center justify-between border-b-2 border-black bg-white p-2 w-full ">
+      <div className="flex px-4 flex-row items-center justify-between border-b-2 border-black bg-white pb-3 w-full">
         <Link href="/explore">
           <li className="flex items-center justify-center">
             <div className="text-2xl hover:scale-110">All</div>
           </li>
         </Link>
         <Link href="/explore/music">
-          <li className="hover:scale-110 flex flex-col items-center justify-center">
+          <li className="hover:scale-105 flex flex-col items-center justify-center">
             <img
-              src="/musicIcon.svg"
+              src="/icons/music-black.svg"
               alt="musicIcon"
-              className="w-12 bg-black"
+              className="w-10"
             />
-            <text>Music</text>
+            <text className='text-sm'>Music</text>
           </li>
         </Link>
         <Link href="/explore/knitting">
           <li className="hover:scale-110 flex flex-col items-center justify-center ">
             <img
-              src="/knitting.svg"
+              src="/icons/knitting-black.svg"
               alt="knittingIcon"
-              className="w-12 bg-black"
+              className="w-12"
             />
             <text>Knitting</text>
           </li>
@@ -33,9 +33,9 @@ export default function Filter() {
         <Link href="/explore/language">
           <li className="hover:scale-110 flex flex-col items-center justify-center ">
             <img
-              src="/languageIcon.svg"
+              src="/icons/language-black.svg"
               alt="languageIcon"
-              className="w-12 bg-black bg-black"
+              className="w-10 "
             />
             <text>Language</text>
           </li>
@@ -43,25 +43,25 @@ export default function Filter() {
         <Link href="/explore/sport">
           <li className="hover:scale-110 flex flex-col items-center justify-center ">
             <img
-              src="/sportIcon.svg"
+              src="/icons/sport-black.svg"
               alt="sportIcon"
-              className="w-12 bg-black"
+              className="w-10"
             />
             <text>Sport</text>
           </li>
         </Link>
         <Link href="/explore/gardening">
           <li className="hover:scale-110 flex flex-col items-center justify-center ">
-            <img src="/shears.svg" alt="shearsIcon" className="w-12 bg-black" />
+            <img src="/icons/gardening-black.svg" alt="shearsIcon" className="w-10" />
             <text>Gardening</text>
           </li>
         </Link>
         <Link href="/explore/writing">
           <li className="hover:scale-110 flex flex-col items-center justify-center ">
             <img
-              src="/writingIcon.svg"
+              src="/icons/writing-black.svg"
               alt="writingIcon"
-              className="w-12 bg-black"
+              className="w-10"
             />
             <text>Writing</text>
           </li>
@@ -69,9 +69,9 @@ export default function Filter() {
         <Link href="/explore/painting">
           <li className="hover:scale-110 flex flex-col items-center justify-center ">
             <img
-              src="/paintingIcon.svg"
+              src="/icons/painting-black.svg"
               alt="paintingIcon"
-              className="w-12 bg-black"
+              className="w-10"
             />
             <text>Painting</text>
           </li>
@@ -79,9 +79,9 @@ export default function Filter() {
         <Link href="/explore/skill/tutor">
           <li className="hover:scale-110 flex flex-col items-center justify-center ">
             <img
-              src="/tutorIcon.svg"
+              src="/icons/tutoring-black.svg"
               alt="tutorIcon"
-              className="w-12 bg-black"
+              className="w-10"
             />
             <text>Tutoring</text>
           </li>
@@ -89,9 +89,9 @@ export default function Filter() {
         <Link href="/explore/photography">
           <li className="hover:scale-110 flex flex-col items-center justify-center ">
             <img
-              src="/photoIcon.svg"
+              src="/icons/photography-black.svg"
               alt="photoIcon"
-              className="w-12 bg-black"
+              className="w-10"
             />
             <text>Photography</text>
           </li>
@@ -99,9 +99,9 @@ export default function Filter() {
         <Link href="/explore/other">
           <li className="hover:scale-110 flex flex-col items-center justify-center">
             <img
-              src="/otherIcon.svg"
+              src="/icons/other-black.svg"
               alt="otherIcon"
-              className="w-12 bg-black"
+              className="w-10"
             />
             <text>Other</text>
           </li>
