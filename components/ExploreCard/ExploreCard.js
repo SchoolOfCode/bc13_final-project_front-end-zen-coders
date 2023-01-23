@@ -35,66 +35,72 @@ export default function ExploreCard({ title, name, startTime, skill }) {
 
   return (
     <Link href="/profile">
-      <div className="flex w-full flex-col items-center justify-center rounded-3xl border-2 border-black bg-white hover:bg-gray-100 hover:shadow-xl">
-        <div className="m-5 flex border-2 border-black items-center justify-center self-end rounded-full">
+      <div className="flex flex-col items-center justify-center rounded-3xl border-2 border-black bg-white hover:bg-gray-100 hover:shadow-xl m-3 md:m-6">
+        <div className="m-5 flex border-2 border-black items-center self-end rounded-full">
           {skill === 'Knitting' ? (
-            <img className="h-20 w-20 object-contain p-2" src="/knitting.svg" />
+            <img
+              className="h-20 w-20 object-contain p-3"
+              src="/icons/knitting-black.svg"
+            />
           ) : null}
           {skill === 'Music' ? (
             <img
-              className="h-20 w-20 object-contain p-2"
-              src="/musicIcon.svg"
+              className="h-20 w-20 object-contain p-3"
+              src="/icons/music-black.svg"
             />
           ) : null}
           {skill === 'Gardening' ? (
-            <img className="h-20 w-20 object-contain p-2" src="/shears.svg" />
+            <img
+              className="h-20 w-20 object-contain p-3"
+              src="/icons/gardening-black.svg"
+            />
           ) : null}
           {skill === 'Photography' ? (
             <img
-              className="h-20 w-20 object-contain p-2"
-              src="/photoIcon.svg"
+              className="h-20 w-20 object-contain p-3"
+              src="/icons/photography-black.svg"
             />
           ) : null}
           {skill === 'Painting' ? (
             <img
-              className="h-20 w-20 object-contain p-2"
-              src="/paintingIcon.svg"
+              className="h-20 w-20 object-contain p-3"
+              src="/icons/painting-black.svg"
             />
           ) : null}
           {skill === 'Writing' ? (
             <img
-              className="h-20 w-20 object-contain p-2"
-              src="/writingIcon.svg"
+              className="h-20 w-20 object-contain p-3"
+              src="/icons/writing-black.svg"
             />
           ) : null}
           {skill === 'Language' ? (
             <img
-              className="h-20 w-20 object-contain p-2"
-              src="/languageIcon.svg"
+              className="h-20 w-20 object-contain p-3"
+              src="/icons/language-black.svg"
             />
           ) : null}
           {skill === 'Tutoring' ? (
             <img
-              className="h-20 w-20 object-contain p-2"
-              src="/tutorIcon.svg"
+              className="h-20 w-20 object-contain p-3"
+              src="/icons/tutoring-black.svg"
             />
           ) : null}
           {skill === 'Sports' ? (
             <img
-              className="h-20 w-20 object-contain p-2"
-              src="/sportIcon.svg"
+              className="h-20 w-20 object-contain p-3"
+              src="/icons/sport-black.svg"
             />
           ) : null}
           {skill === 'Other' ? (
             <img
-              className="h-20 w-20 object-contain p-2"
-              src="/otherIcon.svg"
+              className="h-20 w-20 object-contain p-3"
+              src="/icons/other-black.svg"
             />
           ) : null}
         </div>
-        <div className="m-3">
-          <h1 className="font-bold text-lg">{title}</h1>
-          <p className="font-light text-lg">Name</p>
+        <div className="m-3 w-full pb-3 px-6">
+          <h1 className="font-bold text-lg w-full">{title}</h1>
+          <p className="font-light text-lg">{name}</p>
           <div className="mt-2.5 flex flex-row">
             <img className="h-30 w-24 mr-3" src="/arrow.svg" />
             <div className="flex flex-col  justify-end">
