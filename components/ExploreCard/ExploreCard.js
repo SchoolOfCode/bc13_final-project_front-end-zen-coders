@@ -102,8 +102,8 @@ export default function ExploreCard({ title, name, startTime, skill }) {
           <h1 className="font-bold text-lg w-full">{title}</h1>
           <p className="font-light text-lg">{name}</p>
           <div className="mt-2.5 flex flex-row">
-            <img className="h-30 w-24 mr-3" src="/arrow.svg" />
-            <div className="flex flex-col  justify-end">
+            <img className="h-30 w-24 mr-3" src="/icons/arrow-black.svg" />
+            <div className="flex flex-col justify-end">
               <p>
                 {hour}:{minutes}
               </p>

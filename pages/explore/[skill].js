@@ -17,7 +17,7 @@ export default function Skill({ event, skill }) {
     <div className="mx-12 mb-20 md:pt-28">
       <Filter />
       <div className="flex flex-row flex-wrap">
-        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 lg:gap-x-14">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 lg:gap-x-14">
           {event.map((event) => (
             <div key={event.id}>
               <ExploreCard
