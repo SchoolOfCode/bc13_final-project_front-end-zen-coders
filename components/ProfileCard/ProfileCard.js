@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useUser } from '@auth0/nextjs-auth0/client';
-import ProfileModal from '../ProfileModal/ProfileModal';
+import React, { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { useUser } from "@auth0/nextjs-auth0/client";
+import ProfileModal from "../ProfileModal/ProfileModal";
 
-export default function ProfileCard({ event, userId }) {
-
+export default function ProfileCard({ event, userId, authId }) {
   const { user, error, isLoading } = useUser();
+  // const authId = JSON.stringify(user?.sub?.substring(6));
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>{error.message}</div>;
+  console.log(authId);
   return (
     <div className="h-screen rounded-lg bg-gray-200">
       <a>
@@ -19,7 +20,7 @@ export default function ProfileCard({ event, userId }) {
             alt="profile picture"
           />
         ) : (
-          'no user info'
+          "no user info"
         )}
       </a>
       <div className="p-5">
@@ -39,9 +40,7 @@ export default function ProfileCard({ event, userId }) {
             <h3 className="text-sm">(12 REVIEWS)</h3>
           </div>
           <h2 className="pt-3 text-2xl font-bold">About me:</h2>
-          <p className="mb-3">
-          {event[0].aboutMe}
-          </p>
+          <p className="mb-3">{event[0].aboutMe}</p>
         </div>
         <div className="flex flex-col items-center justify-center">
           <div className="mb-3 flex flex-row gap-3 rounded-xl border-2 border-black bg-white p-3">
@@ -52,12 +51,16 @@ export default function ProfileCard({ event, userId }) {
           </div>
           <button className="h-full w-full rounded-full border-2 border-indigo-900 bg-indigo-700 object-contain py-1 px-4 font-bold text-white transition ease-in-out  hover:bg-indigo-900 hover:bg-opacity-50">
             {user ? (
-              <a href={'mailto:' + event[0].email}> CONTACT </a>
+              <a href={"mailto:" + event[0].email}> CONTACT </a>
             ) : (
-              <a href={'#'}> CONTACT </a>
+              <a href={"#"}> CONTACT </a>
             )}
           </button>
-          <ProfileModal  userId={userId}/>
+          {authId === `"${userId}"` ? (
+            <ProfileModal userId={userId} />
+          ) : (
+            <h1>Not logged in</h1>
+          )}
         </div>
       </div>
     </div>
