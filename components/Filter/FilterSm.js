@@ -49,14 +49,14 @@ export default function FilterSm() {
               <text className="text-sm">Language</text>
             </li>
           </Link>
-          <Link href="/explore/sport">
+          <Link href="/explore/sports">
             <li className="hover:scale-105 flex flex-col items-center justify-center ">
               <img
                 src="/icons/sport-black.svg"
                 alt="sportIcon"
                 className="w-10"
               />
-              <text className="text-sm">Sport</text>
+              <text className="text-sm">Sports</text>
             </li>
           </Link>
           <Link href="/explore/gardening">
@@ -89,7 +89,7 @@ export default function FilterSm() {
               <text className="text-sm">Painting</text>
             </li>
           </Link>
-          <Link href="/explore/skill/tutor">
+          <Link href="/explore/tutoring">
             <li className="hover:scale-105 flex flex-col items-center justify-center ">
               <img
                 src="/icons/tutoring-black.svg"

@@ -12,8 +12,7 @@ export const getServerSideProps = async ({ params }) => {
   };
 };
 
-export default function Skill({ event, skill }) {
-
+export default function Skill({ event }) {
   return (
     <div className="mx-12 mb-20 md:pt-28">
       <Filter />
@@ -21,10 +20,10 @@ export default function Skill({ event, skill }) {
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 lg:gap-x-14">
           {event.map((event) => (
             <div key={event.id}>
-            {/* <Link href="/profile/${user}"> */}
+              {/* <Link href="/profile/${user}"> */}
               <ExploreCard
                 title={event.title}
-                skill={event.skill}
+                skill={event.skill.toLowerCase()}
                 name={event.sharerName[0].name}
                 startTime={event.startTime}
               />
