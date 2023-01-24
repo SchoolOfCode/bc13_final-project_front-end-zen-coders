@@ -30,6 +30,17 @@ export default function ProfileEventCard({title, area, location, description,sta
     let day = date.getDate();
     let hour = date.getHours();
     let minutes = date.getMinutes();
+
+function async delete(e){
+  try { 
+const response = await fetch (`https://hobi.onrender.com/events/${eventId}`,
+{method:"DELETE"})
+const data = response.json()
+
+
+} catch (error){console.log(error)}
+}
+
   return (
     <card className="mb-6 flex rounded-xl overflow-hidden">
       <div className="grid grid-cols-1 md:grid-cols-4 overflow-hidden">
@@ -62,6 +73,7 @@ export default function ProfileEventCard({title, area, location, description,sta
                 Edit
               </h3> */}
               <EventModal eventId={eventId} userId={userId}/>
+              <button className="p-4 bg-red-400 hover:bg-red-800" onClick={(e)=>{delete}}> Delete</button>
             </div>
           </div>
         </div>
