@@ -44,7 +44,7 @@ export default function ExploreCard({ title, name, startTime, skill, sharerId })
               src="/icons/knitting-black.svg"
             />
           ) : null}
-          {skill === 'Music' ? (
+          {skill === 'music' ? (
             <img className="object-contain p-3" src="/icons/music-black.svg" />
           ) : null}
           {skill === 'Gardening' ? (

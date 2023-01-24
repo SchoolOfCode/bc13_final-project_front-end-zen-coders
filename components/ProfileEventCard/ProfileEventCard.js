@@ -1,7 +1,8 @@
-import React from 'react';
+import {useState} from 'react';
 import EventModal from '../EventModal/EventModal';
 
-export default function ProfileEventCard({title, area, location, description,startTime, skill, eventPic, eventId, userId}) {
+export default function ProfileEventCard({title, area, location, description,startTime, skill, eventPic, eventId, userId, sharerId}) {
+  const [error, setError] = useState(null);
     //lists of weekdays and month format .
     const weekdayList = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     const monthList = [
@@ -21,6 +22,7 @@ export default function ProfileEventCard({title, area, location, description,sta
 
     console.log("this is eventId1 from ProfileEventCard", eventId)
     console.log("this is userId2 from ProfileEventCard", userId)
+    console.log("this is sharerId3 from ProfileEventCard", sharerId)
   
     //date() function turns date into a date that js can read
     const date = new Date(startTime);
@@ -31,14 +33,21 @@ export default function ProfileEventCard({title, area, location, description,sta
     let hour = date.getHours();
     let minutes = date.getMinutes();
 
-function async delete(e){
+    async function handleDelete(e) {
+   
   try { 
-const response = await fetch (`https://hobi.onrender.com/events/${eventId}`,
-{method:"DELETE"})
-const data = response.json()
+    if(userId !== sharerId){
+    setError("You are not authorised to delete this event")
+    return;
+    } else{
+    const response = await fetch (`https://hobi.onrender.com/events/${eventId}`,
+    {method:"DELETE"})
 
+    const data =  await response.json()
 
-} catch (error){console.log(error)}
+}}catch (error){
+    console.log(error)
+}
 }
 
   return (
@@ -68,12 +77,12 @@ const data = response.json()
               <h3 className="font-bold">{hour}:{minutes}</h3>
               <h3 className="">{weekday} {day} {month}</h3>
             </div>
-            <div>
+            <div className='flex flex-row gap-6 items-center justify-center'>
               {/* <h3 className="rounded-full border-2 border-indigo-700 object-contain py-1 px-4 transition ease-in-out hover:scale-110 hover:bg-indigo-400 hover:bg-opacity-50">
                 Edit
               </h3> */}
               <EventModal eventId={eventId} userId={userId}/>
-              <button className="p-4 bg-red-400 hover:bg-red-800" onClick={(e)=>{delete}}> Delete</button>
+ <img src="/delete.svg" onClick={(e)=>{handleDelete(e)}} className="cursor-pointer hover:scale-125"/>
             </div>
           </div>
         </div>

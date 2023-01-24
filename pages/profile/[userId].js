@@ -49,6 +49,7 @@ export default function Index({ event, userId }) {
               eventPic={event.eventPic}
               startTime={event.startTime}
               className="mt-6"
+              sharerId={event.sharerId}
             />
           </div>
         ))}

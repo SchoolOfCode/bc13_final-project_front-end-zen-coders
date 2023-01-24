@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next run dev",
     "lint": "next lint",
-    "test": "jest testEnvironment: 'jest-environment-jsdom',",
+    "test": "jest testEnvironment: 'jest-environment-jsdom' --watch",
     "cypress": "cypress open"
   },
   "dependencies": {
