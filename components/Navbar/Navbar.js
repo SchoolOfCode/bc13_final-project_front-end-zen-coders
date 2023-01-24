@@ -4,9 +4,15 @@
 import React from 'react';
 import Link from 'next/link';
 import Auth from '../Auth/Auth.js';
+import { useUser } from "@auth0/nextjs-auth0/client";
 
 // Navbar component
 export default function Navbar() {
+  const { user, error, isLoading } = useUser();
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>{error.message}</div>;
+  const authId = JSON.stringify(user?.sub?.substring(6));
+  const newAuthId = authId.replaceAll('"','');
   return (
     // add fixed to div
     <div className="w-full bg-white hidden md:fixed md:flex z-10">
@@ -36,12 +42,13 @@ export default function Navbar() {
           <div className="flex gap-3">
             <h3 className="text-m underline decoration-indigo-400">Location</h3>
             <Auth />
-            <Link
-              href="/profile"
+            { user ? (   <Link
+              href={`/profile/${newAuthId}`}
               className="text-2xl pr-3 font-bold leading-none text-indigo-600 hover:border-transparent hover:text-black mt-0"
             >
               PK
-            </Link>
+            </Link>) : null}
+            
           </div>
         </div>
       </nav>
