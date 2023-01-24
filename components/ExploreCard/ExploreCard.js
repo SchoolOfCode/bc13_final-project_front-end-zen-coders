@@ -40,7 +40,7 @@ export default function ExploreCard({
 
   return (
     <Link href={`/profile/${sharerId}`}>
-      <div className="flex h-full flex-row items-center justify-center rounded-3xl border-2 border-black bg-white hover:bg-gray-100 hover:shadow-xl md:flex-col">
+      <div className="flex h-full flex-row items-center justify-center rounded-3xl border-2 border-white bg-white/80 shadow-lg backdrop-blur-sm hover:border-blue-500  hover:shadow-2xl md:flex-col">
         <div className="m-2 flex w-1/4 items-start self-start md:static md:m-5 md:h-20 md:w-20 md:self-end md:rounded-full md:border-2 md:border-black">
           {skill === 'Knitting' ? (
             <img

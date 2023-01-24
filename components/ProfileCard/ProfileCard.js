@@ -5,16 +5,15 @@ import { useUser } from '@auth0/nextjs-auth0/client';
 import ProfileModal from '../ProfileModal/ProfileModal';
 
 export default function ProfileCard({ event, userId }) {
-
   const { user, error, isLoading } = useUser();
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>{error.message}</div>;
   return (
-    <div className="h-screen rounded-lg bg-gray-200">
+    <div className="flex flex-col rounded-lg bg-gray-200">
       <a>
         {event ? (
           <img
-            className="rounded-t-lg"
+            className="h-72 w-full rounded-t-lg object-cover"
             src={event[0].profilePic}
             alt="profile picture"
           />
@@ -39,9 +38,7 @@ export default function ProfileCard({ event, userId }) {
             <h3 className="text-sm">(12 REVIEWS)</h3>
           </div>
           <h2 className="pt-3 text-2xl font-bold">About me:</h2>
-          <p className="mb-3">
-          {event[0].aboutMe}
-          </p>
+          <p className="mb-3">{event[0].aboutMe}</p>
         </div>
         <div className="flex flex-col items-center justify-center">
           <div className="mb-3 flex flex-row gap-3 rounded-xl border-2 border-black bg-white p-3">
@@ -57,7 +54,7 @@ export default function ProfileCard({ event, userId }) {
               <a href={'#'}> CONTACT </a>
             )}
           </button>
-          <ProfileModal  userId={userId}/>
+          <ProfileModal userId={userId} />
         </div>
       </div>
     </div>

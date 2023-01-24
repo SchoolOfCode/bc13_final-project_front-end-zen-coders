@@ -5,22 +5,22 @@ import { useState } from 'react';
 export default function FilterSm() {
   const [show, setShow] = useState(false);
   return (
-    <div className="fixed md:hidden">
+    <div className="fixed z-10 md:hidden ">
       <button
         onClick={() => setShow(!show)}
-        className="mt-3 rounded-full border-2 h-12 border-indigo-700 bg-white px-4"
+        className="mt-3 h-12 rounded-full border-2 border-indigo-700 bg-white/30 px-4 shadow-md backdrop-blur-md"
       >
         Catagory
       </button>
       {show ? (
-        <div className="flex gap-6 shadow-lg mt-6 flex-row flex-wrap items-center p-3 rounded-xl justify-between border-2 border-black bg-white">
+        <div className="mt-6 flex flex-row flex-wrap items-center justify-between gap-6 rounded-xl border-2 border-black bg-white p-3 shadow-lg">
           <Link href="/explore">
             <li className="flex items-center justify-center">
               <div className="text-2xl hover:scale-105">All</div>
             </li>
           </Link>
           <Link href="/explore/music">
-            <li className="hover:scale-105 flex flex-col items-center justify-center">
+            <li className="flex flex-col items-center justify-center hover:scale-105">
               <img
                 src="/icons/music-black.svg"
                 alt="musicIcon"
@@ -30,7 +30,7 @@ export default function FilterSm() {
             </li>
           </Link>
           <Link href="/explore/knitting">
-            <li className="hover:scale-105 flex flex-col items-center justify-center ">
+            <li className="flex flex-col items-center justify-center hover:scale-105 ">
               <img
                 src="/icons/knitting-black.svg"
                 alt="knittingIcon"
@@ -40,7 +40,7 @@ export default function FilterSm() {
             </li>
           </Link>
           <Link href="/explore/language">
-            <li className="hover:scale-105 flex flex-col items-center justify-center ">
+            <li className="flex flex-col items-center justify-center hover:scale-105 ">
               <img
                 src="/icons/language-black.svg"
                 alt="languageIcon"
@@ -50,7 +50,7 @@ export default function FilterSm() {
             </li>
           </Link>
           <Link href="/explore/sports">
-            <li className="hover:scale-105 flex flex-col items-center justify-center ">
+            <li className="flex flex-col items-center justify-center hover:scale-105 ">
               <img
                 src="/icons/sport-black.svg"
                 alt="sportIcon"
@@ -60,7 +60,7 @@ export default function FilterSm() {
             </li>
           </Link>
           <Link href="/explore/gardening">
-            <li className="hover:scale-105 flex flex-col items-center justify-center ">
+            <li className="flex flex-col items-center justify-center hover:scale-105 ">
               <img
                 src="/icons/gardening-black.svg"
                 alt="shearsIcon"
@@ -70,7 +70,7 @@ export default function FilterSm() {
             </li>
           </Link>
           <Link href="/explore/writing">
-            <li className="hover:scale-105 flex flex-col items-center justify-center ">
+            <li className="flex flex-col items-center justify-center hover:scale-105 ">
               <img
                 src="/icons/writing-black.svg"
                 alt="writingIcon"
@@ -80,7 +80,7 @@ export default function FilterSm() {
             </li>
           </Link>
           <Link href="/explore/painting">
-            <li className="hover:scale-105 flex flex-col items-center justify-center ">
+            <li className="flex flex-col items-center justify-center hover:scale-105 ">
               <img
                 src="/icons/painting-black.svg"
                 alt="paintingIcon"
@@ -90,7 +90,7 @@ export default function FilterSm() {
             </li>
           </Link>
           <Link href="/explore/tutoring">
-            <li className="hover:scale-105 flex flex-col items-center justify-center ">
+            <li className="flex flex-col items-center justify-center hover:scale-105 ">
               <img
                 src="/icons/tutoring-black.svg"
                 alt="tutorIcon"
@@ -100,7 +100,7 @@ export default function FilterSm() {
             </li>
           </Link>
           <Link href="/explore/photography">
-            <li className="hover:scale-105 flex flex-col items-center justify-center ">
+            <li className="flex flex-col items-center justify-center hover:scale-105 ">
               <img
                 src="/icons/photography-black.svg"
                 alt="photoIcon"
@@ -110,7 +110,7 @@ export default function FilterSm() {
             </li>
           </Link>
           <Link href="/explore/other">
-            <li className="hover:scale-105 flex flex-col items-center justify-center">
+            <li className="flex flex-col items-center justify-center hover:scale-105">
               <img
                 src="/icons/other-black.svg"
                 alt="otherIcon"

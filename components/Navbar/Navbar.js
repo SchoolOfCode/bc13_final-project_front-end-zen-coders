@@ -8,37 +8,29 @@ import Auth from '../Auth/Auth.js';
 // Navbar component
 export default function Navbar() {
   return (
-    // add fixed to div
-    <div className="w-full bg-white hidden md:fixed md:flex z-10">
-      <nav className="flex mt-6 mx-6 flex-row items-center justify-between rounded-full border-2 border-black bg-white p-2 w-full">
-        <div className="flex w-full justify-between items-center">
-          <div className="flex text-m items-center">
-            <img src="/logo.svg" alt="logo" className="h-12 pr-3" />
-            <Link
-              href="/"
-              className="mr-4 text-black hover:text-indigo-700 hover:underline mt-0"
-            >
+    <div className="z-10 hidden h-20 w-full md:fixed md:flex">
+      <nav className="mx-6 mt-6 flex w-full flex-row items-baseline rounded-full border-2 border-white bg-white/50 p-2 shadow-lg backdrop-blur-md">
+        <div className="flex w-full items-baseline justify-between ">
+          <div className="ml-3 flex items-baseline gap-10">
+            <Link href="/" className="text-2xl font-bold text-blue-600">
+              hobï
+            </Link>
+            <Link href="/" className="hover:underline">
               Home
             </Link>
-            <Link
-              href="/explore"
-              className="mr-4 text-black hover:text-indigo-700 hover:underline mt-0"
-            >
+            <Link href="/explore" className="hover:underline">
               Explore
             </Link>
-            <Link
-              href="/about"
-              className="text-black hover:text-indigo-700 hover:underline mt-0"
-            >
+            <Link href="/about" className="hover:underline">
               About
             </Link>
           </div>
-          <div className="flex gap-3">
-            <h3 className="text-m underline decoration-indigo-400">Location</h3>
+          <div className="flex gap-10">
+            {/* <h3 className="text-m underline decoration-indigo-400">Location</h3> */}
             <Auth />
             <Link
               href="/profile"
-              className="text-2xl pr-3 font-bold leading-none text-indigo-600 hover:border-transparent hover:text-black mt-0"
+              className="mt-0 pr-3 text-2xl font-bold leading-none text-indigo-600 hover:border-transparent hover:text-black"
             >
               PK
             </Link>
