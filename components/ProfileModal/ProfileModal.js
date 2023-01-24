@@ -1,11 +1,13 @@
 import React from "react";
 import { useState } from "react";
 
-export default function ProfileModal() {
+
+export default function ProfileModal({userId}) {
+
   const [showModal, setShowModal] = React.useState(false);
   const [profile, setProfile] = useState({});
   const [profilePic, setProfilePic] = useState();
-
+console.log(userId)
   function handleProfilePic(e) {
       setProfilePic(e.target.files[0]);
     }
@@ -25,8 +27,9 @@ export default function ProfileModal() {
     formData.append("isLearner", Boolean(profile.isLearner));
     formData.append("aboutMe", profile.aboutMe);
 
-    const response = await fetch("http://localhost:3003/users/add", {
-      method: "POST",
+
+    const response = await fetch(`http://localhost:3003/users/update/${userId}`, {
+      method: "PATCH",
       body: formData
     });
 
@@ -35,7 +38,7 @@ export default function ProfileModal() {
   } else {
   console.log("An error occurred, please try again later.");
   }
-  }
+  } 
   
   return (
     <div>
@@ -203,4 +206,3 @@ export default function ProfileModal() {
     </div>
   );
 }
-
