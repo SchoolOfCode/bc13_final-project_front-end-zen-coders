@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useUser } from '@auth0/nextjs-auth0/client';
-import ProfileModal from '../ProfileModal/ProfileModal';
+import React, { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { useUser } from "@auth0/nextjs-auth0/client";
+import ProfileModal from "../ProfileModal/ProfileModal";
 
 export default function ProfileCard({ event }) {
   const { user, error, isLoading } = useUser();
