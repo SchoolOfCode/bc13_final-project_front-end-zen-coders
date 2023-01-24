@@ -11,8 +11,9 @@ export default function Navbar() {
   const { user, error, isLoading } = useUser();
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>{error.message}</div>;
-  const authId = JSON.stringify(user?.sub?.substring(6));
-  const newAuthId = authId.replaceAll('"','');
+  const authId = user ? (JSON.stringify(user?.sub?.substring(6))): null
+  const newAuthId =  user ? (authId.replaceAll('"','')): null
+
   return (
     // add fixed to div
     <div className="w-full bg-white hidden md:fixed md:flex z-10">
