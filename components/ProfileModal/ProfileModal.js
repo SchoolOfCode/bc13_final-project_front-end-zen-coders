@@ -116,7 +116,7 @@ console.log(userId)
                     </div>
                     <div>
                       <label
-                        htmlFor="sharer"
+                        htmlFor="isSharer"
                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                       >
                         Sharer?
@@ -129,7 +129,7 @@ console.log(userId)
   onChange={handleChange}
 />
                       <label
-                        htmlFor="learner"
+                        htmlFor="isLearner"
                         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                       >
                         Learner?
