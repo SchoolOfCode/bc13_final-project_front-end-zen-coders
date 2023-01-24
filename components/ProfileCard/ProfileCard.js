@@ -53,14 +53,10 @@ export default function ProfileCard({ event, userId, authId }) {
             {user ? (
               <a href={"mailto:" + event[0].email}> CONTACT </a>
             ) : (
-              <a href={"#"}> CONTACT </a>
+              <h3>Please login for contact info</h3>
             )}
           </button>
-          {authId === `"${userId}"` ? (
-            <ProfileModal userId={userId} />
-          ) : (
-            <h1>Not logged in</h1>
-          )}
+          {authId === `"${userId}"` ? <ProfileModal userId={userId} /> : null}
         </div>
       </div>
     </div>
