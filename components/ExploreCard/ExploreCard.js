@@ -4,8 +4,10 @@
 import React from 'react';
 import Link from 'next/link';
 
+
 // Component
-export default function ExploreCard({ title, name, startTime, skill }) {
+export default function ExploreCard({ title, name, startTime, skill, sharerId }) {
+
   //lists of weekdays and month format .
   const weekdayList = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   const monthList = [
@@ -33,7 +35,7 @@ export default function ExploreCard({ title, name, startTime, skill }) {
   let minutes = date.getMinutes();
 
   return (
-    <Link href="/profile">
+    <Link href={`/profile/${sharerId}`>
       <div className="m-3 flex flex-row items-center justify-center rounded-3xl border-2 border-black bg-white hover:bg-gray-100 hover:shadow-xl md:m-6 md:flex-col">
         <div className="m-2 flex w-1/4 items-start self-start md:static md:m-5 md:h-20 md:w-20 md:self-end md:rounded-full md:border-2 md:border-black">
           {skill === 'Knitting' ? (

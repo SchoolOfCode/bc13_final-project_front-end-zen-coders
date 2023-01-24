@@ -4,35 +4,29 @@ import Link from "next/link";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import ProfileModal from "../ProfileModal/ProfileModal";
 
-export default function ProfileCard() {
+export default function ProfileCard({ event }) {
   const { user, error, isLoading } = useUser();
-
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>{error.message}</div>;
-
   return (
     <div className="h-screen rounded-lg bg-gray-200">
       <a>
-        {user ? (
+        {event ? (
           <img
             className="rounded-t-lg"
-            src={user.picture}
+            src={event[0].profilePic}
             alt="profile picture"
           />
         ) : (
-          "no user info"
+          'no user info'
         )}
       </a>
       <div className="p-5">
         <div>
-          {user ? (
-            <h1 className="mb-2 text-4xl font-bold tracking-tight">
-              {user.name}
-            </h1>
-          ) : (
-            "Neo from Matrix"
-          )}
-          <h3 className="text-base font-light">Knightsbridge, London</h3>
+          <h1 className="mb-2 text-4xl font-bold tracking-tight">
+            {event[0].name}
+          </h1>
+          <h3 className="text-base font-light">{event[0].location}</h3>
           <div className="flex flex-row items-center gap-3">
             <div className="mt-2 flex h-5 flex-row">
               <img src="/full-star.svg" />
@@ -45,14 +39,7 @@ export default function ProfileCard() {
           </div>
           <h2 className="pt-3 text-2xl font-bold">About me:</h2>
           <p className="mb-3">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.
+          {event[0].aboutMe}
           </p>
         </div>
         <div className="flex flex-col items-center justify-center">
@@ -64,13 +51,12 @@ export default function ProfileCard() {
           </div>
           <button className="h-full w-full rounded-full border-2 border-indigo-900 bg-indigo-700 object-contain py-1 px-4 font-bold text-white transition ease-in-out  hover:bg-indigo-900 hover:bg-opacity-50">
             {user ? (
-              <a href={"mailto:" + user.email}> CONTACT </a>
+              <a href={'mailto:' + event[0].email}> CONTACT </a>
             ) : (
-              <a href={"#"}> CONTACT </a>
+              <a href={'#'}> CONTACT </a>
             )}
           </button>
-    
-    <ProfileModal />
+          <ProfileModal />
           {/* <Link href={`/profile/${profile.id}`}
 >     <ProfileModal /></Link>      */}
         </div>

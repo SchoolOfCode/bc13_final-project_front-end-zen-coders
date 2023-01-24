@@ -1,7 +1,8 @@
-import React from 'react';
-import ExploreCard from '../../components/ExploreCard/ExploreCard';
-import Filter from '../../components/Filter/Filter';
+import React from "react";
+import ExploreCard from "../../components/ExploreCard/ExploreCard";
+import Filter from "../../components/Filter/Filter";
 import FilterSm from '../../components/Filter/FilterSm.js';
+
 
 export const getServerSideProps = async () => {
   const res = await fetch(process.env.DATABASE_URL);
@@ -21,6 +22,7 @@ export default function index({ events }) {
           {events.map((event) => (
             <div key={event.id}>
               <ExploreCard
+                sharerId={event.sharerId}
                 title={event.title}
                 skill={event.skill}
                 name={event.sharerName[0].name}
