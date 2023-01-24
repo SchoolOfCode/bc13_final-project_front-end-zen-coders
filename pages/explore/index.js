@@ -16,8 +16,8 @@ export default function index({ events }) {
     <div className="mx-3 mb-20 md:mx-12 md:pt-28">
       <Filter />
       <FilterSm />
-      <div className="flex flex-row items-center pt-16">
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  2xl:grid-cols-6">
+      <div className="mt-8 flex flex-row items-center">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
           {events.map((event) => (
             <div key={event.id}>
               <ExploreCard
