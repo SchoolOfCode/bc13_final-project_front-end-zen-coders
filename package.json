@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next run dev",
     "lint": "next lint",
     "test": "jest testEnvironment: 'jest-environment-jsdom',",
     "cypress": "cypress open"

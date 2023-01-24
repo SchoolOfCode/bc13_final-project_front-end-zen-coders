@@ -2,7 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import {useState} from "react";
 
-export default function AddEventCard() {
+export default function AddEventCard({userId}) {
   const [event, setEvent] = useState({});
   const [eventPic, setEventPic] = useState();
 
@@ -109,11 +109,11 @@ export default function AddEventCard() {
             className="form-control  relative m-0 block w-full min-w-0 flex-auto rounded-full border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-1.5 text-base font-normal  text-gray-700 transition ease-in-out focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none"
             onChange={handleChange} /><p>{errors.DateTime?.message}</p>
         </div>
-        <input {...register("sharerId", { required: "id is required" })}
+        {/* <input {...register("sharerId", { required: "id is required" })}
             placeholder="id:"
             type="text"
             className="form-control  relative m-0 block w-full min-w-0 flex-auto rounded-full border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-1.5 text-base font-normal  text-gray-700 transition ease-in-out focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none"
-            onChange={handleChange}  /><p>{errors.Id?.message}</p>
+            onChange={handleChange}  /><p>{errors.Id?.message}</p> */}
         
         <div className="mt-3 flex flex-row justify-between  gap-3">
           <textarea {...register("description", { required: "Description is required" })}
@@ -124,6 +124,22 @@ export default function AddEventCard() {
             onChange={handleChange} /> <p>{errors.Description?.message}</p>
           <input className="h-full rounded-full border-2 border-indigo-700 object-contain py-1 px-4 transition ease-in-out hover:scale-110 hover:bg-indigo-400 hover:bg-opacity-50" id="submit-btn" type="submit" value="Post"/>
         </div>  
+        <div>
+                      <label
+                        htmlFor="eventPic"
+                        className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+                      >
+                        Upload your photo
+                      </label>
+                      <input
+                        type="file"
+                        name="eventPic"
+                        id="eventPic"
+                        className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400"
+                        required
+                        onChange={handleEventPic}
+                      />
+                    </div>
       </card>
     </form>
   );

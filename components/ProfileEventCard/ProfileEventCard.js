@@ -31,9 +31,9 @@ export default function ProfileEventCard({title, area, location, description,sta
     let hour = date.getHours();
     let minutes = date.getMinutes();
   return (
-    <card className="mb-6 flex rounded-xl">
-      <div className="grid grid-cols-1 md:grid-cols-4">
-        <div className="md:col-span-1">
+    <card className="mb-6 flex rounded-xl overflow-hidden">
+      <div className="grid grid-cols-1 md:grid-cols-4 overflow-hidden">
+        <div className="md:col-span-1 border-t-2 border-l-2 border-b-2 border-black">
           <img
             className="h-full rounded-t-lg md:rounded-l-lg md:rounded-r-none"
             src={eventPic}

@@ -34,7 +34,7 @@ export default function Index({ event, userId }) {
             +event
           </button>
         </div>
-        {show ? <AddEventCard /> : null}
+        {show ? <AddEventCard userId={userId} /> : null}
 
         {event[0].UsersEvents.map((event) => (
           <div key={event.id}>
