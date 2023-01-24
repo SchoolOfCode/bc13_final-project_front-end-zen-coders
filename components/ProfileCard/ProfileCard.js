@@ -1,10 +1,11 @@
-import React, { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { useUser } from "@auth0/nextjs-auth0/client";
-import ProfileModal from "../ProfileModal/ProfileModal";
+import React, { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useUser } from '@auth0/nextjs-auth0/client';
+import ProfileModal from '../ProfileModal/ProfileModal';
 
-export default function ProfileCard({ event }) {
+export default function ProfileCard({ event, userId }) {
+
   const { user, error, isLoading } = useUser();
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>{error.message}</div>;
@@ -56,9 +57,7 @@ export default function ProfileCard({ event }) {
               <a href={'#'}> CONTACT </a>
             )}
           </button>
-          <ProfileModal />
-          {/* <Link href={`/profile/${profile.id}`}
->     <ProfileModal /></Link>      */}
+          <ProfileModal  userId={userId}/>
         </div>
       </div>
     </div>

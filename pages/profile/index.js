@@ -80,4 +80,3 @@ export const getServerSideProps = async () => {
     console.log(err);
   }
 };
-

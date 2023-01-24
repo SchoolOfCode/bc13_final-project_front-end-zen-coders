@@ -3,7 +3,6 @@ import ExploreCard from "../../components/ExploreCard/ExploreCard";
 import Filter from "../../components/Filter/Filter";
 import FilterSm from '../../components/Filter/FilterSm.js';
 
-
 export const getServerSideProps = async () => {
   const res = await fetch(process.env.DATABASE_URL);
   const data = await res.json();

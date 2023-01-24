@@ -32,7 +32,6 @@ export default function ProfileEventCard({title, area, location, description,sta
       <div className="grid grid-cols-1 md:grid-cols-4">
         <div className="md:col-span-1">
           <img
-
             className="h-full rounded-t-lg md:rounded-l-lg md:rounded-r-none"
             src={eventPic}
             alt="knitting img"
@@ -41,7 +40,6 @@ export default function ProfileEventCard({title, area, location, description,sta
         <div className="col-span-3 rounded-b-lg md:rounded-l-none md:rounded-r-lg md:border-t-2 border-b-2 md:border-l-0 border-l-2 border-r-2 border-black p-3">
           <div className="flex flex-row">
             {/* <div className="mr-3 h-14 w-14 rounded-full bg-red-100"></div> */}
-
             <div>
               <h1 className="text-4xl font-bold">{title}</h1>
               <h3 className="text-base font-light">{area},{location}</h3>

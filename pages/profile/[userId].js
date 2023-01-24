@@ -14,13 +14,13 @@ export const getServerSideProps = async ({ params }) => {
   };
   console.log(userId);
 };
-export default function Index({ event }) {
+export default function Index({ event, userId }) {
   const [show, setShow] = useState(false);
   // const router = useRouter();
   return (
     <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mx-3 md:mx-12 mb-20 md:pt-28">
       <div>
-        <ProfileCard event={event} className="col-span-1 bg-blue-200" />
+        <ProfileCard event={event} userId={userId} className="col-span-1 bg-blue-200" />
       </div>
       <div className="col-span-3">
         <div className="mb-3 flex justify-between">
