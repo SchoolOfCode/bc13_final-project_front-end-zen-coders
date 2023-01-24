@@ -1,13 +1,11 @@
 import React from "react";
-import Navbar from "../../components/Navbar/Navbar";
 import ExploreCard from "../../components/ExploreCard/ExploreCard";
-import SearchBar from "../../components/SearchBar/SearchBar";
 import Filter from "../../components/Filter/Filter";
+import FilterSm from '../../components/Filter/FilterSm.js';
 
 export const getServerSideProps = async () => {
   const res = await fetch(process.env.DATABASE_URL);
   const data = await res.json();
-
   return {
     props: { events: data },
   };
@@ -15,12 +13,11 @@ export const getServerSideProps = async () => {
 
 export default function index({ events }) {
   return (
-    <div>
-      <SearchBar />
+    <div className="mx-3 mb-20 md:mx-12 md:pt-28">
       <Filter />
-      <h1>Learn more about...</h1>
-      <div className="flex flex-row flex-wrap">
-        <div class="m-auto grid grid-cols-2  p-7 md:grid-cols-3 lg:grid-cols-4 lg:gap-x-14 ">
+      <FilterSm />
+      <div className="flex flex-row items-center pt-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
           {events.map((event) => (
             <div key={event.id}>
               <ExploreCard

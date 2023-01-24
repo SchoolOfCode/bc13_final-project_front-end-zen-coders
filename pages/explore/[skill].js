@@ -15,12 +15,10 @@ export const getServerSideProps = async ({ params }) => {
 export default function Skill({ event, skill }) {
 
   return (
-    <div>
-      <SearchBar />
+    <div className="mx-12 mb-20 md:pt-28">
       <Filter />
-      <h1>Learn more about {skill} here!</h1>
       <div className="flex flex-row flex-wrap">
-        <div className="m-auto grid grid-cols-2  p-7 md:grid-cols-3 lg:grid-cols-4 lg:gap-x-14 ">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 lg:gap-x-14">
           {event.map((event) => (
             <div key={event.id}>
             {/* <Link href="/profile/${user}"> */}
