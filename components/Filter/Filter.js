@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Filter() {
   return (
-    <div className="fixed hidden bg-white md:flex">
+    <div className=" hidden bg-white md:flex">
       <div className="relative flex w-full flex-row items-center justify-between border-b-2 border-black bg-white px-4 pb-3">
         <Link href="/explore">
           <li className="flex items-center justify-center">
