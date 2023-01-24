@@ -9,7 +9,7 @@ import Auth from '../Auth/Auth.js';
 export default function Navbar() {
   return (
     <div className="z-10 hidden h-20 w-full md:fixed md:flex">
-      <nav className="mx-6 mt-6 flex w-full flex-row items-baseline rounded-full border-2 border-white bg-white/50 p-2 shadow-lg backdrop-blur-md">
+      <nav className="mx-6 mt-6 flex w-full flex-row items-baseline rounded-full border-2 border-white bg-white/30 p-2 shadow-lg backdrop-blur-lg">
         <div className="flex w-full items-baseline justify-between ">
           <div className="ml-3 flex items-baseline gap-10">
             <Link href="/" className="text-2xl font-bold text-blue-600">
