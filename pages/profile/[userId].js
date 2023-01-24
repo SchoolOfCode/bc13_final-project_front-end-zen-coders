@@ -17,6 +17,8 @@ export const getServerSideProps = async ({ params }) => {
 export default function Index({ event, userId }) {
   const [show, setShow] = useState(false);
   // const router = useRouter();
+  console.log("this is event", event)
+  // console.log("this is userId", userId)
   return (
     <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mx-3 md:mx-12 mb-20 md:pt-28">
       <div>
@@ -37,6 +39,8 @@ export default function Index({ event, userId }) {
         {event[0].UsersEvents.map((event) => (
           <div key={event.id}>
             <ProfileEventCard
+            userId= {userId}
+            eventId= {event._id}
               title={event.title}
               skill={event.skill}
               location={event.location}

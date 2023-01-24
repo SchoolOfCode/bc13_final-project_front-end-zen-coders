@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 
-export default function EventModal({ userId }) {
+export default function EventModal({ eventId, userId }) {
   const [showModal, setShowModal] = React.useState(false);
   const [event, setEvent] = useState({});
-
   const [eventPic, setEventPic] = useState();
-  console.log(userId);
+
+  console.log("line 8", eventId);
+  // console.log("line 9", userId);
   function handleEventPic(e) {
     setEventPic(e.target.files[0]);
   }
@@ -17,15 +18,15 @@ export default function EventModal({ userId }) {
 
   async function editEvent() {
     const formData = new FormData();
-    formData.append("profilePic", profilePic);
-    formData.append("name", profile.name);
-    formData.append("location", profile.location);
-    formData.append("email", profile.email);
-    formData.append("isSharer", Boolean(profile.isSharer));
-    formData.append("isLearner", Boolean(profile.isLearner));
-    formData.append("aboutMe", profile.aboutMe);
-
-    const response = await fetch(`http://localhost:3003/events/update/`, {
+    formData.append("eventPic", eventPic);
+    formData.append("title", event.title);
+    formData.append("skill", event.skill);
+    formData.append("location", event.location);
+    formData.append("area", event.area);
+    formData.append("description", event.description);
+    formData.append("startTime", event.startTime);
+    formData.append("sharerId", userId);
+    const response = await fetch(`http://localhost:3003/events/update/${eventId}`, {
       method: "PATCH",
       body: formData,
     });
@@ -36,6 +37,8 @@ export default function EventModal({ userId }) {
       console.log("An error occurred, please try again later.");
     }
   }
+
+
   return (
     <div>
       <div className="userUpdate">
@@ -83,7 +86,7 @@ export default function EventModal({ userId }) {
                       >
                         Skill
                       </label>
-                      <select name="skill" id="skill" onChange={handleChange}>
+                      <select name="skill" id="skill" onChange={handleChange} className="bg-gray-600 text-gray-100 rounded-md p-2">
                         <option value="Music">Music</option>
                         <option value="Gardening">Gardening</option>
                         <option value="Photograhy">Photograhy</option>
@@ -191,7 +194,7 @@ export default function EventModal({ userId }) {
                     type="button"
                     onClick={() => {
                       setShowModal(false);
-                      editUser();
+                      editEvent();
                     }}
                   >
                     Save Changes

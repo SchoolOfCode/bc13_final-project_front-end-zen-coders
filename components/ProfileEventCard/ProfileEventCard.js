@@ -1,7 +1,7 @@
 import React from 'react';
 import EventModal from '../EventModal/EventModal';
 
-export default function ProfileEventCard({title, area, location, description,startTime, skill, eventPic}) {
+export default function ProfileEventCard({title, area, location, description,startTime, skill, eventPic, eventId, userId}) {
     //lists of weekdays and month format .
     const weekdayList = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     const monthList = [
@@ -18,6 +18,9 @@ export default function ProfileEventCard({title, area, location, description,sta
       "Nov",
       "Dec",
     ];
+
+    console.log("this is eventId1 from ProfileEventCard", eventId)
+    console.log("this is userId2 from ProfileEventCard", userId)
   
     //date() function turns date into a date that js can read
     const date = new Date(startTime);
@@ -58,7 +61,7 @@ export default function ProfileEventCard({title, area, location, description,sta
               {/* <h3 className="rounded-full border-2 border-indigo-700 object-contain py-1 px-4 transition ease-in-out hover:scale-110 hover:bg-indigo-400 hover:bg-opacity-50">
                 Edit
               </h3> */}
-              <EventModal />
+              <EventModal eventId={eventId} userId={userId}/>
             </div>
           </div>
         </div>

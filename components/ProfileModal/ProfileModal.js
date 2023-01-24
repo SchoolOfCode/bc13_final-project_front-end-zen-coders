@@ -5,7 +5,9 @@ export default function ProfileModal({ userId }) {
   const [showModal, setShowModal] = React.useState(false);
   const [profile, setProfile] = useState({});
   const [profilePic, setProfilePic] = useState();
+  
   console.log(userId);
+
   function handleProfilePic(e) {
     setProfilePic(e.target.files[0]);
   }
