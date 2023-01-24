@@ -18,14 +18,18 @@ export const getServerSideProps = async ({ params }) => {
 export default function Index({ event, userId }) {
   const [show, setShow] = useState(false);
 
+  // Getting data from auth0 logged in user
+
   const { user, error, isLoading } = useUser();
-  const authId = JSON.stringify(user?.sub?.substring(6));
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>{error.message}</div>;
+  // Getting user id from JSON and removing "auth0|" from the start of userid
+  const authId = JSON.stringify(user?.sub?.substring(6));
 
   return (
     <div className="mx-3 mb-20 grid grid-cols-1 gap-4 md:mx-12 md:grid-cols-4 md:pt-28">
       <div>
+        {/* Passing down props to profile card component to render for specific user page navigated to*/}
         <ProfileCard
           event={event}
           userId={userId}
@@ -36,6 +40,7 @@ export default function Index({ event, userId }) {
       <div className="col-span-3">
         <div className="mb-3 flex justify-between">
           <h1 className="text-4xl font-bold">Available Sessions:</h1>
+          {/* If auth0 id equals id of profile beiong viewed show the add event button. User id is in quotes to match format of authId */}
           {authId === `"${userId}"` ? (
             <button
               onClick={() => setShow(!show)}
@@ -46,7 +51,7 @@ export default function Index({ event, userId }) {
           ) : null}
         </div>
         {show ? <AddEventCard /> : null}
-
+        {/* Passing down props to event cards which are mapped over to generate relevant information */}
         {event[0].UsersEvents.map((event) => (
           <div key={event.id}>
             <ProfileEventCard

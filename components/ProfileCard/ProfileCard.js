@@ -5,11 +5,11 @@ import { useUser } from "@auth0/nextjs-auth0/client";
 import ProfileModal from "../ProfileModal/ProfileModal";
 
 export default function ProfileCard({ event, userId, authId }) {
+  // Getting data from auth0 logged in user
   const { user, error, isLoading } = useUser();
-  // const authId = JSON.stringify(user?.sub?.substring(6));
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>{error.message}</div>;
-  console.log(authId);
+
   return (
     <div className="h-screen rounded-lg bg-gray-200">
       <a>
@@ -50,12 +50,14 @@ export default function ProfileCard({ event, userId, authId }) {
             <p>skill icon</p>
           </div>
           <button className="h-full w-full rounded-full border-2 border-indigo-900 bg-indigo-700 object-contain py-1 px-4 font-bold text-white transition ease-in-out  hover:bg-indigo-900 hover:bg-opacity-50">
+            {/* If user is logged in. This will show the contact button to get in touch with sharer. If they are not logged in will show prompt for login */}
             {user ? (
               <a href={"mailto:" + event[0].email}> CONTACT </a>
             ) : (
               <h3>Please login for contact info</h3>
             )}
           </button>
+          {/* If id of user who is logged in matches the id of the propfile being viewed shows the edit profile modal */}
           {authId === `"${userId}"` ? <ProfileModal userId={userId} /> : null}
         </div>
       </div>

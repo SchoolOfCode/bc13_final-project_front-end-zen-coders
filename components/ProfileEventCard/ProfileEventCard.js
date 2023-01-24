@@ -69,9 +69,7 @@ export default function ProfileEventCard({
               </h3>
             </div>
             <div>
-              {/* <h3 className="rounded-full border-2 border-indigo-700 object-contain py-1 px-4 transition ease-in-out hover:scale-110 hover:bg-indigo-400 hover:bg-opacity-50">
-                Edit
-              </h3> */}
+              {/* If id of user who is logged in matches the id of the propfile being viewed shows the edit event modal */}
               {authId === `"${userId}"` ? <EventModal /> : null}
             </div>
           </div>
