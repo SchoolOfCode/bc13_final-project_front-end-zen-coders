@@ -5,11 +5,7 @@
 [Hobi][] is a [community sharing platform][] for people to be able to share their skills and learn new things.
 
 This project is coded in Nextjs, it uses Auth0, Tailwind and ...libraries
-* [![Next][Next.js]][Next-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+* ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 * [![JQuery][JQuery.com]][JQuery-url]
 To run the project, first, you will need to clone the repository and run npm install command.
 Attention: the server side has its own repository and you must install the server side first.
