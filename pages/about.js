@@ -28,8 +28,8 @@ const curt = {
 const evgenii = {
   name: 'Evgenii Smazanovich',
   intro: "I'm a full stack developer",
-  gitHub: 'https://github.com/kianeblackman/',
-  linkedIn: 'https://www.linkedin.com/in/kiane-gucher-blackman-646286251/',
+  gitHub: 'https://github.com/itsevgenii/',
+  linkedIn: 'https://www.linkedin.com/in/eugene-smazanovich/',
   portfolio: 'https://main.d3v0r89gmu5nt7.amplifyapp.com',
   image: '/profileImages/eugine.jpg',
 };
