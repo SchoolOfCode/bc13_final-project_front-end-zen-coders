@@ -5,7 +5,7 @@ export default function ProfileModal({ userId }) {
   const [showModal, setShowModal] = React.useState(false);
   const [profile, setProfile] = useState({});
   const [profilePic, setProfilePic] = useState();
-  
+
   console.log(userId);
 
   function handleProfilePic(e) {
@@ -28,7 +28,7 @@ export default function ProfileModal({ userId }) {
     formData.append("aboutMe", profile.aboutMe);
 
     const response = await fetch(
-      `http://localhost:3003/users/update/${userId}`,
+      `${process.env.NEXT_PUBLIC_DATABASE_URL}/users/update/${userId}`,
       {
         method: "PATCH",
         body: formData,
@@ -166,7 +166,7 @@ export default function ProfileModal({ userId }) {
                         htmlFor="profilePic"
                         className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
                       >
-                        Upload your photo (not working just now, bear with us)
+                        Upload your photo
                       </label>
                       <input
                         type="file"

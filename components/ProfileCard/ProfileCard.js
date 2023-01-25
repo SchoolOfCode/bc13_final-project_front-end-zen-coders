@@ -43,12 +43,12 @@ export default function ProfileCard({ event, userId, authId }) {
           <p className="mb-3">{event[0].aboutMe}</p>
         </div>
         <div className="flex flex-col items-center justify-center">
-          <div className="mb-3 flex flex-row gap-3 rounded-xl border-2 border-black bg-white p-3">
+          {/* <div className="mb-3 flex flex-row gap-3 rounded-xl border-2 border-black bg-white p-3">
             <p>skill icon</p>
             <p>skill icon</p>
             <p>skill icon</p>
             <p>skill icon</p>
-          </div>
+          </div> */}
           <button className="h-full w-full rounded-full border-2 border-indigo-900 bg-indigo-700 object-contain py-1 px-4 font-bold text-white transition ease-in-out  hover:bg-indigo-900 hover:bg-opacity-50">
             {/* If user is logged in. This will show the contact button to get in touch with sharer. If they are not logged in will show prompt for login */}
             {user ? (
