@@ -1,86 +1,104 @@
-import Link from 'next/link';
 import React from 'react';
+import Link from 'next/link';
 
-const Filter = () => {
+export default function Filter() {
   return (
-    <ul className="flex flex-row justify-between flex-wrap bg-gray-300 rounded-full my-9 mx-5 px-6 sm:p-4">
-      <Link href="/explore">
-        <li className="w-28 h-20 flex items-center justify-center text-5xl">
-          <div>All</div>
-        </li>
-      </Link>
-      <Link href="/explore/AOG">
-        <li className="w-20 h-20 hover:scale-125 flex items-center justify-center  bg-gray-900 rounded-full">
-          <div>
-            <img src="/musicIcon.svg" alt="musicIcon" className="w-12" />
-          </div>
-        </li>
-      </Link>
-      <Link href="/explore/RVM">
-        <li className="w-20 h-20 hover:scale-125 flex items-center justify-center bg-gray-900 rounded-full">
-          <div>
-            <img src="/knitting.svg" alt="knittingIcon" className="w-12" />
-          </div>
-        </li>
-      </Link>
-      <Link href="/explore/language">
-        <li className="w-20 h-20 hover:scale-125 flex items-center justify-center bg-gray-900 rounded-full">
-          <div>
-            <img src="/languageIcon.svg" alt="languageIcon" className="w-12" />
-          </div>
-        </li>
-      </Link>
-      <Link href="/explore/sport">
-        <li className="w-20 h-20 hover:scale-125 flex items-center justify-center bg-gray-900 rounded-full">
-          <div>
-            <img src="/sportIcon.svg" alt="sportIcon" className="w-12" />
-          </div>
-        </li>
-      </Link>
-      <Link href="/explore/gardening">
-        <li className="w-20 h-20 hover:scale-125 flex items-center justify-center bg-gray-900 rounded-full">
-          <div>
-            <img src="/shears.svg" alt="shearsIcon" className="w-12" />
-          </div>
-        </li>
-      </Link>
-      <Link href="/explore/writing">
-        <li className="w-20 h-20 hover:scale-125 flex items-center justify-center bg-gray-900 rounded-full">
-          <div>
-            <img src="/writingIcon.svg" alt="writingIcon" className="w-12" />
-          </div>
-        </li>
-      </Link>
-      <Link href="/explore/painting">
-        <li className="w-20 h-20 hover:scale-125 flex items-center justify-center bg-gray-900 rounded-full">
-          <div>
-            <img src="/paintingIcon.svg" alt="paintingIcon" className="w-12" />
-          </div>
-        </li>
-      </Link>
-      <Link href="/explore/skill/tutor">
-        <li className="w-20 h-20 hover:scale-125 flex items-center justify-center bg-gray-900 rounded-full">
-          <div>
-            <img src="/tutorIcon.svg" alt="tutorIcon" className="w-12" />
-          </div>
-        </li>
-      </Link>
-      <Link href="/explore/photography">
-        <li className="w-20 h-20 hover:scale-125 flex items-center justify-center bg-gray-900 rounded-full">
-          <div>
-            <img src="/photoIcon.svg" alt="photoIcon" className="w-12" />
-          </div>
-        </li>
-      </Link>
-      <Link href="/explore/other">
-        <li className="w-20 h-20 hover:scale-125 flex items-center justify-center bg-gray-900 rounded-full">
-          <div>
-            <img src="/otherIcon.svg" alt="otherIcon" className="w-12" />
-          </div>
-        </li>
-      </Link>
-    </ul>
+    <div className="hidden w-full md:flex">
+      <div className="relative flex w-full flex-row items-center justify-between border-b-2 border-black px-4 pb-1 ">
+        <Link href="/explore">
+          <li className="flex items-center justify-center">
+            <div className="text-2xl text-slate-900 hover:scale-105">All</div>
+          </li>
+        </Link>
+        <Link href="/explore/Music">
+          <li className="flex flex-col items-center justify-center hover:scale-105">
+            <img src="/icons/music-black.svg" alt="musicIcon" className="w-8" />
+            <text className="text-sm">Music</text>
+          </li>
+        </Link>
+        <Link href="/explore/Knitting">
+          <li className="flex flex-col items-center justify-center hover:scale-105 ">
+            <img
+              src="/icons/knitting-black.svg"
+              alt="knittingIcon"
+              className="w-8"
+            />
+            <text className="text-sm">Knitting</text>
+          </li>
+        </Link>
+        <Link href="/explore/Language">
+          <li className="flex flex-col items-center justify-center hover:scale-105 ">
+            <img
+              src="/icons/language-black.svg"
+              alt="languageIcon"
+              className="w-8 "
+            />
+            <text className="text-sm">Language</text>
+          </li>
+        </Link>
+        <Link href="/explore/Sports">
+          <li className="flex flex-col items-center justify-center hover:scale-105 ">
+            <img src="/icons/sport-black.svg" alt="sportIcon" className="w-8" />
+            <text className="text-sm">Sports</text>
+          </li>
+        </Link>
+        <Link href="/explore/Gardening">
+          <li className="flex flex-col items-center justify-center hover:scale-105 ">
+            <img
+              src="/icons/gardening-black.svg"
+              alt="shearsIcon"
+              className="w-8"
+            />
+            <text className="text-sm">Gardening</text>
+          </li>
+        </Link>
+        <Link href="/explore/Writing">
+          <li className="flex flex-col items-center justify-center hover:scale-105 ">
+            <img
+              src="/icons/writing-black.svg"
+              alt="writingIcon"
+              className="w-8"
+            />
+            <text className="text-sm">Writing</text>
+          </li>
+        </Link>
+        <Link href="/explore/Painting">
+          <li className="flex flex-col items-center justify-center hover:scale-105 ">
+            <img
+              src="/icons/painting-black.svg"
+              alt="paintingIcon"
+              className="w-8"
+            />
+            <text className="text-sm">Painting</text>
+          </li>
+        </Link>
+        <Link href="/explore/Tutoring">
+          <li className="flex flex-col items-center justify-center hover:scale-105 ">
+            <img
+              src="/icons/tutoring-black.svg"
+              alt="tutorIcon"
+              className="w-8"
+            />
+            <text className="text-sm">Tutoring</text>
+          </li>
+        </Link>
+        <Link href="/explore/Photography">
+          <li className="flex flex-col items-center justify-center hover:scale-105 ">
+            <img
+              src="/icons/photography-black.svg"
+              alt="photoIcon"
+              className="w-8"
+            />
+            <text className="text-sm">Photography</text>
+          </li>
+        </Link>
+        <Link href="/explore/Other">
+          <li className="flex flex-col items-center justify-center hover:scale-105">
+            <img src="/icons/other-black.svg" alt="otherIcon" className="w-8" />
+            <text className="text-sm">Other</text>
+          </li>
+        </Link>
+      </div>
+    </div>
   );
-};
-
-export default Filter;
+}

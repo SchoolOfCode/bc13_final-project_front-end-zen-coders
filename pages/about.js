@@ -3,15 +3,17 @@
 // Import statements
 import React from 'react';
 import AboutProfileCard from '../components/AboutProfileCard/AboutProfileCard';
+import ProfileEventCard from '../components/ProfileEventCard/ProfileEventCard';
+import NavbarSmTop from '../components/Navbar/NavbarSmTop';
 
 // Profile information
 const bella = {
-  name: 'Kiane Blackman',
+  name: 'Bella Bekanova',
   intro: "I'm a full stack developer blah blah blah",
   gitHub: 'https://github.com/kianeblackman/',
   linkedIn: 'https://www.linkedin.com/in/bella-bekanova-b5215b26/',
   portfolio: 'https://kianeblackman.com/',
-  image: '/profileImages/kiane.jpg',
+  image: '/profileImages/bella.jpg',
 };
 
 const curt = {
@@ -21,25 +23,25 @@ const curt = {
   gitHub: 'https://github.com/Ottcoder',
   linkedIn: 'https://www.linkedin.com/in/kiane-gucher-blackman-646286251/',
   portfolio: 'https://kianeblackman.com/',
-  image: '/profileImages/kiane.jpg',
+  image: '/profileImages/curt.jpg',
 };
 
 const evgenii = {
-  name: 'Eugine',
+  name: 'Evgenii Smazanovich',
   intro: "I'm a full stack developer",
-  gitHub: 'https://github.com/kianeblackman/',
-  linkedIn: 'https://www.linkedin.com/in/kiane-gucher-blackman-646286251/',
+  gitHub: 'https://github.com/itsevgenii/',
+  linkedIn: 'https://www.linkedin.com/in/eugene-smazanovich/',
   portfolio: 'https://main.d3v0r89gmu5nt7.amplifyapp.com',
-  image: '/profileImages/kiane.jpg',
+  image: '/profileImages/eugine.jpg',
 };
 
 const illwad = {
-  name: 'Illwad',
+  name: 'Ilwad Kamal',
   intro: "I'm a full stack developer",
   gitHub: 'https://github.com/kianeblackman/',
   linkedIn: 'https://www.linkedin.com/in/kiane-gucher-blackman-646286251/',
   portfolio: 'https://kianeblackman.com/',
-  image: '/profileImages/kiane.jpg',
+  image: '/profileImages/illwad.jpg',
 };
 
 const kiane = {
@@ -52,23 +54,24 @@ const kiane = {
 };
 
 const jay = {
-  name: 'Kiane',
+  name: 'Jay Bartley',
   intro: "I'm a full stack developer",
   gitHub: 'https://github.com/kianeblackman/',
   linkedIn: 'https://www.linkedin.com/in/kiane-gucher-blackman-646286251/',
   portfolio: 'https://kianeblackman.com/',
-  image: '/profileImages/kiane.jpg',
+  image: '/profileImages/jay.jpg',
 };
 
 // About page
 export default function about() {
   return (
-    <div className="flex flex-col p-6">
-      <div className="">
-        <h1 className="text-7xl font-bold">About us</h1>
-        <p className="mt-2 font-roboto text-xl w-3/4">
+    <div className="mx-6 mb-20 flex flex-col md:mx-12 md:pt-28">
+      <NavbarSmTop />
+      <div className="w-full md:mt-4 md:ml-28">
+        <h1 className="text-5xl font-bold md:text-7xl">About us</h1>
+        <p className="mt-2 font-serif text-base md:w-3/4 md:text-lg">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          eiusmod tempor incididunt ut labore et dolore magnxa aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet,
           consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -76,7 +79,7 @@ export default function about() {
           exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
       </div>
-      <div className="grid md:grid-cols-6 gap-12 mt-6 sm:grid-cols-1">
+      <div className="mt-12 grid grid-cols-2 gap-12 md:grid-cols-6">
         <AboutProfileCard
           name={bella.name}
           intro={bella.intro}
