@@ -6,9 +6,21 @@
 
 This project is coded in Nextjs, it uses Auth0, Tailwind and ...libraries
 * ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
-* [![JQuery][JQuery.com]][JQuery-url]
+* ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+* ![Semantic UI React](https://img.shields.io/badge/Semantic%20UI%20React-%2335BDB2.svg?style=for-the-badge&logo=SemanticUIReact&logoColor=white)
+
+
+Unit and E2E testing is done using
+* ![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
+* ![cypress](https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e)
+*
+
+# Getting Started
+
 To run the project, first, you will need to clone the repository and run npm install command.
+
 Attention: the server side has its own repository and you must install the server side first.
+
 <a href="https://github.com/SchoolOfCode/bc13_final-project_back-end-zen-coders" >Click to access backend repository </a>
 
 ```bash
