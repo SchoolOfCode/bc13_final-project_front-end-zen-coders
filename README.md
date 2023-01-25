@@ -21,6 +21,31 @@ Unit and E2E testing is done using
     2. Run $ npm install
     3. Create .env.local file in the root of the project
     4. ".env.local" must have the following variables:
+    5. <!-- Content of .env.local -->
+<details>
+  <summary>Content of .env.local</summary>
+  <ol>
+    <li>
+     MONGODB_DATA_API_KEY='Enter yours'
+      <ul>
+      MONGODB_DATA_API_URL='Enter yours'
+      </ul>
+    </li>
+    <li>
+    MONGODB_DATA_SOURCE=Enter yours
+      <ul>
+AUTH0_SECRET='Enter yours'
+AUTH0_BASE_URL='Enter yours'
+      </ul>
+    </li>
+ AUTH0_ISSUER_BASE_URL='Enter yours'
+   AUTH0_CLIENT_ID='Enter yours'
+  AUTH0_CLIENT_SECRET='Enter yours'
+DATABASE_URL='Enter yours'
+  DATABASE_URL_SKILL='Enter yours'
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
 
 Attention: the server side has its own repository and you must install the server side first.
