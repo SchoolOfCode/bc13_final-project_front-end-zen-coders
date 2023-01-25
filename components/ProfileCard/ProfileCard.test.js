@@ -1,8 +1,7 @@
 import React from "react";
 import { render, screen, cleanup } from "@testing-library/react";
-import '@testing-library/jest-dom/extend-expect';
+import "@testing-library/jest-dom/extend-expect";
 import ProfileCard from "./ProfileCard";
-
 
 afterEach(cleanup);
 
@@ -13,7 +12,12 @@ describe("ProfileCard", () => {
     jest.mock("@auth0/nextjs-auth0/client", () => {
       return { useUser: () => ({ isLoading: true }) };
     });
-    render(<ProfileCard />);
+
+    render(
+      <UserProvider>
+        <ProfileCard />
+      </UserProvider>
+    );
     expect(screen.getByText("Loading...")).toBeInTheDocument();
   });
 
@@ -23,7 +27,11 @@ describe("ProfileCard", () => {
     jest.mock("@auth0/nextjs-auth0/client", () => {
       return { useUser: () => ({ error: { message: "Error message" } }) };
     });
-    render(<ProfileCard />);
+    render(
+      <UserProvider>
+        <ProfileCard />
+      </UserProvider>
+    );
     expect(screen.getByText("Error message")).toBeInTheDocument();
   });
 
@@ -46,7 +54,11 @@ describe("ProfileCard", () => {
     const userId = "12345";
     const authId = "12345";
 
-    render(<ProfileCard event={event} userId={userId} authId={authId} />);
+    render(
+      <UserProvider>
+        <ProfileCard event={event} userId={userId} authId={authId} />
+      </UserProvider>
+    );
 
     // Expect the profile information to be rendered correctly
     expect(screen.getByAltText("profile picture")).toBeInTheDocument();
