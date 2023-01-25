@@ -14,11 +14,14 @@ This project is coded in Nextjs, it uses Auth0, Tailwind and ...libraries
 Unit and E2E testing is done using
 * ![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
 * ![cypress](https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e)
-*
 
 # Getting Started
+To install:
+    1. Clone the repository;
+    2. Run $ npm install
+    3. Create .env.local file in the root of the project
+    4. ".env.local" must have the following variables:
 
-To run the project, first, you will need to clone the repository and run npm install command.
 
 Attention: the server side has its own repository and you must install the server side first.
 
