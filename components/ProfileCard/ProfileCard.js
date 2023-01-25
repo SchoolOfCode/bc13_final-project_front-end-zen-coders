@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useUser } from "@auth0/nextjs-auth0/client";
+import { UserProvider, useUser } from "@auth0/nextjs-auth0/client";
 import ProfileModal from "../ProfileModal/ProfileModal";
 
 export default function ProfileCard({ event, userId, authId }) {
@@ -11,6 +11,7 @@ export default function ProfileCard({ event, userId, authId }) {
   if (error) return <div>{error.message}</div>;
 
   return (
+
     <div className="h-screen rounded-lg bg-gray-200">
       <a>
         {event ? (
@@ -62,5 +63,6 @@ export default function ProfileCard({ event, userId, authId }) {
         </div>
       </div>
     </div>
+
   );
 }
