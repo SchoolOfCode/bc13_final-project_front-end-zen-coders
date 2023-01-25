@@ -46,59 +46,8 @@ export default function ExploreCard({
           src={eventPic}
           className="top-0 flex h-full w-36 rounded-l-3xl object-cover md:h-36 md:w-full md:rounded-t-3xl md:rounded-bl-none"
         ></img>
-        {/* <div className="m-2 flex w-1/4 items-start self-start md:static md:m-5 md:h-20 md:w-20 md:self-end md:rounded-full md:border-2 md:border-black">
-          {skill === 'Knitting' ? (
-            <img
-              className="object-contain p-1 md:p-3"
-              src="/icons/knitting-black.svg"
-            />
-          ) : null}
-          {skill === 'Music' ? (
-            <img className="object-contain p-3" src="/icons/music-black.svg" />
-          ) : null}
-          {skill === 'Gardening' ? (
-            <img
-              className="object-contain p-3"
-              src="/icons/gardening-black.svg"
-            />
-          ) : null}
-          {skill === 'Photography' ? (
-            <img
-              className="object-contain p-3"
-              src="/icons/photography-black.svg"
-            />
-          ) : null}
-          {skill === 'Painting' ? (
-            <img
-              className="object-contain p-3"
-              src="/icons/painting-black.svg"
-            />
-          ) : null}
-          {skill === 'Writing' ? (
-            <img
-              className="h-20 w-20 object-contain p-3"
-              src="/icons/writing-black.svg"
-            />
-          ) : null}
-          {skill === 'Language' ? (
-            <img
-              className="object-contain p-3"
-              src="/icons/language-black.svg"
-            />
-          ) : null}
-          {skill === 'Tutoring' ? (
-            <img
-              className="object-contain p-3"
-              src="/icons/tutoring-black.svg"
-            />
-          ) : null}
-          {skill === 'Sports' ? (
-            <img className="object-contain p-3" src="/icons/sport-black.svg" />
-          ) : null}
-          {skill === 'Other' ? (
-            <img className="object-contain p-3" src="/icons/other-black.svg" />
-          ) : null}
-        </div> */}
+      
+  
         <div className="w-full p-3">
           <div>
             <h1 className="w-full text-lg font-bold">{title}</h1>

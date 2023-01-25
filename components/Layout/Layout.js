@@ -14,7 +14,6 @@ const Layout = ({ children }) => {
       </Head>
       <Navbar />
       <NavbarSm />
-      <NavbarSmTop />
       {children}
     </>
   );
