@@ -21,7 +21,7 @@ Unit and E2E testing is done using
     2. Run $ npm install
     3. Create .env.local file in the root of the project
     4. ".env.local" must have the following variables:
-    5. <!-- Content of .env.local -->
+    5. 
 <details>
   <summary>Content of .env.local</summary>
   <ol>
@@ -39,8 +39,7 @@ AUTH0_SECRET='Enter yours
       </li>
         <li>
 AUTH0_BASE_URL='Enter yours'
-                  </li>
- 
+      </li>
     <li>
  AUTH0_ISSUER_BASE_URL='Enter yours'
          </li>
