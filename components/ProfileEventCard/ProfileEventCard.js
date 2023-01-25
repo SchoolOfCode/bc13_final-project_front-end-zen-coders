@@ -37,15 +37,15 @@ export default function ProfileEventCard({
   let minutes = date.getMinutes();
   return (
     <card className="mb-6 flex rounded-xl">
-      <div className="grid grid-cols-1 md:grid-cols-4">
+      <div className="grid grid-cols-1 rounded-lg border-2 border-slate-800 md:grid-cols-4">
         <div className="md:col-span-1">
           <img
-            className="h-full rounded-t-lg md:rounded-l-lg md:rounded-r-none"
+            className="h-full rounded-t-lg border-slate-800 md:rounded-l-lg md:rounded-r-none"
             src={eventPic}
             alt="knitting img"
           />
         </div>
-        <div className="col-span-3 rounded-b-lg border-b-2 border-l-2 border-r-2 border-black p-3 md:rounded-l-none md:rounded-r-lg md:border-t-2 md:border-l-0">
+        <div className="col-span-3 p-3 md:rounded-l-none md:rounded-r-lg md:border-t-2 md:border-l-0">
           <div className="flex flex-row">
             {/* <div className="mr-3 h-14 w-14 rounded-full bg-red-100"></div> */}
             <div>
