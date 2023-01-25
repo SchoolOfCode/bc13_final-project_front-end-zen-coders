@@ -21,13 +21,10 @@ export default function NavbarSmTop() {
     <div className="fixed top-0 right-0 z-10 mr-3 mt-3 md:hidden">
       {/* If user is not logged in doesn't show link to profile page. If they are logged in link is for their own profile page */}
       {user ? (
-        <Link
-          href={`/profile/${newAuthId}`}
-          className="flex h-12 w-12 items-center rounded-full border-2 border-black bg-white p-1.5"
-        >
+        <Link href={`/profile/${newAuthId}`} className="flex">
           <div className="ml-1 mr-1 flex align-middle">
-            <div className="text-xl font-bold text-indigo-500">PK</div>
-          </div>
+          <img className="h-12 w-12 bg-white" src="/icons/profile-black.svg" />
+        </div>
         </Link>
       ) : null}
     </div>

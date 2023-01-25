@@ -55,7 +55,7 @@ export default function AddEventCard({ userId }) {
         postEvent(data);
       })}
     >
-      <card className="mb-6 flex flex-col rounded-lg border-2 border-black bg-gray-200 p-3">
+      <card className="mb-6 flex flex-col rounded-lg border-2 p-3 border-white bg-slate-100 shadow-xl backdrop-blur-2xl">
         <div className="flex flex-row">
           <h2 className="text-2xl font-bold">Skill Type: </h2>
           <div className="flex flex-row">

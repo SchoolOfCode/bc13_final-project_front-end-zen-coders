@@ -44,6 +44,7 @@ export default function ProfileEventCard({
   let day = date.getDate();
   let hour = date.getHours();
   let minutes = date.getMinutes();
+  let newMinutes = minutes.toString().padStart(2, '0');
 
   async function handleDelete(e) {
     try {
@@ -64,22 +65,22 @@ export default function ProfileEventCard({
   }
 
   return (
-    <card className="mb-6 flex overflow-hidden rounded-xl">
-      <div className="grid grid-cols-1 overflow-hidden md:grid-cols-4">
-        <div className="border-t-2 border-l-2 border-b-2 border-black md:col-span-1">
+    <div className="mt-6 flex rounded-xl border-white bg-slate-100 shadow-xl backdrop-blur-2xl">
+      <div className="grid grid-cols-1 rounded-lg md:grid-cols-4">
+        <div className="md:col-span-1">
           <img
-            className="h-full rounded-t-lg md:rounded-l-lg md:rounded-r-none"
+            className="h-full w-full rounded-t-lg border-slate-800 object-cover  md:rounded-l-lg md:rounded-r-none"
             src={eventPic}
             alt="knitting img"
           />
         </div>
-        <div className="col-span-3 rounded-b-lg border-b-2 border-l-2 border-r-2 border-black p-3 md:rounded-l-none md:rounded-r-lg md:border-t-2 md:border-l-0">
+        <div className="col-span-3 p-3 md:rounded-l-none md:rounded-r-lg md:border-t-2 md:border-l-0">
           <div className="flex flex-row">
             {/* <div className="mr-3 h-14 w-14 rounded-full bg-red-100"></div> */}
             <div>
               <h1 className="text-4xl font-bold">{title}</h1>
               <h3 className="text-base font-light">
-                {area === undefined ? "London" : area}, {location}
+                {area},{location}
               </h3>
             </div>
           </div>
@@ -88,7 +89,7 @@ export default function ProfileEventCard({
           <div className="flex flex-row justify-between gap-3 pt-3">
             <div>
               <h3 className="font-bold">
-                {hour}:{minutes}
+                {hour}:{newMinutes}
               </h3>
               <h3 className="">
                 {weekday} {day} {month}
@@ -112,6 +113,6 @@ export default function ProfileEventCard({
           </div>
         </div>
       </div>
-    </card>
+    </div>
   );
 }

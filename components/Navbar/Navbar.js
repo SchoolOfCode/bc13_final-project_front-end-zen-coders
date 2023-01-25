@@ -18,40 +18,33 @@ export default function Navbar() {
   const newAuthId = user ? authId.replaceAll('"', "") : null;
 
   return (
-    <div className="z-10 hidden w-full bg-white md:fixed md:flex">
-      <nav className="mx-6 mt-6 flex w-full flex-row items-center justify-between rounded-full border-2 border-black bg-white p-2">
-        <div className="flex w-full items-center justify-between">
-          <div className="text-m flex items-center">
-            <img src="/logo.svg" alt="logo" className="h-12 pr-3" />
-            <Link
-              href="/"
-              className="mr-4 mt-0 text-black hover:text-indigo-700 hover:underline"
-            >
+    <div className="z-20 hidden h-20 w-full md:fixed md:flex">
+      <nav className="mx-6 mt-6 flex w-full flex-row items-baseline rounded-full border-2 border-white bg-white/30 p-2 shadow-lg backdrop-blur-lg">
+        <div className="flex w-full items-baseline justify-between ">
+          <div className="ml-3 flex items-baseline gap-10">
+            <Link href="/" className="text-2xl font-bold text-blue-600">
+              hobï
+            </Link>
+            <Link href="/" className="hover:underline">
               Home
             </Link>
-            <Link
-              href="/explore"
-              className="mr-4 mt-0 text-black hover:text-indigo-700 hover:underline"
-            >
+            <Link href="/explore" className="hover:underline">
               Explore
             </Link>
-            <Link
-              href="/about"
-              className="mt-0 text-black hover:text-indigo-700 hover:underline"
-            >
+            <Link href="/about" className="hover:underline">
               About
             </Link>
           </div>
-          <div className="flex gap-3">
-            <h3 className="text-m underline decoration-indigo-400">Location</h3>
+          <div className="flex gap-10 items-center">
+            {/* <h3 className="text-m underline decoration-indigo-400">Location</h3> */}
             <Auth />
             {/* If user is not logged in doesn't show link to profile page. If they are logged in link is for their own profile page */}
             {user ? (
               <Link
                 href={`/profile/${newAuthId}`}
                 className="mt-0 pr-3 text-2xl font-bold leading-none text-indigo-600 hover:border-transparent hover:text-black"
-              >
-                PK
+            >
+                <img className='h-8 w-8' src="/icons/profile-black.svg" />
               </Link>
             ) : null}
           </div>
