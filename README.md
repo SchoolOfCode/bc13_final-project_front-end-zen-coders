@@ -21,7 +21,7 @@ Unit and E2E testing is done using
     2. Run $ npm install
     3. Create .env.local file in the root of the project
     4. ".env.local" must have the following variables:
-    5. 
+    5. Below you can find what variables you should
 <details>
   <summary>Content of .env.local</summary>
   <ol>
