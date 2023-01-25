@@ -44,7 +44,7 @@ export default function ExploreCard({
       <div className="hover:rounder flex h-full flex-row items-start items-center justify-center justify-between rounded-3xl border-2 border-white bg-slate-100 shadow-xl backdrop-blur-2xl hover:border-blue-500  hover:shadow-md md:flex-col">
         <img
           src={eventPic}
-          className="top-0 flex h-full w-36 rounded-l-3xl object-cover md:h-36 md:w-full md:rounded-t-3xl md:rounded-l-none"
+          className="top-0 flex h-full w-36 rounded-l-3xl object-cover md:h-36 md:w-full md:rounded-t-3xl md:rounded-bl-none"
         ></img>
         {/* <div className="m-2 flex w-1/4 items-start self-start md:static md:m-5 md:h-20 md:w-20 md:self-end md:rounded-full md:border-2 md:border-black">
           {skill === 'Knitting' ? (
@@ -105,7 +105,7 @@ export default function ExploreCard({
             <p className="text-lg font-light">{name}</p>
           </div>
           <div className="mt-2.5 ml-1 flex flex-row">
-            <img className="h-30 mr-3 w-24 mb-3" src="/icons/arrow-black.svg" />
+            <img className="h-30 mr-3 mb-3 w-24" src="/icons/arrow-black.svg" />
             <div className="flex flex-col justify-end text-sm ">
               <p className="flex flex-row">
                 {hour}:{minutes}

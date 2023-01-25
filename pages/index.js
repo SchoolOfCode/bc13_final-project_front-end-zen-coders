@@ -19,7 +19,7 @@ export default function Home() {
         <h2 className="mt-3 text-5xl font-bold md:text-7xl">
           Learn (almost) anything!
         </h2>
-        <p className="mt-3 font-serif text-lg md:my-6 md:w-2/3 md:text-xl">
+        <p className="mt-3 font-serif text-lg md:my-6 md:w-3/4 md:text-xl">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -27,7 +27,7 @@ export default function Home() {
         </p>
         <div className="mt-3 flex items-center gap-6 text-2xl md:my-12">
           <Link
-            className="rounded-full border-2 border-blue-700 py-2 px-6 text-xl transition ease-in-out hover:bg-blue-400 hover:bg-opacity-50 md:text-2xl"
+            className="rounded-full border-2 border-blue-700 py-1 px-8 text-xl transition ease-in-out hover:bg-blue-400 hover:bg-opacity-50 md:text-2xl"
             href="/explore"
           >
             EXPLORE
@@ -40,7 +40,7 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      <div className="z-0 flex md:absolute md:-bottom-12 md:-right-12 md:w-3/4 ">
+      <div className="z-0 flex md:absolute md:-bottom-12 md:-right-12 md:max-h-screen md:w-3/4 ">
         <img src="/team-work.svg" alt="home" />
       </div>
     </main>
