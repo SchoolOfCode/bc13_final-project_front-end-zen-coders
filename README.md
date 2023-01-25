@@ -16,7 +16,7 @@ Unit and E2E testing is done using
 * ![cypress](https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e)
 
 # Getting Started
-To install:
+- To Install
     1. Clone the repository;
     2. Run $ npm install
     3. Create .env.local file in the root of the project
