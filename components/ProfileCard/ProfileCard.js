@@ -9,7 +9,7 @@ export default function ProfileCard({ event, userId }) {
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>{error.message}</div>;
   return (
-    <div className="mt-3 flex flex-col rounded-lg border-2 border-slate-800 bg-gray-200">
+    <div className="mt-3 flex flex-col rounded-lg border-2 border-white bg-slate-100 shadow-xl backdrop-blur-2xl ">
       <a>
         {event ? (
           <img
@@ -47,7 +47,7 @@ export default function ProfileCard({ event, userId }) {
             <p>skill icon</p>
             <p>skill icon</p>
           </div> */}
-          <button className="h-full w-full rounded-full border-2 border-indigo-900 bg-indigo-700 object-contain py-1 px-4 font-bold text-white transition ease-in-out  hover:bg-indigo-900 hover:bg-opacity-50">
+          <button className="h-full w-full rounded-full bg-blue-600 object-contain py-1 px-4 font-bold text-white transition ease-in-out  hover:bg-blue-900 hover:bg-opacity-50">
             {user ? (
               <a href={'mailto:' + event[0].email}> CONTACT </a>
             ) : (

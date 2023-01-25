@@ -13,7 +13,7 @@ export default function EventModal() {
     <div>
       <div className="userUpdate">
         <button
-          className="rounded-full border-2 border-indigo-700 object-contain py-1 px-4 transition ease-in-out hover:scale-110 hover:bg-indigo-400 hover:bg-opacity-50"
+          className="rounded-full border-2 border-blue-700 object-contain py-1 px-4 transition ease-in-out hover:scale-110 hover:bg-blue-400 hover:bg-opacity-50"
           type="button"
           onClick={() => setShowModal(true)}
         >

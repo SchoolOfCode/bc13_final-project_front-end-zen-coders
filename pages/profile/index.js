@@ -50,7 +50,7 @@ const postEvent = async (obj) => {
 
           <button
             onClick={() => setShow(!show)}
-            className="rounded-full border-2 border-indigo-700 py-1 px-4 transition ease-in-out hover:scale-105 hover:bg-indigo-400 hover:bg-opacity-50"
+            className="rounded-full border-2 border-blue-600 py-1 px-4 transition ease-in-out hover:scale-105 hover:bg-blue-600 hover:bg-opacity-50"
           >
             +event
           </button>

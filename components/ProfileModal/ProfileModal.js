@@ -42,14 +42,14 @@ console.log(userId)
   
   return (
     <div>
-    <div className="userUpdate my-6 flex flex-row border-indigo-900 text-white bg-indigo-700 font-bold uppercase text-sm px-6 py-3 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear justify-center transition-shadow cursor-progress duration-150 hover:bg-indigo-500" onClick={() => setShowModal(true)}>
+    <div className="userUpdate my-6 flex flex-row border-blue-900 text-white bg-blue-600 font-bold uppercase text-sm px-3 py-2 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear justify-center transition-shadow cursor-progress duration-150 hover:bg-blue-500 content-center"  onClick={() => setShowModal(true)}>
     <button
       type="button" className="cursor-progress"
 
     >
       Edit Profile 
     </button>
-    <img className="w-4/12" src="/editProfileIcon.png" />
+    <img className="w-6 h-6 mb-1" src="/editProfileIcon.png" />
   </div>
   {showModal ? (
     <>
