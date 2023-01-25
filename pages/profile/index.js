@@ -79,7 +79,6 @@ export default function Index({ users }) {
 //     const res = await fetch("https://releasev1-0.onrender.com/users");
 //     const data = await res.json();
 //     console.log(data);
-
 //     return {
 //       props: {
 //         users: data,
