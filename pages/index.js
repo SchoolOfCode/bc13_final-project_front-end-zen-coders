@@ -14,7 +14,7 @@ import Navbar from '../components/Navbar/Navbar';
 export default function Home() {
   return (
     <main>
-      <div className="z-10 md:absolute flex-col px-6 md:mt-12 md:ml-28 md:pt-28">
+      <div className="z-10 flex-col px-6 md:absolute md:mt-12 md:ml-28 md:pt-28">
         <h1 className="mt-3 text-8xl font-normal md:hidden">hobï</h1>
         <h2 className="mt-3 text-5xl font-bold md:text-7xl">
           Learn (almost) anything!
@@ -39,11 +39,10 @@ export default function Home() {
             ABOUT
           </Link>
         </div>
-       
       </div>
-      <div className="z-0 md:w-3/4 md:absolute md:top-28 md:-right-8 ">
-          <img src="/team-work.svg" alt="home" />
-        </div>
+      <div className="z-0 flex md:absolute md:-bottom-12 md:-right-12 md:w-3/4 ">
+        <img src="/team-work.svg" alt="home" />
+      </div>
     </main>
   );
 }
