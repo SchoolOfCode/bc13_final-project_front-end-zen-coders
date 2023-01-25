@@ -27,27 +27,35 @@ Unit and E2E testing is done using
   <ol>
     <li>
      MONGODB_DATA_API_KEY='Enter yours'
-           </li>
-      <li>
+     </li>
+     <li>
       MONGODB_DATA_API_URL='Enter yours'
       </li>
-
     <li>
     MONGODB_DATA_SOURCE=Enter yours
+     </li>
+       <li>
+AUTH0_SECRET='Enter yours
       </li>
-        <li>
-AUTH0_SECRET='Enter yours'
-             </li>
         <li>
 AUTH0_BASE_URL='Enter yours'
                   </li>
-      </ul>
-    </li>
+ 
+    <li>
  AUTH0_ISSUER_BASE_URL='Enter yours'
+         </li>
+      <li>
    AUTH0_CLIENT_ID='Enter yours'
+      </li>
+      <li>
   AUTH0_CLIENT_SECRET='Enter yours'
+      </li>
+      <li>
 DATABASE_URL='Enter yours'
+      </li>
+      <li>
   DATABASE_URL_SKILL='Enter yours'
+      </li>
   </ol>
 </details>
 
