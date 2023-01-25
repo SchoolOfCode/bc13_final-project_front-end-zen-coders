@@ -81,15 +81,16 @@ export default function ProfileEventCard({title, area, location, description,sta
                 {weekday} {day} {month}
               </h3>
             </div>
-              <div className='flex flex-row gap-6 items-center justify-center'>
               {/* If id of user who is logged in matches the id of the propfile being viewed shows the edit event modal */}
-              {authId === `"${userId}"` ? <EventModal eventId={eventId} userId={userId} />
+              {authId === `"${userId}"` ? 
+              <div className='flex flex-row gap-6 items-center justify-center'>
+              <EventModal eventId={eventId} userId={userId} />
                <img src="/delete.svg" onClick={(e)=>{handleDelete(e)}} className="cursor-pointer hover:scale-125"/>
+               </div>
               : null}
             </div>
           </div>
         </div>
-      </div>
     </card>
   );
 }
