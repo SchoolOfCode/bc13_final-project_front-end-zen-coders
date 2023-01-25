@@ -15,14 +15,11 @@ Unit and E2E testing is done using
 * ![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
 * ![cypress](https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e)
 
+
 # Getting Started
 - To Install
     1. Clone the repository;
-    2. Run $ npm install
-    ```bash
-$ npm install
-
-```
+    2. Run $ npm install 
     3. Create .env.local file in the root of the project
     4. ".env.local" must have the following variables:
     5. Below you can find what variables you should
