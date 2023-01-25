@@ -25,14 +25,14 @@ export default function Navbar() {
               About
             </Link>
           </div>
-          <div className="flex gap-10">
+          <div className="flex gap-10 items-center">
             {/* <h3 className="text-m underline decoration-indigo-400">Location</h3> */}
             <Auth />
             <Link
               href="/profile"
               className="mt-0 pr-3 text-2xl font-bold leading-none text-indigo-600 hover:border-transparent hover:text-black"
             >
-              PK
+              <img className='h-8 w-8' src="/icons/profile-black.svg" />
             </Link>
           </div>
         </div>
