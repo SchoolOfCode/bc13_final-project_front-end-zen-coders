@@ -2,7 +2,7 @@
 
 # Hobi
 
-[Hobi][] is a [community sharing platform][] for people to be able to share their skills and learn new things.
+Hobi is a community sharing platform for people to be able to share their skills and learn new things.
 
 This project is coded in Nextjs, it uses Auth0, Tailwind and ...libraries
 * ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
