@@ -26,6 +26,7 @@ export default function index({ events }) {
                 skill={event.skill}
                 name={event.sharerName[0].name}
                 startTime={event.startTime}
+                eventPic={event.eventPic}
               />
             </div>
           ))}

@@ -16,7 +16,7 @@ export default function Filter() {
             <text className="text-sm">Music</text>
           </li>
         </Link>
-        <Link href="/explore/knitting">
+        <Link href="/explore/Knitting">
           <li className="flex flex-col items-center justify-center hover:scale-105 ">
             <img
               src="/icons/knitting-black.svg"
