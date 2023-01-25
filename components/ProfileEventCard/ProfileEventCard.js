@@ -52,7 +52,7 @@ export default function ProfileEventCard({
         return;
       } else {
         const response = await fetch(
-          `https://hobi.onrender.com/events/${eventId}`,
+          `${process.env.NEXT_PUBLIC_DATABASE_URL}/events/${eventId}`,
           { method: "DELETE" }
         );
 
@@ -79,7 +79,7 @@ export default function ProfileEventCard({
             <div>
               <h1 className="text-4xl font-bold">{title}</h1>
               <h3 className="text-base font-light">
-                {area},{location}
+                {area === undefined ? "London" : area}, {location}
               </h3>
             </div>
           </div>

@@ -26,10 +26,13 @@ export default function EventModal({ eventId, userId }) {
     formData.append("description", event.description);
     formData.append("startTime", event.startTime);
     formData.append("sharerId", userId);
-    const response = await fetch(`http://localhost:3003/events/update/${eventId}`, {
-      method: "PATCH",
-      body: formData,
-    });
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_DATABASE_URL}/events/update/${eventId}`,
+      {
+        method: "PATCH",
+        body: formData,
+      }
+    );
 
     if (response.ok) {
       console.log("Event successfully updated.");
@@ -37,7 +40,6 @@ export default function EventModal({ eventId, userId }) {
       console.log("An error occurred, please try again later.");
     }
   }
-
 
   return (
     <div>
@@ -86,7 +88,12 @@ export default function EventModal({ eventId, userId }) {
                       >
                         Skill
                       </label>
-                      <select name="skill" id="skill" onChange={handleChange} className="bg-gray-600 text-gray-100 rounded-md p-2">
+                      <select
+                        name="skill"
+                        id="skill"
+                        onChange={handleChange}
+                        className="rounded-md bg-gray-600 p-2 text-gray-100"
+                      >
                         <option value="Music">Music</option>
                         <option value="Gardening">Gardening</option>
                         <option value="Photograhy">Photograhy</option>
@@ -166,7 +173,7 @@ export default function EventModal({ eventId, userId }) {
                         htmlFor="eventPic"
                         className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
                       >
-                        Upload your photo (not working just now, bear with us)
+                        Upload your photo
                       </label>
                       <input
                         type="file"

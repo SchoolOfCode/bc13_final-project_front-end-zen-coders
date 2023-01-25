@@ -8,16 +8,15 @@ import { useUser } from "@auth0/nextjs-auth0/client";
 export const getServerSideProps = async ({ params }) => {
   const userId = params.userId;
   const event = await fetch(
-    `https://hobi.onrender.com/users/profile/${userId}`
+    `${process.env.DATABASE_URL}/users/profile/${userId}`
   ).then((res) => res.json());
   return {
     props: { event, userId },
   };
-  console.log(userId);
 };
+
 export default function Index({ event, userId }) {
   const [show, setShow] = useState(false);
-
 
   // Getting data from auth0 logged in user
 
@@ -58,8 +57,8 @@ export default function Index({ event, userId }) {
         {event[0].UsersEvents.map((event) => (
           <div key={event.id}>
             <ProfileEventCard
-            userId= {userId}
-            eventId= {event._id}
+              userId={userId}
+              eventId={event._id}
               title={event.title}
               skill={event.skill}
               location={event.location}
@@ -68,7 +67,6 @@ export default function Index({ event, userId }) {
               eventPic={event.eventPic}
               startTime={event.startTime}
               authId={authId}
-              userId={userId}
               className="mt-6"
               sharerId={event.sharerId}
             />
