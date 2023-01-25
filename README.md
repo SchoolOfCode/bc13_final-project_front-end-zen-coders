@@ -8,6 +8,7 @@ This project is coded in Nextjs, it uses Auth0, Tailwind and ...libraries
 * ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 * ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 * ![Semantic UI React](https://img.shields.io/badge/Semantic%20UI%20React-%2335BDB2.svg?style=for-the-badge&logo=SemanticUIReact&logoColor=white)
+* <img src="https://cdn.auth0.com/oss/badges/a0-badge-light.png"/>
 
 
 Unit and E2E testing is done using
