@@ -48,7 +48,6 @@ export default function ExploreCard({
           src={eventPic}
           className="top-0 flex  h-full w-36 shrink-0 rounded-l-3xl object-cover md:h-36 md:w-full md:rounded-t-3xl md:rounded-bl-none"
         ></img>
-
         <div className="w-full p-3">
           <div>
             <h1 className="w-full text-lg font-bold">{title}</h1>

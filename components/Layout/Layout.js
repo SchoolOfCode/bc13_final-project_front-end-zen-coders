@@ -1,7 +1,7 @@
-import Navbar from '../Navbar/Navbar.js';
-import NavbarSm from '../Navbar/NavbarSm.js';
-import NavbarSmTop from '../Navbar/NavbarSmTop.js';
-import Head from 'next/head';
+import Navbar from "../Navbar/Navbar.js";
+import NavbarSm from "../Navbar/NavbarSm.js";
+import NavbarSmTop from "../Navbar/NavbarSmTop.js";
+import Head from "next/head";
 
 const Layout = ({ children }) => {
   return (

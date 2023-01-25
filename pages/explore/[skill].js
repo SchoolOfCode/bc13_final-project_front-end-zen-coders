@@ -7,7 +7,7 @@ import NavbarSmTop from '../../components/Navbar/NavbarSmTop';
 export const getServerSideProps = async ({ params }) => {
   const skill = params.skill;
   const event = await fetch(
-    `https://hobi.onrender.com/events/explore/skill?skill=${skill}`
+    `${process.env.DATABASE_URL}/events/explore/skill?skill=${skill}`
   ).then((res) => res.json());
   return {
     props: { event, skill },

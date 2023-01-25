@@ -5,7 +5,7 @@ import FilterSm from '../../components/Filter/FilterSm.js';
 import NavbarSmTop from '../../components/Navbar/NavbarSmTop.js';
 
 export const getServerSideProps = async () => {
-  const res = await fetch(process.env.DATABASE_URL);
+  const res = await fetch(`${process.env.DATABASE_URL}/events/explore`);
   const data = await res.json();
   return {
     props: { events: data },

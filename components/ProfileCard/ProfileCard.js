@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useUser } from '@auth0/nextjs-auth0/client';
-import ProfileModal from '../ProfileModal/ProfileModal';
+import React, { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { useUser } from "@auth0/nextjs-auth0/client";
+import ProfileModal from "../ProfileModal/ProfileModal";
 
-export default function ProfileCard({ event, userId }) {
+export default function ProfileCard({ event, userId, authId }) {
+  // Getting data from auth0 logged in user
   const { user, error, isLoading } = useUser();
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>{error.message}</div>;
+
   return (
     <div className="mt-3 flex flex-col rounded-lg border-2 border-white bg-slate-100 shadow-xl backdrop-blur-2xl ">
       <a>
@@ -18,7 +20,7 @@ export default function ProfileCard({ event, userId }) {
             alt="profile picture"
           />
         ) : (
-          'no user info'
+          "no user info"
         )}
       </a>
       <div className="p-5">
@@ -48,13 +50,15 @@ export default function ProfileCard({ event, userId }) {
             <p>skill icon</p>
           </div> */}
           <button className="h-full w-full rounded-full bg-blue-600 object-contain py-1 px-4 font-bold text-white transition ease-in-out  hover:bg-blue-900 hover:bg-opacity-50">
+            {/* If user is logged in. This will show the contact button to get in touch with sharer. If they are not logged in will show prompt for login */}
             {user ? (
-              <a href={'mailto:' + event[0].email}> CONTACT </a>
+              <a href={"mailto:" + event[0].email}> CONTACT </a>
             ) : (
-              <a href={'#'}> CONTACT </a>
+              <h3>Please login for contact info</h3>
             )}
           </button>
-          <ProfileModal userId={userId} />
+          {/* If id of user who is logged in matches the id of the propfile being viewed shows the edit profile modal */}
+          {authId === `"${userId}"` ? <ProfileModal userId={userId} /> : null}
         </div>
       </div>
     </div>
