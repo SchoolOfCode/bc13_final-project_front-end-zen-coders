@@ -10,7 +10,7 @@ import Image from 'next/image';
 export default function NavbarSm() {
   return (
     <div className="fixed bottom-0 z-10 w-full px-3 pb-3 md:hidden">
-      <nav className="flex items-center rounded-full border-2 border-black bg-white p-2 shadow-lg">
+      <nav className="flex items-center rounded-full border-2 border-blue-700 bg-white/50 p-2 shadow-md backdrop-blur-lg">
         <div className="ml-6 mr-6 flex w-full justify-between">
           <Link href="/" className="flex flex-col">
             <img src="/icons/home.svg" alt="home-icon" className="h-5"></img>

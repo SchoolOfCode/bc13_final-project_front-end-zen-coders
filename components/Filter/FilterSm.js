@@ -8,9 +8,9 @@ export default function FilterSm() {
     <div className="fixed z-10 md:hidden ">
       <button
         onClick={() => setShow(!show)}
-        className="mt-3 h-12 rounded-full border-2 border-indigo-700 bg-white/30 px-4 shadow-md backdrop-blur-md"
+        className="mt-3 h-12 rounded-full border-2 border-blue-700 bg-white/30 px-4 shadow-md backdrop-blur-md"
       >
-        Catagory
+        Category
       </button>
       {show ? (
         <div className="mt-6 flex flex-row flex-wrap items-center justify-between gap-6 rounded-xl border-2 border-black bg-white p-3 shadow-lg">
