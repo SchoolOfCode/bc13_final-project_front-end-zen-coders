@@ -1,46 +1,59 @@
-import React from "react";
-import EventModal from "../EventModal/EventModal";
+import {useState} from 'react';
+import EventModal from '../EventModal/EventModal';
 
-export default function ProfileEventCard({
-  title,
-  area,
-  location,
-  description,
-  startTime,
-  skill,
-  eventPic,
-  authId,
-  userId,
-}) {
-  //lists of weekdays and month format .
-  const weekdayList = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  const monthList = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
-  ];
+export default function ProfileEventCard({title, area, location, description,startTime, skill, eventPic, eventId, userId, sharerId, authId}) {
+  const [error, setError] = useState(null);
+    //lists of weekdays and month format .
+    const weekdayList = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    const monthList = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
 
-  //date() function turns date into a date that js can read
-  const date = new Date(startTime);
-  // extracts relevant date/time from Date function
-  let weekday = weekdayList[date.getDay()];
-  let month = monthList[date.getMonth()];
-  let day = date.getDate();
-  let hour = date.getHours();
-  let minutes = date.getMinutes();
+    console.log("this is eventId1 from ProfileEventCard", eventId)
+    console.log("this is userId2 from ProfileEventCard", userId)
+    console.log("this is sharerId3 from ProfileEventCard", sharerId)
+  
+    //date() function turns date into a date that js can read
+    const date = new Date(startTime);
+    // extracts relevant date/time from Date function
+    let weekday = weekdayList[date.getDay()];
+    let month = monthList[date.getMonth()];
+    let day = date.getDate();
+    let hour = date.getHours();
+    let minutes = date.getMinutes();
+
+    async function handleDelete(e) {
+   
+  try { 
+    if(userId !== sharerId){
+    setError("You are not authorised to delete this event")
+    return;
+    } else{
+    const response = await fetch (`https://hobi.onrender.com/events/${eventId}`,
+    {method:"DELETE"})
+
+    const data =  await response.json()
+
+}}catch (error){
+    console.log(error)
+}
+}
+
   return (
-    <card className="mb-6 flex rounded-xl">
-      <div className="grid grid-cols-1 md:grid-cols-4">
-        <div className="md:col-span-1">
+    <card className="mb-6 flex rounded-xl overflow-hidden">
+      <div className="grid grid-cols-1 md:grid-cols-4 overflow-hidden">
+        <div className="md:col-span-1 border-t-2 border-l-2 border-b-2 border-black">
           <img
             className="h-full rounded-t-lg md:rounded-l-lg md:rounded-r-none"
             src={eventPic}
@@ -68,9 +81,11 @@ export default function ProfileEventCard({
                 {weekday} {day} {month}
               </h3>
             </div>
-            <div>
+              <div className='flex flex-row gap-6 items-center justify-center'>
               {/* If id of user who is logged in matches the id of the propfile being viewed shows the edit event modal */}
-              {authId === `"${userId}"` ? <EventModal /> : null}
+              {authId === `"${userId}"` ? <EventModal eventId={eventId} userId={userId} />
+               <img src="/delete.svg" onClick={(e)=>{handleDelete(e)}} className="cursor-pointer hover:scale-125"/>
+              : null}
             </div>
           </div>
         </div>

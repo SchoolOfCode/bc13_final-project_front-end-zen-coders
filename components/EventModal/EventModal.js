@@ -1,12 +1,42 @@
 import React, { useState, useEffect } from "react";
 
-export default function EventModal() {
+export default function EventModal({ eventId, userId }) {
   const [showModal, setShowModal] = React.useState(false);
-  const [event, setEvent] = useState({})
+  const [event, setEvent] = useState({});
+  const [eventPic, setEventPic] = useState();
 
+  console.log("line 8", eventId);
+  // console.log("line 9", userId);
+  function handleEventPic(e) {
+    setEventPic(e.target.files[0]);
+  }
 
+  function handleChange(e) {
+    setEvent((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    console.log(event);
+  }
 
+  async function editEvent() {
+    const formData = new FormData();
+    formData.append("eventPic", eventPic);
+    formData.append("title", event.title);
+    formData.append("skill", event.skill);
+    formData.append("location", event.location);
+    formData.append("area", event.area);
+    formData.append("description", event.description);
+    formData.append("startTime", event.startTime);
+    formData.append("sharerId", userId);
+    const response = await fetch(`http://localhost:3003/events/update/${eventId}`, {
+      method: "PATCH",
+      body: formData,
+    });
 
+    if (response.ok) {
+      console.log("Event successfully updated.");
+    } else {
+      console.log("An error occurred, please try again later.");
+    }
+  }
 
 
   return (
@@ -22,11 +52,11 @@ export default function EventModal() {
       </div>
       {showModal ? (
         <>
-          <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-            <div className="relative w-auto my-6 mx-auto max-w-3xl">
+          <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden outline-none focus:outline-none">
+            <div className="relative my-6 mx-auto w-auto max-w-3xl">
               {/*content*/}
               {/* <!-- Modal content --> */}
-              <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
+              <div className="relative rounded-lg bg-white shadow dark:bg-gray-700">
                 <div className="px-6 py-6 lg:px-8">
                   <h3 className="mb-4 text-xl font-medium text-gray-900 dark:text-white">
                     Update event
@@ -35,7 +65,7 @@ export default function EventModal() {
                     <div>
                       <label
                         htmlFor="title"
-                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
                       >
                         Event Title
                       </label>
@@ -43,20 +73,21 @@ export default function EventModal() {
                         type="text"
                         name="title"
                         id="title"
-                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                        className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400"
                         placeholder="Event name here..."
-                        required onChange={handleChange}
+                        required
+                        onChange={handleChange}
                       />
                     </div>
                     <div>
                       <label
                         htmlFor="skill"
-                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
                       >
                         Skill
                       </label>
-                      <select name="skill" id="skill" onChange={handleChange}>
-                        <option value="Music" >Music</option>
+                      <select name="skill" id="skill" onChange={handleChange} className="bg-gray-600 text-gray-100 rounded-md p-2">
+                        <option value="Music">Music</option>
                         <option value="Gardening">Gardening</option>
                         <option value="Photograhy">Photograhy</option>
                         <option value="Painting">Painting</option>
@@ -71,7 +102,7 @@ export default function EventModal() {
                     <div>
                       <label
                         htmlFor="location"
-                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
                       >
                         Location
                       </label>
@@ -80,14 +111,15 @@ export default function EventModal() {
                         name="location"
                         id="location"
                         placeholder="London"
-                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        required onChange={handleChange}
+                        className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400"
+                        required
+                        onChange={handleChange}
                       />
                     </div>
                     <div>
                       <label
                         htmlFor="area"
-                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
                       >
                         Area
                       </label>
@@ -95,26 +127,28 @@ export default function EventModal() {
                         type="text"
                         name="area"
                         id="area"
-                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        required onChange={handleChange}
+                        className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400"
+                        required
+                        onChange={handleChange}
                       />
                       <label
                         htmlFor="description"
-                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
                       >
                         Description
                       </label>
                       <textarea
                         name="description"
                         id="description"
-                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        required onChange={handleChange}
+                        className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400"
+                        required
+                        onChange={handleChange}
                       />
                     </div>
                     <div>
                       <label
                         htmlFor="startTime"
-                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
                       >
                         Event Start Time
                       </label>
@@ -122,14 +156,15 @@ export default function EventModal() {
                         type="datetime-local"
                         name="startTime"
                         id="startTime"
-                        className=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        required onChange={handleChange}
+                        className=" block w-full rounded-lg border border-gray-300 bg-gray-50 p-4 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400"
+                        required
+                        onChange={handleChange}
                       />
                     </div>
                     <div>
                       <label
                         htmlFor="eventPic"
-                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
                       >
                         Upload your photo (not working just now, bear with us)
                       </label>
@@ -137,8 +172,9 @@ export default function EventModal() {
                         type="file"
                         name="eventPic"
                         id="eventPic"
-                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        required onChange={handleChange}
+                        className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400"
+                        required
+                        onChange={handleEventPic}
                       />
                     </div>
                   </form>
@@ -147,16 +183,19 @@ export default function EventModal() {
                 {/*footer*/}
                 <div className="flex items-center justify-end p-6 ">
                   <button
-                    className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className="background-transparent mr-1 mb-1 px-6 py-2 text-sm font-bold uppercase text-red-500 outline-none transition-all duration-150 ease-linear focus:outline-none"
                     type="button"
                     onClick={() => setShowModal(false)}
                   >
                     Close
                   </button>
                   <button
-                    className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className="mr-1 mb-1 rounded bg-emerald-500 px-6 py-3 text-sm font-bold uppercase text-white shadow outline-none transition-all duration-150 ease-linear hover:shadow-lg focus:outline-none active:bg-emerald-600"
                     type="button"
-                    onClick={() => setShowModal(false)}
+                    onClick={() => {
+                      setShowModal(false);
+                      editEvent();
+                    }}
                   >
                     Save Changes
                   </button>
@@ -164,7 +203,7 @@ export default function EventModal() {
               </div>
             </div>
           </div>
-          <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+          <div className="fixed inset-0 z-40 bg-black opacity-25"></div>
         </>
       ) : null}
     </div>

@@ -18,6 +18,7 @@ export const getServerSideProps = async ({ params }) => {
 export default function Index({ event, userId }) {
   const [show, setShow] = useState(false);
 
+
   // Getting data from auth0 logged in user
 
   const { user, error, isLoading } = useUser();
@@ -50,11 +51,15 @@ export default function Index({ event, userId }) {
             </button>
           ) : null}
         </div>
-        {show ? <AddEventCard /> : null}
+
+        {show ? <AddEventCard userId={userId} /> : null}
         {/* Passing down props to event cards which are mapped over to generate relevant information */}
+
         {event[0].UsersEvents.map((event) => (
           <div key={event.id}>
             <ProfileEventCard
+            userId= {userId}
+            eventId= {event._id}
               title={event.title}
               skill={event.skill}
               location={event.location}
@@ -65,6 +70,7 @@ export default function Index({ event, userId }) {
               authId={authId}
               userId={userId}
               className="mt-6"
+              sharerId={event.sharerId}
             />
           </div>
         ))}
