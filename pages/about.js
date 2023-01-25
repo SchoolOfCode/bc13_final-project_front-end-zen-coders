@@ -65,13 +65,13 @@ const jay = {
 // About page
 export default function about() {
   return (
-    <div className="mx-6 mt-3 mb-20 flex flex-col md:mx-12 md:pt-28">
+    <div className="mx-6 mb-20 flex flex-col md:mx-12 md:pt-28">
       <NavbarSmTop />
-      <div className="w-full">
+      <div className="w-full md:mt-4 md:ml-28">
         <h1 className="text-5xl font-bold md:text-7xl">About us</h1>
         <p className="mt-2 font-serif text-base md:w-3/4 md:text-lg">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          eiusmod tempor incididunt ut labore et dolore magnxa aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet,
           consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -79,7 +79,7 @@ export default function about() {
           exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
       </div>
-      <div className="mt-6 grid grid-cols-2 gap-12 md:grid-cols-6">
+      <div className="mt-12 grid grid-cols-2 gap-12 md:grid-cols-6">
         <AboutProfileCard
           name={bella.name}
           intro={bella.intro}

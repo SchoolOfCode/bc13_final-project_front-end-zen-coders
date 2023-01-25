@@ -38,6 +38,8 @@ export default function ExploreCard({
   let day = date.getDate();
   let hour = date.getHours();
   let minutes = date.getMinutes();
+  let newMinutes = minutes.toString().padStart(2, '0')
+
 
   return (
     <Link href={`/profile/${sharerId}`}>
@@ -56,7 +58,7 @@ export default function ExploreCard({
             <img className="h-30 mr-3 mb-3 w-24" src="/icons/arrow-black.svg" />
             <div className="flex flex-col justify-end text-sm ">
               <p className="flex flex-row">
-                {hour}:{minutes}
+                {hour}:{newMinutes}
               </p>
               <p className="font-bold">
                 {weekday} {day} {month}

@@ -35,6 +35,8 @@ export default function ProfileEventCard({
   let day = date.getDate();
   let hour = date.getHours();
   let minutes = date.getMinutes();
+  let newMinutes = minutes.toString().padStart(2, '0');
+
   return (
     <div className="mt-6 flex rounded-xl border-white bg-slate-100 shadow-xl backdrop-blur-2xl">
       <div className="grid grid-cols-1 rounded-lg md:grid-cols-4">
@@ -60,7 +62,7 @@ export default function ProfileEventCard({
           <div className="flex flex-row justify-between gap-3 pt-3">
             <div>
               <h3 className="font-bold">
-                {hour}:{minutes}
+                {hour}:{newMinutes}
               </h3>
               <h3 className="">
                 {weekday} {day} {month}
