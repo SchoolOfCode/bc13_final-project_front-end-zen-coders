@@ -44,10 +44,9 @@ export default function ExploreCard({
       <div className="hover:rounder flex h-full flex-row items-start items-center justify-center justify-between rounded-3xl border-2 border-white bg-slate-100 shadow-xl backdrop-blur-2xl hover:border-blue-500  hover:shadow-md md:flex-col">
         <img
           src={eventPic}
-          className="top-0 flex h-full w-36 rounded-l-3xl object-cover md:h-36 md:w-full md:rounded-t-3xl md:rounded-bl-none"
+          className="top-0 flex  h-full w-36 shrink-0 rounded-l-3xl object-cover md:h-36 md:w-full md:rounded-t-3xl md:rounded-bl-none"
         ></img>
-      
-  
+
         <div className="w-full p-3">
           <div>
             <h1 className="w-full text-lg font-bold">{title}</h1>

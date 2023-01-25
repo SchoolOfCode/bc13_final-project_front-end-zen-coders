@@ -4,6 +4,7 @@
 import React from 'react';
 import AboutProfileCard from '../components/AboutProfileCard/AboutProfileCard';
 import ProfileEventCard from '../components/ProfileEventCard/ProfileEventCard';
+import NavbarSmTop from '../components/Navbar/NavbarSmTop';
 
 // Profile information
 const bella = {
@@ -64,10 +65,11 @@ const jay = {
 // About page
 export default function about() {
   return (
-    <div className="flex flex-col mx-6 mt-3 mb-20 md:pt-28 md:mx-12">
+    <div className="mx-6 mt-3 mb-20 flex flex-col md:mx-12 md:pt-28">
+      <NavbarSmTop />
       <div className="w-full">
-        <h1 className="font-bold text-5xl md:text-7xl">About us</h1>
-        <p className="mt-2 text-base md:text-lg md:w-3/4 font-serif">
+        <h1 className="text-5xl font-bold md:text-7xl">About us</h1>
+        <p className="mt-2 font-serif text-base md:w-3/4 md:text-lg">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -77,7 +79,7 @@ export default function about() {
           exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
       </div>
-      <div className="grid md:grid-cols-6 gap-12 mt-6 grid-cols-2">
+      <div className="mt-6 grid grid-cols-2 gap-12 md:grid-cols-6">
         <AboutProfileCard
           name={bella.name}
           intro={bella.intro}
