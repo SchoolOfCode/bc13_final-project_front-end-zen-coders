@@ -1,7 +1,7 @@
 import React from "react";
 import ProfileCard from "../../components/ProfileCard/ProfileCard";
 import { useState } from "react";
-import ProfileEventCard from "../../components/ProfileEventCard/profileEventCard";
+import ProfileEventCard from "../../components/ProfileEventCard/ProfileEventCard";
 import AddEventCard from "../../components/AddEventCard/AddEventCard.js";
 import { useUser } from "@auth0/nextjs-auth0/client";
 
