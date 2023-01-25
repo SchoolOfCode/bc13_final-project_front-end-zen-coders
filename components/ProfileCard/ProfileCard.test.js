@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen, cleanup, act } from "@testing-library/react";
-import '@testing-library/jest-dom/extend-expect';
+import "@testing-library/jest-dom/extend-expect";
 import useUser from "@auth0/nextjs-auth0/client";
 import ProfileCard from "./ProfileCard";
 import { UserProvider } from "@auth0/nextjs-auth0/client";
@@ -33,7 +33,11 @@ describe("ProfileCard", () => {
 //       act(() => {
 //       const { getByText } = render(
 //       <UserProvider value={{ error }}>
-//         <ProfileCard />
+//         
+      <UserProvider>
+        <ProfileCard />
+      </UserProvider>
+    
 //       </UserProvider>
 //     );
 //     })
