@@ -71,26 +71,29 @@ export default function about() {
         <h1 className="text-5xl font-bold md:text-7xl">About us</h1>
         <p className="mt-2 font-serif text-base md:w-3/4 md:text-lg">
           Welcome to <strong>hobï</strong>, where we connect people with similar
-          interests and passions! We believe that everyone should have the
+          interests and passions. We believe that everyone should have the
           opportunity to explore their hobbies and interests, and our app makes
-          it easy to do just that.{" "}
+          it easy to do just that!{" "}
         </p>
         <p className="mt-2 font-serif text-base md:w-3/4 md:text-lg">
           {" "}
           Whether you&apos;re looking to try gardening, painting, or playing an
           instrument, <strong>hobï</strong> helps you find like-minded
-          individuals who can introduce you to your new passion. Our app is
-          designed to be user-friendly and easy to navigate, so you can quickly
-          find and connect with others who share your interests. You can create
-          a profile, join hobby-based groups, and even organize events and
-          meetups with other members. We strive to create a welcoming and
-          inclusive community where everyone is encouraged to share their
-          hobbies and interests. Our team is dedicated to providing a safe and
-          enjoyable experience for all of our users. So why wait? Download our
-          app and start exploring your hobbies today! Whether you're looking for
-          new friends, inspiration, or just a fun way to spend your time, our
-          hobby sharing app has something for everyone.
-        </p>
+          individuals who can introduce you to your new passion.</p>
+          <p className="mt-2 font-serif text-base md:w-3/4 md:text-lg">
+            {" "}
+            Our app is designed to be user-friendly and easy to navigate, so you
+            can quickly find and connect with others.
+            You can also create a profile and organize your own events. We
+            strive to create a welcoming and inclusive community that is open to
+            all.{" "}
+          </p>
+          <p className="mt-2 font-serif text-base md:w-3/4 md:text-lg">
+            {" "}
+            Whether you&apos;re looking for new friends, inspiration, or just a
+            fun way to spend your time, <strong>hobï</strong> has something for
+            everyone.
+          </p>
       </div>
       <div className="mt-12 grid grid-cols-2 gap-12 md:grid-cols-6">
         <AboutProfileCard
