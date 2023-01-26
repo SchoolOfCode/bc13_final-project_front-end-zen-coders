@@ -66,7 +66,6 @@ const jay = {
 export default function about() {
   return (
     <div>
-      <div class="bg-[url('/public/background/clear-background.jpg')]"></div>
       <div className="mx-6 mb-20 flex flex-col md:mx-12 md:pt-28">
         <NavbarSmTop />
         <div className="w-full md:mt-4 md:ml-28">
@@ -132,6 +131,13 @@ export default function about() {
             image={jay.image}
           />
         </div>
+      </div>
+      <div className="fixed h-screen w-full -scale-x-100 transform">
+        <img
+          src="/background/clear-background.jpg"
+          alt="home"
+          className="h-full w-full object-cover opacity-75"
+        />
       </div>
     </div>
   );

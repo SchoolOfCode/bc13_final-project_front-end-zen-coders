@@ -1,8 +1,8 @@
 //* Description: This component is used to display the cards on the explore page. It takes in the title, name, start time and skill as props. It then displays the relevant icon based on the skill
 
 // Import statements
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
 // Component
 export default function ExploreCard({
@@ -14,20 +14,20 @@ export default function ExploreCard({
   eventPic,
 }) {
   //lists of weekdays and month format .
-  const weekdayList = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  const weekdayList = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const monthList = [
-    'Jan',
-    'Feb',
-    'Mar',
-    'Apr',
-    'May',
-    'Jun',
-    'Jul',
-    'Aug',
-    'Sep',
-    'Oct',
-    'Nov',
-    'Dec',
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
   ];
 
   //date() function turns date into a date that js can read
@@ -38,12 +38,11 @@ export default function ExploreCard({
   let day = date.getDate();
   let hour = date.getHours();
   let minutes = date.getMinutes();
-  let newMinutes = minutes.toString().padStart(2, '0')
-
+  let newMinutes = minutes.toString().padStart(2, "0");
 
   return (
     <Link href={`/profile/${sharerId}`}>
-      <div className="hover:rounder flex h-full flex-row items-start items-center justify-center justify-between rounded-3xl border-2 border-white bg-slate-100 shadow-xl backdrop-blur-2xl hover:border-blue-500  hover:shadow-md md:flex-col">
+      <div className="hover:rounder flex h-full flex-row items-start items-center justify-center justify-between rounded-3xl border-2 border-white bg-white/30 shadow-xl backdrop-blur-md hover:border-blue-500  hover:shadow-md md:flex-col">
         <img
           src={eventPic}
           className="top-0 flex  h-full w-36 shrink-0 rounded-l-3xl object-cover md:h-36 md:w-full md:rounded-t-3xl md:rounded-bl-none"
