@@ -57,11 +57,12 @@ export default function AddEventCard({ userId }) {
     >
       <card className="mb-6 flex flex-col rounded-lg border-2 p-3 border-white bg-slate-100 shadow-xl backdrop-blur-2xl">
         <div className="flex flex-row">
-          <h2 className="text-2xl font-bold">Skill Type: </h2>
+          <h2 className="text-2xl font-bold mr-3">Skill Type: </h2>
           <div className="flex flex-row">
             <select
               {...register("skill", { required: "Skill is required" })}
               onChange={handleChange}
+              className="rounded-full border border-solid border-gray-300 pl-2"
             >
               <option value="">Skill</option>
               <option value="Gardening">Gardening</option>
@@ -78,14 +79,25 @@ export default function AddEventCard({ userId }) {
             <p>{errors.Skill?.message}</p>
           </div>
         </div>
-        <div className="flex flex-row">
-          <h2 className="text-2xl font-bold">Location: </h2>
-          <div className="flex flex-row">
-            <select
-              {...register("location", { required: "Location is required" })}
+        <div className="mt-3 flex flex-row" >
+        <h2 className="text-2xl font-bold mr-3">Location: </h2>
+          <input {...register("location", { required: "Location is required" })}
+           value="London"
+            type="Location"
+            className="form-control relative m-0 block w-2/3 min-w-0 flex-auto rounded-full border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-1.5 text-base font-normal text-gray-700 transition ease-in-out focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none"
               onChange={handleChange}
+           ></input>
+
+        </div>
+        <div className="mt-3 flex flex-row">
+          <h2 className="text-2xl font-bold mr-3">Area: </h2>
+          <div className=" flex flex-row">
+            <select
+              {...register("area", { required: "Area is required" })}
+              onChange={handleChange}
+              className="rounded-full border border-solid border-gray-300 pl-2"
             >
-              <option value="">Location</option>
+              <option value="">Area</option>
               <option value="City of Westminster">City of Westminster</option>
               <option value="Hammersmith and Fulham">
                 Hammersmith and Fulham
@@ -98,7 +110,7 @@ export default function AddEventCard({ userId }) {
               <option value="Tower Hamlets">Tower Hamlets</option>
               <option value="Wandsworth">Wandsworth</option>
             </select>
-            <p>{errors.Location?.message}</p>
+            <p>{errors.Area?.message}</p>
           </div>
         </div>
         <div className="mt-3 flex flex-row gap-3">

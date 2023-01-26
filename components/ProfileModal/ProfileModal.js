@@ -44,52 +44,52 @@ export default function ProfileModal({ userId }) {
 
   return (
     <div>
-    <div className="userUpdate my-6 flex flex-row border-blue-900 text-white bg-blue-600 font-bold uppercase text-sm px-3 py-2 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear justify-center transition-shadow cursor-progress duration-150 hover:bg-blue-500 content-center"  onClick={() => setShowModal(true)}>
-    <button
-      type="button" className="cursor-progress"
-
-    >
-      Edit Profile 
-    </button>
-    <img className="w-6 h-6 mb-1" src="/editProfileIcon.png" />
-  </div>
-  {showModal ? (
-    <>
-      <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-        <div className="relative w-auto my-6 mx-auto max-w-3xl">
-          {/*content*/}
-          {/* <!-- Modal content --> */}
-          <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
-            <div className="px-6 py-6 lg:px-8">
-              <h3 className="mb-4 text-xl font-medium text-gray-900 dark:text-white">
-                Update profile
-              </h3>
-              <form className="space-y-6" action="#">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >
-                    Your name
-                  </label>
-                  <input
-                    type="name"
-                    name="name"
-                    id="name"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                    placeholder="John Lewis"
-                    required
-                    onChange={handleChange}
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="location"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >
-                    Location
-                  </label>
-                  <input
+      <div
+        className="userUpdate my-6 mr-1 mb-1 flex flex-row content-center justify-center rounded-full border-blue-900 bg-blue-600 px-3 py-2 text-sm font-bold uppercase text-white shadow outline-none transition-shadow duration-150 ease-linear hover:bg-blue-500 hover:shadow-lg focus:outline-none"
+        onClick={() => setShowModal(true)}
+      >
+        <button type="button" className="cursor-progress">
+          Edit Profile
+        </button>
+        <img className="mb-1 h-6 w-6" src="/editProfileIcon.png" />
+      </div>
+      {showModal ? (
+        <>
+          <div className="justify-centeroutline-none fixed inset-0 z-50 flex items-center pt-80 focus:outline-none">
+            <div className=" my-6 mx-auto w-auto max-w-3xl">
+              {/*content*/}
+              {/* <!-- Modal content --> */}
+              <div className="relative rounded-lg bg-white shadow dark:bg-gray-700">
+                <div className="px-6 py-6 lg:px-8">
+                  <h3 className="mb-4 text-xl font-medium text-gray-900 dark:text-white">
+                    Update profile
+                  </h3>
+                  <form className="space-y-6" action="#">
+                    <div>
+                      <label
+                        htmlFor="name"
+                        className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+                      >
+                        Your name
+                      </label>
+                      <input
+                        type="name"
+                        name="name"
+                        id="name"
+                        className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400"
+                        placeholder="John Lewis"
+                        required
+                        onChange={handleChange}
+                      />
+                    </div>
+                    <div>
+                      <label
+                        htmlFor="location"
+                        className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+                      >
+                        Location
+                      </label>
+                      <input
                         type="location"
                         name="location"
                         id="location"
