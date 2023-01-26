@@ -1,8 +1,8 @@
-import React from 'react';
-import ExploreCard from '../../components/ExploreCard/ExploreCard';
-import Filter from '../../components/Filter/Filter';
-import FilterSm from '../../components/Filter/FilterSm.js';
-import NavbarSmTop from '../../components/Navbar/NavbarSmTop.js';
+import React from "react";
+import ExploreCard from "../../components/ExploreCard/ExploreCard";
+import Filter from "../../components/Filter/Filter";
+import FilterSm from "../../components/Filter/FilterSm.js";
+import NavbarSmTop from "../../components/Navbar/NavbarSmTop.js";
 
 export const getServerSideProps = async () => {
   const res = await fetch(`${process.env.DATABASE_URL}/events/explore`);

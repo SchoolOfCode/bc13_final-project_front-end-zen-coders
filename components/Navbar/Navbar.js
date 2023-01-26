@@ -1,10 +1,10 @@
 //* Description: This component will render the Navbar component
 
 // Import statements
-import React from 'react';
-import Link from 'next/link';
-import Auth from '../Auth/Auth.js';
-import { useUser } from '@auth0/nextjs-auth0/client';
+import React from "react";
+import Link from "next/link";
+import Auth from "../Auth/Auth.js";
+import { useUser } from "@auth0/nextjs-auth0/client";
 
 // Navbar component
 export default function Navbar() {
@@ -15,7 +15,7 @@ export default function Navbar() {
   // Getting user id from JSON and removing "auth0|" from the start of userid
   const authId = user ? JSON.stringify(user?.sub?.substring(6)) : null;
   // Removing extra quotes from authId to make comparisons to user id string easier
-  const newAuthId = user ? authId.replaceAll('"', '') : null;
+  const newAuthId = user ? authId.replaceAll('"', "") : null;
 
   return (
     <div className="z-20 hidden h-20 w-full md:fixed md:flex">

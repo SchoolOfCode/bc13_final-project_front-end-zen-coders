@@ -1,22 +1,22 @@
 //* Description: This is the home page of the site
 
 // Import statements
-import React from 'react';
-import Link from 'next/link';
-import Head from 'next/head';
-import Image from 'next/image';
-import NavbarSmTop from '../components/Navbar/NavbarSmTop';
-import '../styles/Home.module.css';
+import React from "react";
+import Link from "next/link";
+import Head from "next/head";
+import Image from "next/image";
+import NavbarSmTop from "../components/Navbar/NavbarSmTop";
+import "../styles/Home.module.css";
 
 // Component imports
-import Navbar from '../components/Navbar/Navbar';
+import Navbar from "../components/Navbar/Navbar";
 
 // Home component
 export default function Home() {
   return (
     <main>
       <NavbarSmTop />
-      <div className="z-10 flex-col px-6 md:absolute md:mt-12 md:ml-28 md:pt-28">
+      <div className="z-10 flex-col px-6 absolute md:mt-12 md:ml-28 md:pt-28">
         <h1 className="mt-3 text-8xl font-normal md:hidden">hobï</h1>
         <h2 className="mt-3 text-5xl font-bold md:text-7xl">
           Learn (almost) anything!
@@ -42,8 +42,12 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      <div className="z-0 flex md:absolute md:-bottom-12 md:-right-12 md:max-h-screen md:w-3/4 ">
-        <img src="/team-work.svg" alt="home" />
+      <div className="fixed h-screen w-full -scale-x-100 transform">
+        <img
+          src="/background/joanna-kosinska-RE-8WswW95o-unsplash.jpg"
+          alt="home"
+          className="h-full w-full object-cover opacity-75"
+        />
       </div>
     </main>
   );
