@@ -54,7 +54,7 @@ export default function EventModal({ eventId, userId }) {
       </div>
       {showModal ? (
         <>
-          <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden outline-none focus:outline-none">
+          <div className="justify-center outline-none fixed inset-0 z-50 flex items-center pt-80 focus:outline-none">
             <div className="relative my-6 mx-auto w-auto max-w-3xl">
               {/*content*/}
               {/* <!-- Modal content --> */}
