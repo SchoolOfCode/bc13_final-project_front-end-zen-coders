@@ -28,6 +28,13 @@ export default function Index({ event, userId }) {
 
   return (
     <div>
+      <div className="fixed z-0 h-screen w-full -scale-x-100 transform">
+        <img
+          src="/background/clear-background.jpg"
+          alt="home"
+          className="h-full w-full object-cover opacity-75"
+        />
+      </div>
       <div className="mx-3 mb-20 grid grid-cols-1 md:mx-12 md:grid-cols-3 md:gap-4 md:pt-28 lg:grid-cols-4">
         <div>
           {/* Passing down props to profile card component to render for specific user page navigated to*/}
@@ -38,7 +45,7 @@ export default function Index({ event, userId }) {
             className="col-span-1 bg-blue-200"
           />
         </div>
-        <div className="mt-3 md:col-span-2 lg:col-span-3 ">
+        <div className="z-30 mt-3 md:col-span-2 lg:col-span-3">
           <div className="mb-3 flex justify-between">
             <h1 className="text-2xl font-bold md:text-4xl">
               Available Sessions:

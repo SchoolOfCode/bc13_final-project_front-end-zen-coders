@@ -44,7 +44,7 @@ export default function ProfileEventCard({
   let day = date.getDate();
   let hour = date.getHours();
   let minutes = date.getMinutes();
-  let newMinutes = minutes.toString().padStart(2, '0');
+  let newMinutes = minutes.toString().padStart(2, "0");
 
   async function handleDelete(e) {
     try {
@@ -65,7 +65,7 @@ export default function ProfileEventCard({
   }
 
   return (
-    <div className="mt-6 flex rounded-xl border-white bg-slate-100 shadow-xl backdrop-blur-2xl">
+    <div className="mt-6 flex rounded-xl border-2 border-white bg-slate-100 shadow-xl backdrop-blur-2xl hover:border-blue-500">
       <div className="grid grid-cols-1 rounded-lg md:grid-cols-4">
         <div className="md:col-span-1">
           <img

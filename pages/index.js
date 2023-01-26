@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <main>
       <NavbarSmTop />
-      <div className="z-10 flex-col px-6 absolute md:mt-12 md:ml-28 md:pt-28">
+      <div className="absolute z-10 flex-col px-6 md:mt-12 md:ml-28 md:pt-28">
         <h1 className="mt-3 text-8xl font-normal md:hidden">hobï</h1>
         <h2 className="mt-3 text-5xl font-bold md:text-7xl">
           Learn (almost) anything!
@@ -46,7 +46,7 @@ export default function Home() {
         <img
           src="/background/joanna-kosinska-RE-8WswW95o-unsplash.jpg"
           alt="home"
-          className="h-full w-full object-cover opacity-75"
+          className="h-full w-full object-cover"
         />
       </div>
     </main>

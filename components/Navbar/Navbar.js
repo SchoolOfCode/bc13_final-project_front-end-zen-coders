@@ -18,7 +18,7 @@ export default function Navbar() {
   const newAuthId = user ? authId.replaceAll('"', "") : null;
 
   return (
-    <div className="z-20 hidden h-20 w-full md:fixed md:flex">
+    <div className="z-50 hidden h-20 w-full md:fixed md:flex">
       <nav className="mx-6 mt-6 flex w-full flex-row items-baseline rounded-full border-2 border-white bg-white/30 p-2 shadow-lg backdrop-blur-lg">
         <div className="flex w-full items-baseline justify-between ">
           <div className="ml-3 flex items-baseline gap-10">

@@ -21,7 +21,7 @@ export default function Skill({ event }) {
         <img
           src="/background/clear-background.jpg"
           alt="home"
-          className="h-full w-full object-cover opacity-75"
+          className="h-full w-full object-cover"
         />
       </div>
       <div className="mx-3 mb-20 md:mx-12 md:pt-24">

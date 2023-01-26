@@ -9,10 +9,10 @@ import NavbarSmTop from "../components/Navbar/NavbarSmTop";
 // Profile information
 const bella = {
   name: "Bella Bekanova",
-  intro: "I'm a full stack developer blah blah blah",
-  gitHub: "https://github.com/kianeblackman/",
+  intro: "/",
+  gitHub: "https://github.com/BellaBekanova",
   linkedIn: "https://www.linkedin.com/in/bella-bekanova-b5215b26/",
-  portfolio: "https://kianeblackman.com/",
+  portfolio: "/",
   image: "/profileImages/bella.jpg",
 };
 
@@ -21,8 +21,8 @@ const curt = {
   intro:
     "I studied geography in university and then moved into a career in finance. I wanted something more challenging and creative so moved into the world of tech.",
   gitHub: "https://github.com/Ottcoder",
-  linkedIn: "https://www.linkedin.com/in/kiane-gucher-blackman-646286251/",
-  portfolio: "https://kianeblackman.com/",
+  linkedIn: "www.linkedin.com/in/curt-smith-a27738252",
+  portfolio: "/",
   image: "/profileImages/curt.jpg",
 };
 
@@ -38,9 +38,9 @@ const evgenii = {
 const illwad = {
   name: "Ilwad Kamal",
   intro: "I'm a full stack developer",
-  gitHub: "https://github.com/kianeblackman/",
-  linkedIn: "https://www.linkedin.com/in/kiane-gucher-blackman-646286251/",
-  portfolio: "https://kianeblackman.com/",
+  gitHub: "/",
+  linkedIn: "/",
+  portfolio: "/",
   image: "/profileImages/illwad.jpg",
 };
 
@@ -55,10 +55,10 @@ const kiane = {
 
 const jay = {
   name: "Jay Bartley",
-  intro: "I'm a full stack developer",
-  gitHub: "https://github.com/kianeblackman/",
-  linkedIn: "https://www.linkedin.com/in/kiane-gucher-blackman-646286251/",
-  portfolio: "https://kianeblackman.com/",
+  intro: "/",
+  gitHub: "/",
+  linkedIn: "https://www.linkedin.com/in/jay-bartley-050603253/",
+  portfolio: "/",
   image: "/profileImages/jay.jpg",
 };
 
@@ -66,9 +66,9 @@ const jay = {
 export default function about() {
   return (
     <div>
-      <div className="mx-6 mb-20 flex flex-col md:mx-12 md:pt-28">
-        <NavbarSmTop />
-        <div className="w-full md:mt-4 md:ml-28">
+      <div className="mx-6 mb-20 md:mx-12 md:pt-28">
+        {/* <NavbarSmTop /> */}
+        <div className="md:mt-4 md:ml-28">
           <h1 className="text-5xl font-bold md:text-7xl">About us</h1>
           <p className="mt-2 font-serif text-base md:w-3/4 md:text-lg">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -131,13 +131,6 @@ export default function about() {
             image={jay.image}
           />
         </div>
-      </div>
-      <div className="fixed h-screen w-full -scale-x-100 transform">
-        <img
-          src="/background/clear-background.jpg"
-          alt="home"
-          className="h-full w-full object-cover opacity-75"
-        />
       </div>
     </div>
   );
