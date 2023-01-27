@@ -21,7 +21,7 @@ const curt = {
   intro:
     "I studied geography in university and then moved into a career in finance. I wanted something more challenging and creative so moved into the world of tech.",
   gitHub: "https://github.com/Ottcoder",
-  linkedIn: "www.linkedin.com/in/curt-smith-a27738252",
+  linkedIn: "https://www.linkedin.com/in/curt-smith-a27738252",
   portfolio: "/",
   image: "/profileImages/curt.jpg",
 };
@@ -41,7 +41,7 @@ const ilwad = {
   gitHub: "https://github.com/ilwadk",
   linkedIn: "https://www.linkedin.com/in/ilwad-kamal-47610b25b/",
   portfolio: "/",
-  image: "/profileImages/illwad.jpg",
+  image: "/profileImages/ilwad.jpg",
 };
 
 const kiane = {
@@ -66,7 +66,7 @@ const jay = {
 export default function about() {
   return (
     <div>
- {/* <img className=" bg-hero  w-screen h-screen bg-contain bg-repeat-round   -scale-x-100 transform -z-50 fixed "></img> */}
+
  <img className=" bg-[url('/background/clear-background.jpg')]  w-screen h-screen bg-cover  -scale-x-100 transform -z-50 fixed bg-fixed "></img>
       <div className="mx-6 mb-20 md:mx-12 md:pt-28">
         {/* <NavbarSmTop /> */}

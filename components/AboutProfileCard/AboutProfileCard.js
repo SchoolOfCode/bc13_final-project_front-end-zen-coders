@@ -11,7 +11,7 @@ export default function AboutProfileCard({
 }) {
   return (
     <div className="text-base">
-      <img src={image} alt="Kiane" className="rounded-full" />
+      <img src={image} alt="Profile-Image" className="rounded-full" />
       <div className="flex flex-col text-center">
         <h1 className="font-bold underline">{name}</h1>
         <p className="hidden">{intro}</p>
