@@ -54,7 +54,9 @@ export default function ProfileCard({ event, userId, authId }) {
             {user ? (
               <a href={"mailto:" + event[0].email}> CONTACT </a>
             ) : (
-              <h3>Please login for contact info</h3>
+              <Link href="/api/auth/login">
+                <h3>Please login for contact info</h3>
+              </Link>
             )}
           </button>
           {/* If id of user who is logged in matches the id of the propfile being viewed shows the edit profile modal */}

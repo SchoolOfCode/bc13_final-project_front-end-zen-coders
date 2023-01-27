@@ -42,11 +42,12 @@ const ilwad = {
   linkedIn: "https://www.linkedin.com/in/ilwad-kamal-47610b25b/",
   portfolio: "/",
   image: "/profileImages/ilwad.jpg",
+
 };
 
 const kiane = {
   name: "Kiane Blackman",
-  intro: "I'm a full stack developer blah blah blah",
+  intro: "I'm a full stack developer",
   gitHub: "https://github.com/kianeblackman/",
   linkedIn: "https://www.linkedin.com/in/kiane-gucher-blackman-646286251/",
   portfolio: "https://kianeblackman.com/",
@@ -55,7 +56,7 @@ const kiane = {
 
 const jay = {
   name: "Jay Bartley",
-  intro: "/",
+  intro: "I'm a full stack developer",
   gitHub: "https://github.com/jayjay1878",
   linkedIn: "https://www.linkedin.com/in/jay-bartley-050603253/",
   portfolio: "/",
@@ -133,7 +134,3 @@ export default function about() {
             image={jay.image}
           />
         </div>
-      </div>
-    </div>
-  );
-}

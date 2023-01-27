@@ -22,10 +22,20 @@ export default function Home() {
           Learn (almost) anything!
         </h2>
         <p className="mt-3 font-serif text-lg md:my-6 md:w-3/4 md:text-xl">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          Struggling to learn a new skill? Have a hobby you want to share with
+          others? <strong>hobï</strong> lets you connect with your local
+          community to learn and teach new skills.
+        </p>
+        <p className="mt-3 font-serif text-lg md:my-6 md:w-3/4 md:text-xl">
+          To get involved you can{" "}
+          <Link href="/explore">
+            <strong>explore</strong>
+          </Link>{" "}
+          the classes that the community is currently offering, or{" "}
+          <Link href="/api/auth/login">
+            <strong>sign up</strong>
+          </Link>{" "}
+          to get started teaching what you love.
         </p>
         <div className="mt-3 flex items-center gap-6 text-2xl md:my-12">
           <Link
