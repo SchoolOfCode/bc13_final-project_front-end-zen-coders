@@ -35,11 +35,11 @@ const evgenii = {
   image: "/profileImages/eugine.jpg",
 };
 
-const illwad = {
+const ilwad = {
   name: "Ilwad Kamal",
   intro: "I'm a full stack developer",
-  gitHub: "/",
-  linkedIn: "/",
+  gitHub: "https://github.com/ilwadk",
+  linkedIn: "https://www.linkedin.com/in/ilwad-kamal-47610b25b/",
   portfolio: "/",
   image: "/profileImages/illwad.jpg",
 };
@@ -56,7 +56,7 @@ const kiane = {
 const jay = {
   name: "Jay Bartley",
   intro: "/",
-  gitHub: "/",
+  gitHub: "https://github.com/jayjay1878",
   linkedIn: "https://www.linkedin.com/in/jay-bartley-050603253/",
   portfolio: "/",
   image: "/profileImages/jay.jpg",
@@ -86,7 +86,7 @@ export default function about() {
         <div className="mt-16 grid grid-cols-2 gap-12 md:grid-cols-6 ">
           <AboutProfileCard
             name={bella.name}
-            intro={bella.intro}
+            // intro={bella.intro}
             gitHub={bella.gitHub}
             linkedIn={bella.linkedIn}
             portfolio={bella.portfolio}
@@ -94,7 +94,7 @@ export default function about() {
           />
           <AboutProfileCard
             name={curt.name}
-            intro={curt.intro}
+            // intro={curt.intro}
             gitHub={curt.gitHub}
             linkedIn={curt.linkedIn}
             portfolio={curt.portfolio}
@@ -102,23 +102,23 @@ export default function about() {
           />
           <AboutProfileCard
             name={evgenii.name}
-            intro={evgenii.intro}
+            // intro={evgenii.intro}
             gitHub={evgenii.gitHub}
             linkedIn={evgenii.linkedIn}
             portfolio={evgenii.portfolio}
             image={evgenii.image}
           />
           <AboutProfileCard
-            name={illwad.name}
-            intro={illwad.intro}
-            gitHub={illwad.gitHub}
-            linkedIn={illwad.linkedIn}
-            portfolio={illwad.portfolio}
-            image={illwad.image}
+            name={ilwad.name}
+            // intro={ilwad.intro}
+            gitHub={ilwad.gitHub}
+            linkedIn={ilwad.linkedIn}
+            portfolio={ilwad.portfolio}
+            image={ilwad.image}
           />
           <AboutProfileCard
             name={kiane.name}
-            intro={kiane.intro}
+            // intro={kiane.intro}
             gitHub={kiane.gitHub}
             linkedIn={kiane.linkedIn}
             portfolio={kiane.portfolio}
@@ -126,7 +126,7 @@ export default function about() {
           />
           <AboutProfileCard
             name={jay.name}
-            intro={jay.intro}
+            // intro={jay.intro}
             gitHub={jay.gitHub}
             linkedIn={jay.linkedIn}
             portfolio={jay.portfolio}
