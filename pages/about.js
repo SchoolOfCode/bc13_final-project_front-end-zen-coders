@@ -73,17 +73,31 @@ export default function about() {
         {/* <NavbarSmTop /> */}
         <div className="md:mt-6 md:ml-28">
           <h1 className="text-5xl font-bold md:text-7xl">About us</h1>
+       <p className="mt-2 font-serif text-base md:w-3/4 md:text-lg">
+          Welcome to <strong>hobï</strong>, where we connect people with similar
+          interests and passions. We believe that everyone should have the
+          opportunity to explore their hobbies and interests, and our app makes
+          it easy to do just that!{" "}
+        </p>
+        <p className="mt-2 font-serif text-base md:w-3/4 md:text-lg">
+          {" "}
+          Whether you&apos;re looking to try gardening, painting, or playing an
+          instrument, <strong>hobï</strong> helps you find like-minded
+          individuals who can introduce you to your new passion.</p>
           <p className="mt-2 font-serif text-base md:w-3/4 md:text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magnxa aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.
+            {" "}
+            Our app is designed to be user-friendly and easy to navigate, so you
+            can quickly find and connect with others.
+            You can also create a profile and organize your own events. We
+            strive to create a welcoming and inclusive community that is open to
+            all.{" "}
           </p>
-        </div>
+          <p className="mt-2 font-serif text-base md:w-3/4 md:text-lg">
+            {" "}
+            Whether you&apos;re looking for new friends, inspiration, or just a
+            fun way to spend your time, <strong>hobï</strong> has something for
+            everyone.
+          </p>        </div>
         <div className="mt-16 grid grid-cols-2 gap-12 md:grid-cols-6 ">
           <AboutProfileCard
             name={bella.name}
