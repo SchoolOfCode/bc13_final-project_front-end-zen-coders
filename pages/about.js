@@ -62,22 +62,15 @@ const jay = {
   image: "/profileImages/jay.jpg",
 };
 
-{
-  /* <div className="fixed h-screen w-full -scale-x-100 transform">
-<img
-  src="/background/joanna-kosinska-RE-8WswW95o-unsplash.jpg"
-  alt="home"
-  className="h-full w-full object-cover"
-/>
-</div> */
-}
 // About page
 export default function about() {
   return (
-    <div className="fixed h-screen w-full -scale-x-100 transform bg-[url('/background/joanna-kosinska-RE-8WswW95o-unsplash.jpg')]">
+    <div>
+ {/* <img className=" bg-hero  w-screen h-screen bg-contain bg-repeat-round   -scale-x-100 transform -z-50 fixed "></img> */}
+ <img className=" bg-[url('/background/clear-background.jpg')]  w-screen h-screen bg-cover  -scale-x-100 transform -z-50 fixed bg-fixed "></img>
       <div className="mx-6 mb-20 md:mx-12 md:pt-28">
         {/* <NavbarSmTop /> */}
-        <div className="md:mt-4 md:ml-28">
+        <div className="md:mt-6 md:ml-28">
           <h1 className="text-5xl font-bold md:text-7xl">About us</h1>
           <p className="mt-2 font-serif text-base md:w-3/4 md:text-lg">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -90,7 +83,7 @@ export default function about() {
             consequat.
           </p>
         </div>
-        <div className="mt-12 grid grid-cols-2 gap-12 md:grid-cols-6">
+        <div className="mt-16 grid grid-cols-2 gap-12 md:grid-cols-6 ">
           <AboutProfileCard
             name={bella.name}
             intro={bella.intro}

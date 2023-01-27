@@ -25,7 +25,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        hero: "url('/background/joanna-kosinska-RE-8WswW95o-unsplash.jpg')",
+        "hero": "url('/background/joanna-kosinska-RE-8WswW95o-unsplash.jpg')",
       },
       gap: {
         p5: "5%",
