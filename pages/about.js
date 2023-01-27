@@ -62,10 +62,19 @@ const jay = {
   image: "/profileImages/jay.jpg",
 };
 
+{
+  /* <div className="fixed h-screen w-full -scale-x-100 transform">
+<img
+  src="/background/joanna-kosinska-RE-8WswW95o-unsplash.jpg"
+  alt="home"
+  className="h-full w-full object-cover"
+/>
+</div> */
+}
 // About page
 export default function about() {
   return (
-    <div>
+    <div className="fixed h-screen w-full -scale-x-100 transform bg-[url('/background/joanna-kosinska-RE-8WswW95o-unsplash.jpg')]">
       <div className="mx-6 mb-20 md:mx-12 md:pt-28">
         {/* <NavbarSmTop /> */}
         <div className="md:mt-4 md:ml-28">
