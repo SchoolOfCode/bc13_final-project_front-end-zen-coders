@@ -134,3 +134,7 @@ export default function about() {
             image={jay.image}
           />
         </div>
+        </div>
+    </div>
+  );
+}
