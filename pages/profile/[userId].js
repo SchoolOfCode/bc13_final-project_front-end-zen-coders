@@ -30,7 +30,7 @@ export default function Index({ event, userId }) {
     <div>
       <div className="fixed z-0 h-screen w-full -scale-x-100 transform">
         <img
-          src="/background/clear-background.jpg"
+          src="https://res.cloudinary.com/drseapwgz/image/upload/v1675183277/clear-background_gn7vvt.jpg"
           alt="home"
           className="h-full w-full object-cover opacity-75"
         />

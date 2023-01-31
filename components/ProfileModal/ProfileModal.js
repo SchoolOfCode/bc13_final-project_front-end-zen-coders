@@ -77,7 +77,7 @@ export default function ProfileModal({ userId }) {
                         name="name"
                         id="name"
                         className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400"
-                        placeholder="John Lewis"
+                        placeholder="Please enter your name..."
                         required
                         onChange={handleChange}
                       />
@@ -93,7 +93,7 @@ export default function ProfileModal({ userId }) {
                         type="location"
                         name="location"
                         id="location"
-                        placeholder="Higham on the Hill"
+                        placeholder="PLease enter your location..."
                         className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400"
                         required
                         onChange={handleChange}
@@ -110,7 +110,7 @@ export default function ProfileModal({ userId }) {
                         type="email"
                         name="email"
                         id="email"
-                        placeholder="johnlewis@gmail.com"
+                        placeholder="john.doe@gmail.com"
                         className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400"
                         required
                         onChange={handleChange}
@@ -155,7 +155,7 @@ export default function ProfileModal({ userId }) {
                         type="text"
                         name="aboutMe"
                         id="aboutMe"
-                        placeholder="I am a biology tutor blablabla"
+                        placeholder="Please tell us a little about yourself"
                         className=" block h-48 w-full rounded-lg border border-gray-300 bg-gray-50 p-4 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400"
                         required
                         onChange={handleChange}

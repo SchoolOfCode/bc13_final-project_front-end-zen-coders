@@ -32,10 +32,6 @@ export default function ProfileEventCard({
     "Dec",
   ];
 
-  console.log("this is eventId1 from ProfileEventCard", eventId);
-  console.log("this is userId2 from ProfileEventCard", userId);
-  console.log("this is sharerId3 from ProfileEventCard", sharerId);
-
   //date() function turns date into a date that js can read
   const date = new Date(startTime);
   // extracts relevant date/time from Date function
