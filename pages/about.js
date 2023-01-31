@@ -68,7 +68,7 @@ export default function about() {
   return (
     <div>
 
- <img className=" bg-[url('/background/clear-background.jpg')]  w-screen h-screen bg-cover  -scale-x-100 transform -z-50 fixed bg-fixed "></img>
+ <img className=" bg-[url('https://res.cloudinary.com/drseapwgz/image/upload/v1675183277/clear-background_gn7vvt.jpg')]  w-screen h-screen bg-cover  -scale-x-100 transform -z-50 fixed bg-fixed "></img>
       <div className="mx-6 mb-20 md:mx-12 md:pt-28">
         {/* <NavbarSmTop /> */}
         <div className="md:mt-6 md:ml-28">
